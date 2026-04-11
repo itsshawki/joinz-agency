@@ -525,27 +525,3 @@ body {
   .show-mobile-only { display: none !important; }
 }
 
-/* --- Marquee Animation --- */
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-100%); }
-}
-
-.marquee-container {
-  display: flex;
-  overflow: hidden;
-  user-select: none;
-  gap: 0;
-}
-
-.marquee-content {
-  animation: marquee 40s linear infinite;
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-}
-
-/* Pause animation on hover for better interaction */
-.marquee-container:hover .marquee-content {
-  animation-play-state: paused;
-}

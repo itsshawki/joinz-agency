@@ -158,7 +158,7 @@ export default function HomePage() {
       </Section>
 
       {/* Partners Logos */}
-      <Section className="py-20 relative overflow-hidden">
+      <Section className="py-20 relative">
         <ScrollReveal>
           <div className="text-center mb-10">
             <h3 className="text-white/40 text-sm font-bold uppercase tracking-[0.3em]">Supported Platforms</h3>
