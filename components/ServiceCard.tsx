@@ -5,7 +5,6 @@ interface ServiceCardProps {
   icon: string;
   title: string;
   description: string;
-  tags?: string[];
 }
 
 export default function ServiceCard({
@@ -13,7 +12,6 @@ export default function ServiceCard({
   icon,
   title,
   description,
-  tags,
 }: ServiceCardProps) {
   return (
     <Link href={`/services/${slug}`} className="group block">

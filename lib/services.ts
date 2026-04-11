@@ -2,6 +2,9 @@ export interface ServiceFeature {
   icon: string;
   title: string;
   description: string;
+  span?: string;
+  badge?: string;
+  badgeSub?: string;
 }
 
 export interface ProcessStep {
@@ -18,8 +21,8 @@ export interface ServiceData {
   heroHighlight: string;
   heroDescription: string;
   ctaText: string;
-  secondaryCta: string;
-  secondaryCtaAnchor: string;
+  secondaryCta?: string;
+  secondaryCtaAnchor?: string;
 
   sectionTitle: string;
   sectionSubtitle: string;
@@ -29,6 +32,7 @@ export interface ServiceData {
     title: string;
     description: string;
     bgIcon: string;
+    footerNote?: string;
   };
   sideFeature: {
     icon: string;
@@ -61,12 +65,12 @@ export const services: ServiceData[] = [
     slug: "verification",
     title: "Social Media Verification",
     tagline: "Authority Protocol",
-    heroTitle: "Social media",
-    heroHighlight: "verification",
+    heroTitle: "Social Media",
+    heroHighlight: "Verification",
     heroDescription:
       "Get verified on major platforms and build real trust with your audience. Stand out, protect your identity, and make your presence official.",
-    ctaText: "Get verified",
-    secondaryCta: "View process",
+    ctaText: "Start Verification",
+    secondaryCta: "View Requirements",
     secondaryCtaAnchor: "#method",
     sectionTitle: "Multi-Platform Verification",
     sectionSubtitle: "Verification Arsenal",
@@ -100,7 +104,7 @@ export const services: ServiceData[] = [
     imageUrl: "/images/verification.jpg",
     statValue: "98%",
     statLabel: "Success Rate",
-    closingTitle: "Get your",
+    closingTitle: "Get Your",
     closingHighlight: "Blue Check",
     closingDescription: "Verification builds trust. We handle everything for you.",
     closingCta: "Start Verification",
@@ -110,45 +114,45 @@ export const services: ServiceData[] = [
     title: "Reputation Management",
     tagline: "Narrative Control",
     heroTitle: "Reputation",
-    heroHighlight: "management",
+    heroHighlight: "Management",
     heroDescription:
-      "Curating your digital shadow. We monitor, protect, and enhance your online presence, ensuring only the most prestigious narrative prevails.",
-    ctaText: "Control your narrative",
-    secondaryCta: "View methods",
+      "We help you take control of what people see when they search your name — removing the negative and pushing forward what actually represents you.",
+    ctaText: "Control Your Narrative",
+    secondaryCta: "View Methods",
     secondaryCtaAnchor: "#method",
     sectionTitle: "Digital Shield Systems",
     sectionSubtitle: "Reputation Arsenal",
     mainFeature: {
       icon: "security",
-      title: "360° Reputation Monitoring",
+      title: "Reputation Monitoring",
       description:
-        "Real-time surveillance of your digital footprint across search engines, social media, news outlets, and review platforms. We detect threats before they materialize.",
+        "We continuously track what’s being said about you online across search, social media, and news — so nothing catches you off guard.",
       bgIcon: "radar",
     },
     sideFeature: {
       icon: "auto_fix_high",
-      title: "Content Suppression",
+      title: "Content Removal",
       description:
-        "Legal and algorithmic strategies to suppress negative content and elevate positive narratives.",
-      statLabel: "Monitored 24/7",
+        "We help remove harmful or misleading content and make sure your online image reflects who you truly are.",
+      statLabel: "Active 24/7",
       statIcon: "visibility",
     },
     smallFeatures: [
-      { icon: "search", title: "SEO Defense", description: "Search result optimization to control what people find about you." },
-      { icon: "rate_review", title: "Review Management", description: "Strategic review response and sentiment improvement campaigns." },
-      { icon: "gavel", title: "Legal Takedowns", description: "Defamatory content removal through legal channels and DMCA." },
+      { icon: "search", title: "Search Protection", description: "We improve what shows up when people search your name." },
+      { icon: "rate_review", title: "Review Management", description: "We manage and improve your online reviews to build trust." },
+      { icon: "gavel", title: "Legal Removal", description: "We handle legal processes to remove damaging content when necessary." },
     ],
     processTitle: "Narrative Control Framework",
-    processSubtitle: "Defense Protocol",
+    processSubtitle: "Process Workflow",
     processSteps: [
-      { number: "01", title: "Threat Assessment", description: "Full audit of your digital footprint identifying risks, negative content, and vulnerability points." },
-      { number: "02", title: "Defense Deployment", description: "Multi-channel strategy execution including content creation, SEO, and legal action." },
-      { number: "03", title: "Ongoing Monitoring", description: "24/7 surveillance and rapid-response protocols for emerging threats." },
+      { number: "01", title: "Profile Review", description: "We analyze your online presence to understand what needs improvement." },
+      { number: "02", title: "Strategy Execution", description: "We take action to improve your image through content, search, and platform optimization." },
+      { number: "03", title: "Ongoing Protection", description: "We continuously monitor and protect your reputation from new risks." },
     ],
     imageUrl: "/images/reputation.jpg",
     statValue: "24/7",
     statLabel: "Monitoring",
-    closingTitle: "Protect your",
+    closingTitle: "Protect Your",
     closingHighlight: "Reputation",
     closingDescription: "Your reputation is your most valuable asset. Let us guard it with military precision.",
     closingCta: "Start Protection",
@@ -158,47 +162,45 @@ export const services: ServiceData[] = [
     title: "Account Recovery",
     tagline: "Asset Retrieval",
     heroTitle: "Account",
-    heroHighlight: "recovery",
+    heroHighlight: "Recovery",
     heroDescription:
-      "Restoring lost assets. Our specialized team utilizes high-level contacts to recover disabled or hacked high-value social profiles swiftly and securely.",
-    ctaText: "Recover your account",
-    secondaryCta: "View process",
+      "Lost access to your account? We recover hacked or disabled profiles quickly and securely through trusted channels.",
+    ctaText: "Recover Account",
+    secondaryCta: "View Process",
     secondaryCtaAnchor: "#method",
     sectionTitle: "Recovery Capabilities",
     sectionSubtitle: "Recovery Arsenal",
     mainFeature: {
       icon: "restore",
-      title: "Multi-Vector Recovery",
-      description:
-        "Whether your account was hacked, disabled, or suspended — we deploy multiple recovery vectors simultaneously. Our direct contacts at major platforms accelerate the restoration process.",
+      title: "Advanced Recovery",
+      description: "We use multiple recovery paths at once to restore access as quickly as possible.",
       bgIcon: "key",
     },
     sideFeature: {
       icon: "speed",
-      title: "Rapid Response",
-      description:
-        "Priority recovery timelines for high-value accounts requiring immediate action.",
-      statLabel: "Avg. 72hr recovery",
+      title: "Fast Response",
+      description: "Priority handling for urgent cases requiring immediate action.",
+      statLabel: "Avg. 72h Recovery",
       statIcon: "timer",
     },
     smallFeatures: [
-      { icon: "lock_open", title: "Hacked Accounts", description: "Full account restoration and security hardening after unauthorized access." },
-      { icon: "block", title: "Disabled Accounts", description: "Appeal and reinstatement of disabled or suspended accounts." },
-      { icon: "enhanced_encryption", title: "Security Hardening", description: "Post-recovery security audit and protection implementation." },
+      { icon: "lock_open", title: "Hacked Accounts", description: "We restore access and secure your account after unauthorized activity." },
+      { icon: "block", title: "Disabled Accounts", description: "We handle appeals and work to reinstate suspended accounts." },
+      { icon: "enhanced_encryption", title: "Security Protection", description: "We strengthen your account to prevent future issues." },
     ],
     processTitle: "Recovery Protocol",
-    processSubtitle: "Retrieval Process",
+    processSubtitle: "Process Workflow",
     processSteps: [
-      { number: "01", title: "Incident Assessment", description: "Rapid triage to determine account status, compromise vectors, and recovery pathway." },
-      { number: "02", title: "Recovery Execution", description: "Multi-channel recovery through platform contacts, legal identity verification, and appeal processes." },
-      { number: "03", title: "Security Lockdown", description: "Post-recovery security hardening — 2FA, session purge, and ongoing monitoring." },
+      { number: "01", title: "Account Review", description: "We assess your account status and identify the fastest recovery path." },
+      { number: "02", title: "Recovery Process", description: "We take action through verified channels to restore your access." },
+      { number: "03", title: "Account Protection", description: "We secure your account and monitor it to prevent future risks." },
     ],
     imageUrl: "/images/recovery.jpg",
     statValue: "72hr",
     statLabel: "Avg Recovery",
-    closingTitle: "Recover your",
-    closingHighlight: "Digital Assets",
-    closingDescription: "Every hour counts. Start the recovery process now and reclaim what's yours.",
+    closingTitle: "Get Your Account Back",
+    closingHighlight: "Starting Today",
+    closingDescription: "We handle everything for you. No stress, no confusion — just results.",
     closingCta: "Start Recovery",
   },
   {
@@ -206,108 +208,150 @@ export const services: ServiceData[] = [
     title: "Username Claim",
     tagline: "Digital Real Estate",
     heroTitle: "Premium",
-    heroHighlight: "username",
+    heroHighlight: "Username Claim",
     heroDescription:
-      "Your @handle is your most visible digital asset. We secure the exact username you need across all platforms through legal trademark claims and administrative channels.",
-    ctaText: "Claim your handle",
-    secondaryCta: "View process",
+      "Get the username you actually want — even if it's already taken. We help you secure inactive, claimed, or trademarked handles across all major platforms.",
+    ctaText: "Claim Your Handle",
+    secondaryCta: "View Process",
     secondaryCtaAnchor: "#method",
-    sectionTitle: "Secure Your Digital Identity",
-    sectionSubtitle: "Handle Acquisition",
+    sectionTitle: "Digital Identity",
+    sectionSubtitle: "Username Claim",
     mainFeature: {
-      icon: "alternate_email",
-      title: "Trademark-Based Claims",
-      description:
-        "We leverage trademark law and platform policies to claim usernames held by inactive or squatting accounts. Our legal team handles every step from filing to acquisition.",
-      bgIcon: "badge",
+      icon: "person_off", // Lucide-like: user-minus/person-off
+      title: "Inactive Handles",
+      description: "Is your username taken but not being used? We help you claim inactive handles through proven outreach and platform processes — and transfer them to you.",
+      bgIcon: "alternate_email",
+      footerNote: "Supporting all major platforms",
     },
     sideFeature: {
-      icon: "language",
-      title: "Cross-Platform",
-      description:
-        "Instagram, Twitter/X, TikTok, YouTube, and more — unified handle strategy.",
-      statLabel: "All major platforms",
-      statIcon: "check",
+      icon: "verified_user", // Lucide-like: shield-check/verified-user
+      title: "Trademark Claims",
+      description: "Own the legal rights to a name? We handle trademark-based claims to recover usernames that belong to your brand.",
+      statLabel: "Guaranteed Success",
+      statIcon: "verified",
     },
     smallFeatures: [
-      { icon: "gavel", title: "Legal Claims", description: "Trademark-based username release through official platform processes." },
-      { icon: "schedule", title: "Inactive Release", description: "Policy-compliant reclamation of dormant username registrations." },
-      { icon: "swap_horiz", title: "Negotiated Transfer", description: "Mediated acquisition from current holders when applicable." },
+      {
+        icon: "person_search", // Lucide-like: search/person-search
+        title: "Impersonation Removal",
+        description: "Someone using your name or pretending to be you? We remove impersonators and secure your real identity across platforms.",
+        span: "md:col-span-4"
+      },
+      {
+        icon: "support_agent", // Lucide-like: head-set/support-agent
+        title: "White-Glove Support",
+        description: "You don’t deal with the process — we do. From start to finish, we handle everything with full privacy and direct support.",
+        span: "md:col-span-8",
+        badge: "Available 24/7",
+        badgeSub: "Direct Support"
+      },
     ],
-    processTitle: "Systematic Handle Reclamation",
-    processSubtitle: "Acquisition Process",
+    processTitle: "How It Works",
+    processSubtitle: "Claim Process",
     processSteps: [
-      { number: "01", title: "Availability Analysis", description: "Deep scan across platforms determining handle status, ownership, and the most viable acquisition pathway." },
-      { number: "02", title: "Legal Preparation", description: "Trademark filing, official complaints, and legal documentation for platform-compliant claim submission." },
-      { number: "03", title: "Claim Execution", description: "Submission through official channels with monitoring until the handle transitions to your ownership." },
+      {
+        number: "01",
+        title: "Check Availability",
+        description: "We check if the handle can be claimed.\nFast and accurate."
+      },
+      {
+        number: "02",
+        title: "Prepare The Claim",
+        description: "We handle everything needed to secure it.\nNo action required from you."
+      },
+      {
+        number: "03",
+        title: "Secure The Handle",
+        description: "We complete the process and transfer it to you.\nFully managed."
+      }
     ],
     imageUrl: "/images/username.jpg",
     statValue: "@yours",
     statLabel: "Every Platform",
-    closingTitle: "Claim your",
+    closingTitle: "Get Your",
     closingHighlight: "@Handle",
-    closingDescription: "Premium usernames are finite. Secure yours before someone else does.",
-    closingCta: "Start Acquisition",
+    closingDescription: "We secure the name before someone else does.",
+    closingCta: "Start Claim",
   },
   {
     slug: "branding",
-    title: "Branding",
+    title: "Branding & Design",
     tagline: "Identity Architecture",
-    heroTitle: "Sovereign",
-    heroHighlight: "brand",
+    heroTitle: "Branding",
+    heroHighlight: "& Design",
     heroDescription:
-      "We don't just design logos — we forge identities. Every brand we build commands respect, radiates exclusivity, and stands as an immovable pillar of digital authority.",
-    ctaText: "Build your brand",
-    secondaryCta: "View deliverables",
-    secondaryCtaAnchor: "#method",
-    sectionTitle: "Comprehensive Identity Engineering",
-    sectionSubtitle: "Brand Systems",
+      "We build brands that look right everywhere. A cohesive visual system designed for authority and influence.",
+    ctaText: "Start Your Brand",
+    secondaryCta: "",
+    secondaryCtaAnchor: "",
+    sectionTitle: "Brand Identity",
+    sectionSubtitle: "Logo & Identity",
     mainFeature: {
       icon: "palette",
-      title: "Visual Identity System",
-      description:
-        "Every element — from logomark to color palette, typography to photography direction — is engineered to form a cohesive identity system that scales across all touchpoints.",
-      bgIcon: "auto_awesome",
+      title: "Visual Identity",
+      description: "A total visual system built for your digital presence. We ensure you look premium on every screen and platform.",
+      bgIcon: "brush",
+      footerNote: "Custom Design Systems",
     },
     sideFeature: {
-      icon: "psychology",
-      title: "Strategy First",
-      description:
-        "Every visual decision is rooted in strategic positioning and audience psychology.",
-      statLabel: "Luxury Tier",
-      statIcon: "diamond",
+      icon: "architecture",
+      title: "Brand Strategy",
+      description: "We define how you appear and speak. A clear strategy built for those who lead their industry.",
+      statLabel: "Perfect Alignment",
+      statIcon: "verified",
     },
     smallFeatures: [
-      { icon: "draw", title: "Logo & Wordmark", description: "Custom hand-crafted logomarks with full variation libraries." },
-      { icon: "format_color_fill", title: "Color & Typography", description: "Proprietary palettes and type hierarchies engineered for impact." },
-      { icon: "menu_book", title: "Brand Guidelines", description: "Comprehensive brand books with usage rules and application standards." },
+      {
+        icon: "fingerprint",
+        title: "Logo & Marks",
+        description: "Precision design for high-end recognition.",
+        span: "md:col-span-4"
+      },
+      {
+        icon: "rule",
+        title: "Design Systems",
+        description: "The rules that keep your brand sharp everywhere.",
+        span: "md:col-span-8",
+        badge: "Global Standard",
+        badgeSub: "Ready to Scale"
+      },
     ],
-    processTitle: "From Vision to Visual Empire",
-    processSubtitle: "The Framework",
+    processTitle: "The Process",
+    processSubtitle: "Creative Flow",
     processSteps: [
-      { number: "01", title: "Strategic Discovery", description: "Immersive brand audit covering market positioning, competitor landscape, and audience psychographics." },
-      { number: "02", title: "Design Engineering", description: "Creating the complete visual identity system — logo, color, type, imagery direction, and motion language." },
-      { number: "03", title: "Deployment & Guidelines", description: "Delivering brand book, asset libraries, and usage guidelines for consistent implementation across all channels." },
+      {
+        number: "01",
+        title: "The Strategy",
+        description: "We find your unique edge.\nDefining how the world should see you."
+      },
+      {
+        number: "02",
+        title: "Creative Design",
+        description: "We build the identity.\nFocusing on clean, high-impact visuals."
+      },
+      {
+        number: "03",
+        title: "Full Release",
+        description: "We deliver the system.\nComplete assets ready for immediate use."
+      },
     ],
     imageUrl: "/images/branding.jpg",
-    statValue: "100+",
-    statLabel: "Brands Forged",
-    closingTitle: "Forge your",
+    statValue: "Top 1%",
+    statLabel: "Visual Authority",
+    closingTitle: "Own Your",
     closingHighlight: "Identity",
-    closingDescription: "Your brand is the foundation of your digital empire. Let's build it to last.",
-    closingCta: "Start Branding",
+    closingDescription: "Build a brand that looks right everywhere.",
+    closingCta: "Start Now",
   },
   {
     slug: "webdev",
     title: "Website Development",
     tagline: "Digital Engineering",
-    heroTitle: "High-performance",
-    heroHighlight: "web",
+    heroTitle: "Websites That",
+    heroHighlight: "Actually Work.",
     heroDescription:
       "We don't build websites — we engineer digital vaults. Every project is a bespoke creation with performance, security, and conversion as non-negotiable foundations.",
-    ctaText: "Start your build",
-    secondaryCta: "View tech stack",
-    secondaryCtaAnchor: "#method",
+    ctaText: "Start Your Build",
     sectionTitle: "Built for Performance & Scale",
     sectionSubtitle: "Engineering Stack",
     mainFeature: {
@@ -340,7 +384,7 @@ export const services: ServiceData[] = [
     imageUrl: "/images/webdev.jpg",
     statValue: "<1s",
     statLabel: "Load Time",
-    closingTitle: "Build your",
+    closingTitle: "Build Your",
     closingHighlight: "Digital Vault",
     closingDescription: "Your website is the headquarters of your digital empire. Let's engineer it to perform.",
     closingCta: "Start Engineering",
@@ -350,97 +394,119 @@ export const services: ServiceData[] = [
     title: "PR & Media",
     tagline: "Media Operations",
     heroTitle: "Strategic",
-    heroHighlight: "PR & media",
+    heroHighlight: "PR & Media Dominance",
     heroDescription:
       "Get featured in the world's most prestigious publications. Our media network spans Forbes, Bloomberg, The New York Times, and 200+ tier-one outlets worldwide.",
-    ctaText: "Get featured",
-    secondaryCta: "Media network",
+    ctaText: "Get Featured",
+    secondaryCta: "Media Network",
     secondaryCtaAnchor: "#method",
-    sectionTitle: "Full-Spectrum Media Coverage",
-    sectionSubtitle: "Media Arsenal",
+    sectionTitle: "Top-Tier Coverage",
+    sectionSubtitle: "Top platforms. Real visibility.",
     mainFeature: {
       icon: "newspaper",
-      title: "Tier-One Publication Features",
-      description:
-        "We don't pitch blindly — we engineer newsroom relationships. Our direct connections with editors at Forbes, Bloomberg, TechCrunch, and Vogue ensure your story gets the platform it deserves.",
-      bgIcon: "newsmode",
+      title: "Global Network",
+      description: "We place your story where it matters.\nDirect access to major media platforms.",
+      bgIcon: "public",
     },
     sideFeature: {
       icon: "hub",
-      title: "200+ Outlets",
-      description:
-        "Direct relationships with editorial teams across global media networks.",
-      statLabel: "Global Reach",
+      title: "Global Reach",
+      description: "Worldwide visibility through top-tier editorial networks.",
+      statLabel: "Global Network",
       statIcon: "public",
     },
     smallFeatures: [
-      { icon: "edit_note", title: "Press Releases", description: "Professional press materials distributed through major wire services." },
-      { icon: "podcasts", title: "Podcast & TV", description: "Booking appearances on top podcasts, news shows, and panel discussions." },
-      { icon: "crisis_alert", title: "Crisis Management", description: "Rapid-response PR for damage control and narrative recovery." },
+      { icon: "edit_note", title: "Press Releases", description: "Clear press coverage across major platforms." },
+      { icon: "podcasts", title: "Podcast & TV", description: "Appear on podcasts and media shows." },
+      { icon: "crisis_alert", title: "Crisis Management", description: "Fast action to protect your reputation." },
     ],
     mediaLogos: ["Forbes", "Bloomberg", "NYT", "Vogue", "TechCrunch", "Reuters"],
-    processTitle: "Publication Strategy",
-    processSubtitle: "Media Framework",
+    processTitle: "How It Works",
+    processSubtitle: "The Process",
     processSteps: [
-      { number: "01", title: "Story Engineering", description: "Craft newsworthy angles that align with editorial calendars and trending conversations." },
-      { number: "02", title: "Targeted Outreach", description: "Direct pitches to editors and journalists in our established network." },
-      { number: "03", title: "Publication & Amplification", description: "Feature publication with social amplification and syndication strategy." },
+      { number: "01", title: "Shape Your Story", description: "Craft a story worth publishing." },
+      { number: "02", title: "Reach The Right Editors", description: "We connect you with the right people." },
+      { number: "03", title: "Get Published", description: "Your story goes live and gets seen." },
     ],
     imageUrl: "/images/pr-media.jpg",
     statValue: "200+",
     statLabel: "Media Outlets",
-    closingTitle: "Dominate the",
-    closingHighlight: "Newsroom",
-    closingDescription: "Your story deserves the world's biggest stage. Let's secure your feature.",
+    closingTitle: "Get",
+    closingHighlight: "Featured",
+    closingDescription: "We place your story where it gets attention.",
     closingCta: "Get Featured",
   },
   {
     slug: "growth",
     title: "Growth & Engagement",
     tagline: "Amplification Engine",
-    heroTitle: "Engineered",
-    heroHighlight: "growth",
+    heroTitle: "Growth",
+    heroHighlight: "Engagement",
     heroDescription:
-      "Algorithm-compliant amplification strategies that grow your audience, boost engagement, and build loyal communities — sustainably and at scale.",
-    ctaText: "Accelerate growth",
-    secondaryCta: "View strategy",
-    secondaryCtaAnchor: "#method",
-    sectionTitle: "Multi-Vector Amplification",
-    sectionSubtitle: "Growth Arsenal",
+      "We help you reach the right people and build a real following. No bots, no fake numbers — just real growth for your account.",
+    ctaText: "Start Growing",
+    secondaryCta: "",
+    secondaryCtaAnchor: "",
+    sectionTitle: "How We Grow Your Account",
+    sectionSubtitle: "Engagement Strategy",
     mainFeature: {
       icon: "trending_up",
-      title: "Organic Growth Engineering",
+      title: "Get More People To Your Account",
       description:
-        "We decode platform algorithms and engineer content strategies that trigger organic amplification loops. No bots, no fake engagement — just sophisticated growth mechanics that comply with every platform's terms of service.",
+        "We help you reach the right audience — not just random views.",
       bgIcon: "rocket_launch",
     },
     sideFeature: {
       icon: "analytics",
-      title: "Data-Driven",
+      title: "Build Real Trust",
       description:
-        "Every strategy is backed by deep analytics and real-time performance tracking.",
-      statLabel: "10x Avg. Growth",
-      statIcon: "show_chart",
+        "We make your account look real, credible, and worth following.",
+      statLabel: "",
+      statIcon: "",
     },
     smallFeatures: [
-      { icon: "group", title: "Community Building", description: "Cultivating engaged communities that advocate for your brand organically." },
-      { icon: "campaign", title: "Paid Amplification", description: "Strategic ad spend across platforms with surgical audience targeting." },
-      { icon: "auto_graph", title: "Algorithm Mastery", description: "Content optimization based on real-time algorithm behavior analysis." },
+      { 
+        icon: "group", 
+        title: "Build A Real Audience", 
+        description: "Grow a community that actually cares about your content." 
+      },
+      { 
+        icon: "campaign", 
+        title: "Reach The Right People", 
+        description: "We put you in front of people who are actually interested in what you do." 
+      },
+      { 
+        icon: "auto_graph", 
+        title: "Keep Them Interested", 
+        description: "We help you create a feed that keeps people coming back for more." 
+      },
     ],
-    processTitle: "Systematic Audience Amplification",
-    processSubtitle: "Growth Framework",
+    processTitle: "How It Works",
+    processSubtitle: "Growth Process",
     processSteps: [
-      { number: "01", title: "Audit & Baseline", description: "Comprehensive analysis of current metrics, audience demographics, content performance, and competitive landscape." },
-      { number: "02", title: "Strategy Deployment", description: "Custom growth playbook execution with content calendar, engagement protocols, and paid amplification campaigns." },
-      { number: "03", title: "Scale & Optimize", description: "Continuous performance iteration, A/B testing, and strategy refinement based on real-time data." },
+      {
+        number: "01",
+        title: "Account Audit",
+        description: "We look at your current numbers and see what's working.\nFinding your growth potential."
+      },
+      {
+        number: "02",
+        title: "Start Growing",
+        description: "We reach the right people and start growing your reach.\nNo technical effort from you."
+      },
+      {
+        number: "03",
+        title: "Keep Scaling",
+        description: "We monitor the results and double down on what works.\nConsistent, long-term growth."
+      }
     ],
     imageUrl: "/images/growth.jpg",
-    statValue: "10x",
-    statLabel: "Average Growth",
+    statValue: "Real",
+    statLabel: "Targeted Growth",
     closingTitle: "Ready to",
-    closingHighlight: "Scale?",
-    closingDescription: "Your audience is out there. Let's engineer the growth engine to reach them.",
-    closingCta: "Accelerate Now",
+    closingHighlight: "Grow?",
+    closingDescription: "Your audience is out there. Let's find them today.",
+    closingCta: "Start Growing Now",
   },
 ];
 
@@ -454,55 +520,55 @@ export const serviceCards = [
     icon: "verified",
     title: "Social Media Verification",
     description:
-      "Get verified on major platforms and build real trust with your audience. Stand out, protect your identity, and make your presence official.",
+      "Get verified on major platforms and build real trust with your audience. We handle the full process until your badge is approved.",
   },
   {
     slug: "reputation",
     icon: "shield",
     title: "Reputation Management",
     description:
-      "Curating your digital shadow. We monitor, protect, and enhance your online presence, ensuring only the most prestigious narrative prevails.",
+      "Take control of what people see when they search your name. We remove harmful content and protect your digital image 24/7.",
   },
   {
     slug: "recovery",
     icon: "history",
     title: "Account Recovery",
     description:
-      "Restoring lost assets. Our specialized team utilizes high-level contacts to recover disabled or hacked high-value social profiles swiftly and securely.",
+      "Lost access to your account? We recover hacked or disabled profiles quickly and securely through trusted channels.",
   },
   {
     slug: "username",
     icon: "alternate_email",
     title: "Username Claim",
     description:
-      "Securing digital identity. Claim inactive or trademarked handles that define your brand. We navigate platform policies to deliver the handle you deserve.",
+      "Secure the exact username you need. We use official trademark and platform channels to claim inactive or squatted handles.",
   },
   {
     slug: "branding",
     icon: "auto_awesome",
     title: "Branding",
     description:
-      "Forging sovereign identities. From visual systems to core messaging, we build brands that command respect and radiate premium architectural quality.",
+      "Build a brand that commands respect. We design high-end visual identities that position you as an authority in your space.",
   },
   {
     slug: "webdev",
     icon: "code",
     title: "Website Development",
     description:
-      "High-performance digital vaults. We engineer bespoke, secure, and blazing-fast web experiences tailored for conversion and elite aesthetic impact.",
+      "High-performance digital presence. We engineer fast, secure, and beautiful websites tailored for elite conversion.",
   },
   {
     slug: "pr-media",
     icon: "article",
     title: "PR & Media",
     description:
-      "Mastering the newsroom. Secure features in top-tier publications to build immediate credibility and support verification requirements globally.",
+      "Get featured in prestigious publications. We secure editorial coverage to build credibility and establish your global presence.",
   },
   {
     slug: "growth",
     icon: "trending_up",
     title: "Growth & Engagement",
     description:
-      "Accelerating digital influence. Algorithmic strategies designed to increase your reach, authority, and active community participation sustainably.",
+      "Scale your audience sustainably. Data-driven strategies designed to grow your influence and build loyal communities.",
   },
 ];

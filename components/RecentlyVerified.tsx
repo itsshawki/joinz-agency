@@ -7,7 +7,8 @@ const scrollItems = [...profiles, ...profiles];
 export default function RecentlyVerified() {
   return (
     <section className="py-24 md:py-32 overflow-hidden border-t border-white/5 relative z-10 w-full">
-      <style dangerouslySetInnerHTML={{ __html: `
+      <style dangerouslySetInnerHTML={{
+        __html: `
         @keyframes scrollLeft {
           0% { transform: translateX(0); }
           100% { transform: translateX(-50%); }
@@ -44,10 +45,10 @@ export default function RecentlyVerified() {
         <div className="scroll-track pb-12">
           {scrollItems.map((account, i) => (
             <div key={i} className="flex-shrink-0 m-0 p-0">
-              <a 
-                href={`https://www.tiktok.com/${account.username}`} 
-                target="_blank" 
-                rel="noopener noreferrer" 
+              <a
+                href={`https://www.tiktok.com/${account.username}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex flex-col items-center gap-6 group/item cursor-pointer outline-none"
               >
                 {/* Profile Circle with Premium Glow */}
@@ -65,7 +66,7 @@ export default function RecentlyVerified() {
                       <div className="absolute inset-0 rounded-full shadow-[inset_0_0_20px_rgba(0,0,0,0.5)] pointer-events-none" />
                     </div>
                   </div>
-                  
+
                   {/* Official Verification Badge (Background Removed) */}
                   <div className="absolute bottom-1 right-1 md:bottom-2 md:right-2 scale-100 group-hover/item:scale-125 transition-transform duration-500 z-10">
                     <span className="material-symbols-outlined text-primary text-2xl md:text-3xl block" style={{ fontVariationSettings: "'FILL' 1" }}>
@@ -76,7 +77,7 @@ export default function RecentlyVerified() {
                   {/* Background Glow Effect on Hover */}
                   <div className="absolute -inset-4 bg-primary/20 blur-3xl rounded-full opacity-0 group-hover/item:opacity-100 transition-opacity duration-700 pointer-events-none -z-10" />
                 </div>
-                
+
                 {/* Account Identity */}
                 <div className="text-center transform transition-all duration-500 group-hover/item:translate-y-[-4px]">
                   <h5 className="text-white font-bold text-base md:text-lg mb-1 tracking-tight">

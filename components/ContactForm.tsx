@@ -133,9 +133,9 @@ export default function ContactForm() {
   }
 
   return (
-    <form 
+    <form
       ref={form}
-      onSubmit={handleSubmit} 
+      onSubmit={handleSubmit}
       className="glass-card rounded-2xl p-8 md:p-12 space-y-6"
     >
       {formFields.map((field) => (
@@ -150,17 +150,17 @@ export default function ContactForm() {
             />
           ) : field.type === "select" ? (
             <div className="space-y-4">
-              <input 
-                type="hidden" 
-                name="service" 
-                value={formData.service || ""} 
+              <input
+                type="hidden"
+                name="service"
+                value={formData.service || ""}
               />
-              <input 
-                type="hidden" 
-                name="custom_service" 
-                value={formData.service === "Other" ? formData.custom_service || "" : ""} 
+              <input
+                type="hidden"
+                name="custom_service"
+                value={formData.service === "Other" ? formData.custom_service || "" : ""}
               />
-              
+
               {/* Custom Luxury Dropdown */}
               <div className="relative">
                 <button
@@ -170,8 +170,8 @@ export default function ContactForm() {
                     ${formData.service ? "font-semibold text-white/90" : "font-medium text-on-surface-variant/50"}
                     tracking-wider transition-all duration-300 border-white/5 hover:border-primary/30 focus:border-primary focus:ring-4 focus:ring-primary/5
                   `}
-                  style={{ 
-                    letterSpacing: '0.04em', 
+                  style={{
+                    letterSpacing: '0.04em',
                     lineHeight: '1.5',
                     fontFamily: 'var(--font-body)'
                   }}
@@ -186,8 +186,8 @@ export default function ContactForm() {
 
                 {isDropdownOpen && (
                   <>
-                    <div 
-                      className="fixed inset-0 z-40 cursor-default" 
+                    <div
+                      className="fixed inset-0 z-40 cursor-default"
                       onClick={() => setIsDropdownOpen(false)}
                     />
                     <div className="absolute top-full left-0 right-0 mt-3 z-[100] bg-[#0a0f12] border border-primary/20 rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.8)] py-2 animate-fade-in slide-in-from-top-2">
@@ -196,8 +196,8 @@ export default function ContactForm() {
                           <div
                             key={opt}
                             className={`px-6 py-4 cursor-pointer font-medium text-sm tracking-wide transition-all duration-200
-                              ${formData.service === opt 
-                                ? "bg-primary/10 text-primary" 
+                              ${formData.service === opt
+                                ? "bg-primary/10 text-primary"
                                 : "text-on-surface-variant/80 hover:bg-white/[0.03] hover:text-white"
                               }
                             `}
@@ -215,12 +215,11 @@ export default function ContactForm() {
                 )}
               </div>
 
-              <div 
-                className={`transition-all duration-500 ease-in-out overflow-hidden ${
-                  field.name === "service" && formData.service === "Other" 
-                    ? "max-h-40 opacity-100 mt-4" 
+              <div
+                className={`transition-all duration-500 ease-in-out overflow-hidden ${field.name === "service" && formData.service === "Other"
+                    ? "max-h-40 opacity-100 mt-4"
                     : "max-h-0 opacity-0 mt-0"
-                }`}
+                  }`}
               >
                 <input
                   name="custom_service_input"

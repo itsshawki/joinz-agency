@@ -32,7 +32,6 @@ export default function Counter({ target, label }: CounterProps) {
   }, [hasAnimated]);
 
   const animateCounter = () => {
-    const isNumeric = /^\d+$/.test(target.replace(/[+%]/g, ""));
     const numericMatch = target.match(/\d+/);
     
     if (!numericMatch) {

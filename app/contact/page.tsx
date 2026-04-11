@@ -14,16 +14,13 @@ export default function ContactPage() {
   return (
     <>
       <Hero
-        tagline="Secure Contact"
         title={
           <>
-            Let&apos;s build something{" "}
-            <span className="text-neon">extraordinary</span>
+            Let&apos;s Build Something{" "}
+            <span className="text-neon">Extraordinary</span>
           </>
         }
         description="Ready to elevate your digital presence? Reach out through our secure contact form and a strategist will respond within 24 hours."
-        ctaText="Call now"
-        ctaHref="tel:+1234567890"
       />
 
       <Section>

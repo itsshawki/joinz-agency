@@ -15,7 +15,6 @@ export default function AboutPage() {
   return (
     <>
       <Hero
-        tagline="The Sovereign Architect"
         title={
           <>
             Who We <span className="text-neon">Are</span>
@@ -37,16 +36,16 @@ export default function AboutPage() {
                   Joinz was built on one simple principle control.
                 </p>
                 <p>
-                  In today's digital world, your online presence defines your reputation, opportunities, and influence. We created Joinz to give individuals and brands full control over how they appear, grow, and protect themselves online.
+                  In today&apos;s digital world, your online presence defines your reputation, opportunities, and influence. We created Joinz to give individuals and brands full control over how they appear, grow, and protect themselves online.
                 </p>
                 <p>
-                  Over the years, we've developed a strong network across media platforms, legal channels, and private communication lines that allow us to deliver results beyond traditional methods.
+                  Over the years, we&apos;ve developed a strong network across media platforms, legal channels, and private communication lines that allow us to deliver results beyond traditional methods.
                 </p>
                 <p>
-                  Whether it's securing verification, removing harmful content, or handling sensitive digital issues we operate with discretion, precision, and results-driven execution.
+                  Whether it&apos;s securing verification, removing harmful content, or handling sensitive digital issues we operate with discretion, precision, and results-driven execution.
                 </p>
                 <p>
-                  At Joinz, we don't rely on automated systems or generic support forms. Every case is handled strategically, ensuring the highest success rate possible.
+                  At Joinz, we don&apos;t rely on automated systems or generic support forms. Every case is handled strategically, ensuring the highest success rate possible.
                 </p>
               </div>
             </div>
@@ -63,7 +62,7 @@ export default function AboutPage() {
                 {[
                   { icon: "hexagon", label: "Social Media Verification" },
                   { icon: "auto_awesome", label: "Account Recovery Solutions" },
-                  { icon: "verified", label: "Username Claims & Handle Acquisition" },
+                  { icon: "verified", label: "Username Claims & Account Claiming" },
                   { icon: "token", label: "Reputation Management & Content Removal" },
                   { icon: "security", label: "Press & Media Publishing" },
                   { icon: "trending_up", label: "Growth & Digital Authority Building" },
@@ -104,7 +103,7 @@ export default function AboutPage() {
               What Makes Us Different
             </h2>
             <p className="text-on-surface-variant text-lg mt-4 max-w-2xl">
-              We operate at the edge of what's possible, balancing speed with surgical precision.
+              We operate at the edge of what&apos;s possible, balancing speed with surgical precision.
             </p>
           </div>
         </ScrollReveal>
@@ -144,10 +143,10 @@ export default function AboutPage() {
       </Section>
 
       <ClosingCta
-        title="LET'S BUILD YOUR"
-        highlight="DIGITAL LEGACY"
+        title="Let's Build Your"
+        highlight="Digital Legacy"
         description="Ready to work with a team that treats your brand like a sovereign entity? Let's talk."
-        ctaText="GET IN TOUCH"
+        ctaText="Get in touch"
       />
     </>
   );

@@ -1,7 +1,6 @@
 import Link from "next/link";
 
 interface HeroProps {
-  tagline: string;
   title: React.ReactNode;
   description: string;
   ctaText?: string;
@@ -11,7 +10,6 @@ interface HeroProps {
 }
 
 export default function Hero({
-  tagline,
   title,
   description,
   ctaText,

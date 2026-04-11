@@ -16,35 +16,35 @@ import { serviceCards as originalServiceCards } from "@/lib/services";
 const homeServiceCards = [
   {
     ...originalServiceCards[0],
-    description: "Get the blue badge on all major platforms through official white-glove channels.",
+    description: "Get verified on major platforms and build real trust with your audience. We handle the full process until your badge is approved.",
   },
   {
     ...originalServiceCards[1],
-    description: "Curate your online narrative and remove negative digital footprints effectively.",
+    description: "Take control of what people see when they search your name. We remove harmful content and protect your digital image 24/7.",
   },
   {
     ...originalServiceCards[2],
-    description: "Recover compromised or disabled high-value accounts with specialized support.",
+    description: "Lost access to your account? We recover hacked or disabled profiles quickly and securely through trusted channels.",
   },
   {
     ...originalServiceCards[3],
-    description: "Acquire desired handles that are inactive or held by squatted accounts.",
+    description: "Secure the exact username you need. We use official trademark and platform channels to claim inactive or squatted handles.",
   },
   {
     ...originalServiceCards[4],
-    description: "Visual identity systems designed for the premium digital-first landscape.",
+    description: "Build a brand that commands respect. We design high-end visual identities that position you as an authority in your space.",
   },
   {
     ...originalServiceCards[5],
-    description: "High-performance, immersive web experiences tailored for conversion.",
+    description: "High-performance digital presence. We engineer fast, secure, and beautiful websites tailored for elite conversion.",
   },
   {
     ...originalServiceCards[6],
-    description: "Press placement and editorial coverage in top-tier global publications.",
+    description: "Get featured in prestigious publications. We secure editorial coverage to build credibility and establish your global presence.",
   },
   {
     ...originalServiceCards[7],
-    description: "Data-driven organic growth strategies to scale your digital influence.",
+    description: "Scale your audience sustainably. Data-driven strategies designed to grow your influence and build loyal communities.",
   },
 ];
 
@@ -52,7 +52,6 @@ export default function HomePage() {
   return (
     <>
       <Hero
-        tagline="The Sovereign Architect"
         title={
           <>
             Take Full Control of Your <span className="text-neon">Digital Presence</span>
@@ -169,10 +168,11 @@ export default function HomePage() {
 
       {/* Closing CTA */}
       <ClosingCta
-        title="Ready to build your"
-        highlight="digital legacy?"
+        title="Ready to Build Your"
+        highlight="Digital Legacy?"
         description="Join 500+ elite brands who trust Joinz to architect their digital future."
         ctaText="Explore services"
+        ctaHref="/services"
       />
     </>
   );

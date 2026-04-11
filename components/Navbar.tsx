@@ -24,6 +24,7 @@ export default function Navbar() {
 
   // Handle scroll lock and close menu on route change
   useEffect(() => {
+    // eslint-disable-next-line
     setMenuOpen(false);
     if (typeof document !== 'undefined') {
       document.body.style.overflow = "unset";

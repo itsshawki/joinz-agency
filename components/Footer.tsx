@@ -107,7 +107,7 @@ export default function Footer() {
         {/* Bottom Line */}
         <div className="pt-8 border-t border-white/[0.08]">
           <p className="text-center text-gray-500 text-xs text-balance">
-            © 2022 - 2026 Joinz Agency. Sovereign Architectural Digital Interfaces.
+            © 2022 - 2026 Joinz. All rights reserved.
           </p>
         </div>
       </div>
