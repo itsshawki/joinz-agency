@@ -4,6 +4,7 @@ import Counter from "@/components/Counter";
 import ScrollReveal from "@/components/ScrollReveal";
 import ClosingCta from "@/components/ClosingCta";
 import Section from "@/components/Section";
+import PlatformShowcase from "@/components/PlatformShowcase";
 import { serviceCards as originalServiceCards } from "@/lib/services";
 
 /**
@@ -156,16 +157,13 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Partners Logos (Maintaining structure, text-shadowed) */}
-      <Section>
+      {/* Partners Logos */}
+      <Section className="py-20 relative overflow-hidden">
         <ScrollReveal>
-          <div className="flex flex-wrap justify-center gap-10 md:gap-16">
-            {["VERTEX", "NEXUS", "AXIOM", "CIPHER", "PRISM"].map((name) => (
-              <span key={name} className="partner-logo">
-                {name}
-              </span>
-            ))}
+          <div className="text-center mb-10">
+            <h3 className="text-white/40 text-sm font-bold uppercase tracking-[0.3em]">Supported Platforms</h3>
           </div>
+          <PlatformShowcase />
         </ScrollReveal>
       </Section>
 
