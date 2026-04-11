@@ -20,17 +20,20 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "JOINZ Agency — Sovereign Digital Architecture",
-    template: "%s — JOINZ Agency",
+    default: "Joinz Agency | Digital Authority Agency",
+    template: "%s | Joinz Agency",
   },
-  description:
-    "A cyber-elite creative agency dedicated to precision engineering and editorial design mastery. We don't just build websites; we construct digital legacies.",
+  description: "We help brands and creators get verified, protect their reputation, and build powerful digital authority across all major platforms.",
   openGraph: {
-    title: "JOINZ Agency — Sovereign Digital Architecture",
-    description:
-      "A cyber-elite creative agency dedicated to precision engineering and editorial design mastery.",
+    title: "Joinz Agency | Digital Authority Agency",
+    description: "We help brands and creators get verified, protect their reputation, and build powerful digital authority across all major platforms.",
+    url: "https://joinz.agency",
+    siteName: "Joinz Agency",
     type: "website",
     locale: "en_US",
+  },
+  icons: {
+    icon: "/favicon.ico",
   },
 };
 
