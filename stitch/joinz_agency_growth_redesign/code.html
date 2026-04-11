@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cyber-Elite | Growth Architecture</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Manrope:wght@700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#6f777a",
+                        "on-primary-container": "#003828",
+                        "error": "#ff716c",
+                        "surface-bright": "#232e32",
+                        "error-dim": "#d7383b",
+                        "background": "#080f12",
+                        "on-error-container": "#ffa8a3",
+                        "tertiary-dim": "#00c7ec",
+                        "primary-fixed": "#64ffca",
+                        "error-container": "#9f0519",
+                        "surface-container-high": "#182125",
+                        "tertiary-fixed-dim": "#00c7ec",
+                        "surface-dim": "#080f12",
+                        "on-primary-fixed-variant": "#006b4f",
+                        "primary-container": "#06c897",
+                        "secondary-container": "#1c3a44",
+                        "on-background": "#f1f7fc",
+                        "inverse-primary": "#006c51",
+                        "on-secondary-fixed": "#26434e",
+                        "on-surface-variant": "#a5acb0",
+                        "primary": "#16cc9b",
+                        "surface-container-lowest": "#000000",
+                        "on-tertiary": "#004f5f",
+                        "tertiary-fixed": "#00d5fe",
+                        "secondary-fixed": "#c8e8f4",
+                        "inverse-on-surface": "#4f565a",
+                        "on-tertiary-fixed": "#002f39",
+                        "on-primary-fixed": "#004b37",
+                        "on-error": "#490006",
+                        "tertiary": "#73e0ff",
+                        "surface-tint": "#16cc9b",
+                        "outline-variant": "#42494c",
+                        "on-secondary-container": "#b6d5e2",
+                        "tertiary-container": "#00d5fe",
+                        "on-tertiary-fixed-variant": "#004e5f",
+                        "secondary-dim": "#bad9e6",
+                        "on-primary": "#005f46",
+                        "primary-fixed-dim": "#53f0bd",
+                        "inverse-surface": "#f3fafe",
+                        "secondary-fixed-dim": "#bad9e6",
+                        "surface-variant": "#1d272b",
+                        "surface-container-low": "#0d1418",
+                        "on-tertiary-container": "#004553",
+                        "on-secondary-fixed-variant": "#43606b",
+                        "surface": "#080f12",
+                        "on-secondary": "#395660",
+                        "surface-container-highest": "#1d272b",
+                        "on-surface": "#f1f7fc",
+                        "secondary": "#c8e8f4",
+                        "primary-dim": "#53f0bd",
+                        "surface-container": "#121b1e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(28, 58, 68, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glow-button {
+            box-shadow: 0 0 20px rgba(22, 204, 155, 0.3);
+        }
+        .curved-line {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            opacity: 0.3;
+        }
+        .bg-mesh {
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(22, 204, 155, 0.05) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(22, 204, 155, 0.05) 0px, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#080f12]/80 backdrop-blur-xl shadow-[0_4px_30px_rgba(22,204,155,0.05)]">
+<div class="flex justify-between items-center px-8 py-6 max-w-[1440px] mx-auto">
+<div class="text-2xl font-bold tracking-tighter text-white font-headline">Cyber-Elite</div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="font-headline font-bold tracking-tight text-[#a5acb0] hover:text-white transition-colors" href="#">Work</a>
+<a class="font-headline font-bold tracking-tight text-[#a5acb0] hover:text-white transition-colors" href="#">Expertise</a>
+<a class="font-headline font-bold tracking-tight text-[#16cc9b] border-b-2 border-[#16cc9b] pb-1" href="#">DNA</a>
+<a class="font-headline font-bold tracking-tight text-[#a5acb0] hover:text-white transition-colors" href="#">The Vault</a>
+</div>
+<button class="bg-primary text-on-primary-container font-headline font-bold tracking-tight px-6 py-2.5 rounded-full glow-button hover:opacity-80 transition-all duration-300 scale-95 active:scale-90">
+                Secure Access
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-24 overflow-hidden bg-mesh">
+<!-- Background Abstract Lines -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none opacity-20" xmlns="http://www.w3.org/2000/svg">
+<path d="M-100 800 C 200 600, 600 900, 1500 500" fill="none" stroke="#16cc9b" stroke-width="0.5"></path>
+<path d="M-100 400 C 400 300, 800 600, 1600 200" fill="none" stroke="#16cc9b" stroke-width="0.5"></path>
+</svg>
+<div class="container mx-auto px-8 relative z-10">
+<div class="max-w-5xl">
+<p class="text-primary font-label tracking-[0.2em] mb-6 uppercase">Growth Engineering Protocol</p>
+<h1 class="text-6xl md:text-8xl font-headline font-extrabold tracking-tighter mb-8 leading-[0.9]">
+                    ACCELERATE YOUR <br/>
+<span class="text-primary">DIGITAL DOMINANCE</span>
+</h1>
+<p class="text-on-surface-variant text-xl max-w-2xl mb-12 leading-relaxed">
+                    Scale your agency with sovereign growth strategies that leverage precision data and elite digital architecture. We don't just grow; we dominate.
+                </p>
+<div class="flex flex-col sm:flex-row gap-6">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary-container font-bold px-10 py-4 rounded-full glow-button hover:scale-105 transition-transform">
+                        Initiate Growth Protocol
+                    </button>
+<button class="border border-outline-variant/30 text-white font-bold px-10 py-4 rounded-full backdrop-blur-sm hover:bg-white/5 transition-colors">
+                        View Intelligence Report
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Metrics Bento Grid -->
+<section class="py-24 bg-surface-container-low relative">
+<div class="container mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Large Metric Card -->
+<div class="md:col-span-2 glass-card rounded-2xl p-12 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-6">trending_up</span>
+<h2 class="text-4xl font-headline font-bold mb-4">Scalability Matrix</h2>
+<p class="text-on-surface-variant text-lg">Systematic expansion of your digital footprint across high-intent search environments.</p>
+</div>
+<div class="mt-12 grid grid-cols-2 gap-8">
+<div>
+<p class="text-5xl font-headline font-extrabold text-primary">+240%</p>
+<p class="text-sm font-label uppercase tracking-widest mt-2">Conversion Lift</p>
+</div>
+<div>
+<p class="text-5xl font-headline font-extrabold text-primary">12ms</p>
+<p class="text-sm font-label uppercase tracking-widest mt-2">Latency Reduction</p>
+</div>
+</div>
+</div>
+<!-- Vertical Card -->
+<div class="glass-card rounded-2xl p-8 border-t-2 border-primary/20">
+<div class="h-48 mb-6 overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover opacity-60" data-alt="abstract data visualization with glowing green lines and digital interface elements on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQIwmFtaWyEkVUXKulJMWVHR0qrQqb1l_WGvXZ0aj17ShlNdEh6UcA-nuNocuL4jitUdowEKqG8HGpoN2y3TiIxM7WfgLTbL1NFTl5bBMYrCCtrfXse0MDjabUD6z91z3yWWUpNzgrMFTiWw9ornSJwdGVLjQ21rE3Yt6NM6zBkvpOUQUx48OirweaNPQUGVSNdxTMWNy_ClzkD0QogcPwtXblIQLVT6hXq6Uvh_2xoLM55mz8A3a67FuXwomip3GBg3aeQncxwA"/>
+</div>
+<h3 class="text-2xl font-headline font-bold mb-4">Identity Security</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                        Protecting your brand sovereignty while expanding reach into elite markets and untethered demographics.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Services Grid -->
+<section class="py-32 bg-surface">
+<div class="container mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-2xl">
+<p class="text-primary font-label tracking-[0.2em] mb-4 uppercase">Operational Core</p>
+<h2 class="text-5xl font-headline font-bold leading-tight">Elite Performance Units</h2>
+</div>
+<p class="text-on-surface-variant max-w-sm mb-2">
+                    Every service is a component of a larger sovereign ecosystem designed for total market capture.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Service Card 1 -->
+<div class="group bg-surface-container rounded-2xl p-8 hover:bg-surface-variant transition-colors duration-500 border border-transparent hover:border-primary/20">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary">data_thresholding</span>
+</div>
+<h4 class="text-xl font-headline font-bold mb-4">Traffic Acquisition</h4>
+<p class="text-on-surface-variant text-sm mb-8 leading-relaxed">High-frequency algorithmic targeting to capture top-tier user intent across all search vectors.</p>
+<a class="text-primary text-xs font-bold uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
+                        Deploy Protocol <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Service Card 2 -->
+<div class="group bg-surface-container rounded-2xl p-8 hover:bg-surface-variant transition-colors duration-500 border border-transparent hover:border-primary/20">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary">query_stats</span>
+</div>
+<h4 class="text-xl font-headline font-bold mb-4">Conversion Logic</h4>
+<p class="text-on-surface-variant text-sm mb-8 leading-relaxed">Advanced UI/UX patterns engineered to minimize friction and maximize high-value user actions.</p>
+<a class="text-primary text-xs font-bold uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
+                        Optimize Funnel <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Service Card 3 -->
+<div class="group bg-surface-container rounded-2xl p-8 hover:bg-surface-variant transition-colors duration-500 border border-transparent hover:border-primary/20">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary">hub</span>
+</div>
+<h4 class="text-xl font-headline font-bold mb-4">Market Expansion</h4>
+<p class="text-on-surface-variant text-sm mb-8 leading-relaxed">Identifying untapped digital territories and establishing brand dominance through rapid deployment.</p>
+<a class="text-primary text-xs font-bold uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
+                        Expand Reach <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Service Card 4 -->
+<div class="group bg-surface-container rounded-2xl p-8 hover:bg-surface-variant transition-colors duration-500 border border-transparent hover:border-primary/20">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary">security</span>
+</div>
+<h4 class="text-xl font-headline font-bold mb-4">Brand Integrity</h4>
+<p class="text-on-surface-variant text-sm mb-8 leading-relaxed">Encryption-grade consistency across all touchpoints ensuring your reputation remains unbreachable.</p>
+<a class="text-primary text-xs font-bold uppercase tracking-widest flex items-center gap-2 group-hover:gap-4 transition-all" href="#">
+                        Secure Brand <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-32 bg-surface-container-low">
+<div class="container mx-auto px-8">
+<div class="text-center mb-24">
+<p class="text-primary font-label tracking-[0.2em] mb-4 uppercase">The Methodology</p>
+<h2 class="text-5xl font-headline font-bold">Protocol Lifecycle</h2>
+</div>
+<div class="relative max-w-6xl mx-auto">
+<!-- Connecting Line -->
+<div class="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent hidden lg:block"></div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+<!-- Step 1 -->
+<div class="relative flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full glass-card flex items-center justify-center mb-8 z-10 border-primary/40 text-primary font-headline font-bold text-xl">
+                            01
+                        </div>
+<h5 class="text-xl font-headline font-bold mb-3">Reconnaissance</h5>
+<p class="text-on-surface-variant text-sm leading-relaxed">Deep analysis of competitive vectors and audience metadata.</p>
+</div>
+<!-- Step 2 -->
+<div class="relative flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full glass-card flex items-center justify-center mb-8 z-10 border-primary/40 text-primary font-headline font-bold text-xl">
+                            02
+                        </div>
+<h5 class="text-xl font-headline font-bold mb-3">Architecting</h5>
+<p class="text-on-surface-variant text-sm leading-relaxed">Engineering the bespoke growth structure for your specific niche.</p>
+</div>
+<!-- Step 3 -->
+<div class="relative flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full glass-card flex items-center justify-center mb-8 z-10 border-primary/40 text-primary font-headline font-bold text-xl">
+                            03
+                        </div>
+<h5 class="text-xl font-headline font-bold mb-3">Execution</h5>
+<p class="text-on-surface-variant text-sm leading-relaxed">Precision launch of targeted campaigns across high-value channels.</p>
+</div>
+<!-- Step 4 -->
+<div class="relative flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full glass-card flex items-center justify-center mb-8 z-10 border-primary/40 text-primary font-headline font-bold text-xl">
+                            04
+                        </div>
+<h5 class="text-xl font-headline font-bold mb-3">Ascension</h5>
+<p class="text-on-surface-variant text-sm leading-relaxed">Continuous algorithmic refining for sustained exponential growth.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA Section -->
+<section class="py-40 bg-surface relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/5 to-transparent"></div>
+<div class="container mx-auto px-8 relative z-10">
+<div class="max-w-4xl mx-auto glass-card rounded-[3rem] p-16 text-center border-primary/10">
+<h2 class="text-5xl md:text-6xl font-headline font-extrabold tracking-tighter mb-8">
+                    READY TO RECLAIM YOUR <br/>
+<span class="text-primary italic">DIGITAL SOVEREIGNTY?</span>
+</h2>
+<p class="text-on-surface-variant text-lg mb-12 max-w-2xl mx-auto leading-relaxed">
+                    Access elite-level growth engineering and architectural precision. The vault is open. Your evolution starts now.
+                </p>
+<div class="flex justify-center">
+<button class="bg-primary text-on-primary-container font-headline font-extrabold text-lg px-12 py-5 rounded-full glow-button hover:scale-105 transition-transform flex items-center gap-3">
+                        REQUEST ACCESS PROTOCOL
+                        <span class="material-symbols-outlined">encrypted</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full border-t border-[#42494c]/15 bg-[#000000]">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-12 w-full gap-8 max-w-[1440px] mx-auto">
+<div class="flex flex-col gap-4">
+<div class="text-lg font-black text-white font-headline">Cyber-Elite</div>
+<div class="font-['Inter'] text-xs font-bold tracking-[0.1em] uppercase text-[#a5acb0]">© 2024 SOVEREIGN ARCHITECT. ALL PROTOCOLS RESERVED.</div>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Inter'] text-xs font-bold tracking-[0.1em] uppercase text-[#a5acb0] hover:text-[#16cc9b] transition-colors duration-500" href="#">Security Protocol</a>
+<a class="font-['Inter'] text-xs font-bold tracking-[0.1em] uppercase text-[#a5acb0] hover:text-[#16cc9b] transition-colors duration-500" href="#">Legal Vault</a>
+<a class="font-['Inter'] text-xs font-bold tracking-[0.1em] uppercase text-[#a5acb0] hover:text-[#16cc9b] transition-colors duration-500" href="#">Encryption Standards</a>
+<a class="font-['Inter'] text-xs font-bold tracking-[0.1em] uppercase text-[#a5acb0] hover:text-[#16cc9b] transition-colors duration-500" href="#">Privacy Architecture</a>
+</div>
+</div>
+</footer>
+</body></html>

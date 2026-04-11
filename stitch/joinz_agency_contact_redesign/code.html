@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact | Joinz Agency</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "tertiary-fixed-dim": "#00c7ec",
+                "on-secondary-fixed-variant": "#43606b",
+                "secondary-fixed-dim": "#bad9e6",
+                "on-primary-fixed": "#004b37",
+                "tertiary-container": "#00d5fe",
+                "inverse-on-surface": "#4f565a",
+                "on-primary-container": "#003828",
+                "on-secondary-container": "#b6d5e2",
+                "on-surface-variant": "#a5acb0",
+                "on-tertiary": "#004f5f",
+                "surface-container-low": "#0d1418",
+                "surface-container": "#121b1e",
+                "on-error": "#490006",
+                "on-surface": "#f1f7fc",
+                "secondary-dim": "#bad9e6",
+                "on-tertiary-fixed-variant": "#004e5f",
+                "on-tertiary-fixed": "#002f39",
+                "inverse-surface": "#f3fafe",
+                "secondary-fixed": "#c8e8f4",
+                "primary-dim": "#53f0bd",
+                "secondary": "#c8e8f4",
+                "primary": "#64ffca",
+                "tertiary": "#73e0ff",
+                "on-secondary": "#395660",
+                "on-secondary-fixed": "#26434e",
+                "on-background": "#f1f7fc",
+                "surface-container-high": "#182125",
+                "surface-tint": "#64ffca",
+                "surface-variant": "#1d272b",
+                "on-tertiary-container": "#004553",
+                "secondary-container": "#2e4b55",
+                "tertiary-dim": "#00c7ec",
+                "outline-variant": "#42494c",
+                "error-container": "#9f0519",
+                "surface": "#080f12",
+                "outline": "#6f777a",
+                "surface-container-highest": "#1d272b",
+                "error": "#ff716c",
+                "background": "#080f12",
+                "surface-dim": "#080f12",
+                "primary-container": "#06c897",
+                "on-error-container": "#ffa8a3",
+                "error-dim": "#d7383b",
+                "on-primary": "#005f46",
+                "surface-bright": "#232e32",
+                "tertiary-fixed": "#00d5fe",
+                "inverse-primary": "#006c51",
+                "on-primary-fixed-variant": "#006b4f",
+                "primary-fixed-dim": "#53f0bd",
+                "surface-container-lowest": "#000000",
+                "primary-fixed": "#64ffca"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "fontFamily": {
+                "headline": ["Manrope"],
+                "body": ["Inter"],
+                "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-panel {
+            background: rgba(28, 58, 68, 0.6);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .cyber-glow {
+            box-shadow: 0 0 40px rgba(22, 204, 155, 0.15);
+        }
+        .abstract-line {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, transparent 0%, transparent 100%);
+            border: 0.5px solid rgba(22, 204, 155, 0.1);
+            border-radius: 100%;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#080f12]/80 backdrop-blur-xl shadow-[0_0_40px_rgba(22,204,155,0.05)]">
+<div class="flex justify-between items-center px-8 py-6 max-w-[1440px] mx-auto">
+<div class="text-xl font-bold tracking-tighter text-white font-headline">Joinz Agency</div>
+<div class="hidden md:flex items-center space-x-8 font-headline font-bold tracking-tight">
+<a class="text-[#a5acb0] hover:text-white transition-colors" href="#">Work</a>
+<a class="text-[#a5acb0] hover:text-white transition-colors" href="#">Expertise</a>
+<a class="text-[#a5acb0] hover:text-white transition-colors" href="#">DNA</a>
+<a class="text-[#a5acb0] hover:text-white transition-colors" href="#">The Vault</a>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full active:scale-95 duration-200 hover:bg-primary transition-all shadow-[0_0_20px_rgba(22,204,155,0.3)]">
+                    Secure Access
+                </button>
+</div>
+<!-- Mobile Toggle Placeholder -->
+<div class="md:hidden">
+<span class="material-symbols-outlined text-primary">menu</span>
+</div>
+</div>
+</nav>
+<main class="relative pt-32 pb-24 overflow-hidden">
+<!-- Abstract Background Elements -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-[150%] h-[150%] abstract-line rotate-12 -translate-y-1/2 opacity-30"></div>
+<div class="absolute bottom-0 right-0 w-[80%] h-[80%] abstract-line -rotate-45 translate-x-1/4 translate-y-1/4 opacity-20"></div>
+<div class="max-w-[1440px] mx-auto px-8 relative z-10">
+<!-- Hero Section -->
+<div class="mb-20 max-w-4xl">
+<p class="text-primary font-label font-bold uppercase tracking-[0.2em] mb-4">Contact Protocol</p>
+<h1 class="font-headline font-extrabold text-6xl md:text-8xl tracking-tight leading-[0.9] mb-8">
+                    LET'S BUILD THE <span class="text-primary">SOVEREIGN</span> FUTURE.
+                </h1>
+<p class="text-on-surface-variant text-xl md:text-2xl max-w-2xl leading-relaxed">
+                    The architect of your digital dominance is one message away. Secure your position in the next generation of digital excellence.
+                </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<!-- Contact Form Section -->
+<div class="lg:col-span-7">
+<div class="glass-panel p-8 md:p-12 rounded-[2rem] cyber-glow">
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-widest px-1">Identity Name</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-xl py-4 px-6 text-on-surface focus:ring-1 focus:ring-primary transition-all placeholder:text-outline-variant" placeholder="Your Name" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-widest px-1">Neural Email</label>
+<input class="w-full bg-surface-container-lowest border-none rounded-xl py-4 px-6 text-on-surface focus:ring-1 focus:ring-primary transition-all placeholder:text-outline-variant" placeholder="email@address.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-widest px-1">Interest Protocol</label>
+<select class="w-full bg-surface-container-lowest border-none rounded-xl py-4 px-6 text-on-surface focus:ring-1 focus:ring-primary transition-all appearance-none">
+<option>Select Service</option>
+<option>Web Architecture</option>
+<option>Cyber Branding</option>
+<option>Neural Interface Design</option>
+<option>Growth Security</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold text-on-surface-variant uppercase tracking-widest px-1">Message Transmission</label>
+<textarea class="w-full bg-surface-container-lowest border-none rounded-xl py-4 px-6 text-on-surface focus:ring-1 focus:ring-primary transition-all placeholder:text-outline-variant resize-none" placeholder="Detailed project scope..." rows="5"></textarea>
+</div>
+<button class="w-full bg-primary-container hover:bg-primary text-on-primary-container font-headline font-bold py-5 rounded-full transition-all duration-300 transform active:scale-[0.98] shadow-[0_10px_30px_rgba(22,204,155,0.2)] flex items-center justify-center gap-3" type="submit">
+                                Initialize Connection
+                                <span class="material-symbols-outlined text-xl">send</span>
+</button>
+</form>
+</div>
+</div>
+<!-- Contact Info/Details -->
+<div class="lg:col-span-5 space-y-8">
+<div class="grid grid-cols-1 gap-6">
+<!-- Info Card 1 -->
+<div class="bg-surface-container p-8 rounded-3xl group hover:bg-surface-variant transition-colors duration-300">
+<div class="flex items-start gap-6">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="alternate_email">alternate_email</span>
+</div>
+<div>
+<h4 class="text-on-surface font-headline font-bold text-lg mb-1">Direct Uplink</h4>
+<p class="text-on-surface-variant mb-4">Our neural network is always monitoring.</p>
+<a class="text-primary font-bold hover:underline" href="mailto:hello@joinz.agency">hello@joinz.agency</a>
+</div>
+</div>
+</div>
+<!-- Info Card 2 -->
+<div class="bg-surface-container p-8 rounded-3xl group hover:bg-surface-variant transition-colors duration-300">
+<div class="flex items-start gap-6">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+</div>
+<div>
+<h4 class="text-on-surface font-headline font-bold text-lg mb-1">HQ Coordinates</h4>
+<p class="text-on-surface-variant mb-2">Global distribution, centered in high-tier hubs.</p>
+<p class="text-white font-medium">Remote First / Global Agency</p>
+</div>
+</div>
+</div>
+<!-- Info Card 3 (Socials) -->
+<div class="bg-surface-container p-8 rounded-3xl">
+<h4 class="text-on-surface font-headline font-bold text-lg mb-6">Neural Social Links</h4>
+<div class="flex gap-4">
+<a class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</a>
+<a class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="public">public</span>
+</a>
+<a class="w-12 h-12 rounded-full bg-surface-container-highest flex items-center justify-center text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="terminal">terminal</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Visual Accent Card -->
+<div class="relative h-64 rounded-3xl overflow-hidden cyber-glow">
+<img class="absolute inset-0 w-full h-full object-cover grayscale brightness-50" data-alt="abstract digital connection network with glowing green data lines on a deep black space background cinematic style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgtl0p-NXvyryETUDMQdV91mtoFuUVWujW4kZzXCd8ZQv_fhMPlu3IiBUfJl36c13JhPoSt627hBHph5PqUVugwLQcQqHYoQ-gnFLK04QKowJiMLcqC7RnZPgnhvqXO0U9ameWazfVuosZPz8ZzUzE6NarvpSC2-c1AVSJ6Gd3dfCU4vakZgUD4CfiqLvwvwVrxeHcOl8ddkkpKW2WKekoBym2pwYpxMDPyOSwiLt0ktQTmlOtk1_ijV2S2NtMngvPSFBZObbmFQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface to-transparent"></div>
+<div class="absolute bottom-6 left-6">
+<p class="text-primary font-label text-[10px] uppercase tracking-widest mb-1">Status: Online</p>
+<p class="text-white font-bold text-xl">Sovereign Architecture Ready.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-white/5 bg-[#080f12]">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 w-full max-w-[1440px] mx-auto">
+<div class="mb-8 md:mb-0">
+<div class="text-lg font-black text-white mb-2 font-headline">Joinz Agency</div>
+<p class="text-[#a5acb0] font-body text-sm tracking-wide">© 2024 Joinz Agency. The Sovereign Architect.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8 font-body text-sm tracking-wide">
+<a class="text-[#a5acb0] hover:text-[#16cc9b] transition-colors" href="#">Privacy Protocol</a>
+<a class="text-[#a5acb0] hover:text-[#16cc9b] transition-colors" href="#">Security Terms</a>
+<a class="text-[#a5acb0] hover:text-[#16cc9b] transition-colors" href="#">Neural Interface</a>
+</div>
+</div>
+</footer>
+</body></html>

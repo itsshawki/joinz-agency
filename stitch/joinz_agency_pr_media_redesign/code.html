@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PR &amp; Media | Cyber-Elite</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#00d5fe",
+                        "background": "#080f12",
+                        "on-tertiary": "#004f5f",
+                        "on-primary-fixed-variant": "#006b4f",
+                        "surface": "#080f12",
+                        "on-error": "#490006",
+                        "on-primary-fixed": "#004b37",
+                        "surface-container-high": "#182125",
+                        "on-primary-container": "#003828",
+                        "error-dim": "#d7383b",
+                        "surface-variant": "#1d272b",
+                        "tertiary-container": "#00d5fe",
+                        "on-secondary-fixed": "#26434e",
+                        "primary-dim": "#53f0bd",
+                        "primary": "#64ffca",
+                        "surface-container-low": "#0d1418",
+                        "surface-tint": "#64ffca",
+                        "on-secondary": "#395660",
+                        "on-primary": "#005f46",
+                        "secondary": "#c8e8f4",
+                        "on-error-container": "#ffa8a3",
+                        "on-secondary-container": "#b6d5e2",
+                        "surface-container-lowest": "#000000",
+                        "error-container": "#9f0519",
+                        "on-tertiary-fixed-variant": "#004e5f",
+                        "on-surface": "#f1f7fc",
+                        "on-secondary-fixed-variant": "#43606b",
+                        "outline-variant": "#42494c",
+                        "tertiary-dim": "#00c7ec",
+                        "surface-dim": "#080f12",
+                        "tertiary": "#73e0ff",
+                        "inverse-surface": "#f3fafe",
+                        "surface-bright": "#232e32",
+                        "secondary-fixed": "#c8e8f4",
+                        "outline": "#6f777a",
+                        "tertiary-fixed-dim": "#00c7ec",
+                        "secondary-fixed-dim": "#bad9e6",
+                        "secondary-dim": "#bad9e6",
+                        "inverse-on-surface": "#4f565a",
+                        "on-surface-variant": "#a5acb0",
+                        "on-tertiary-fixed": "#002f39",
+                        "secondary-container": "#2e4b55",
+                        "surface-container": "#121b1e",
+                        "on-background": "#f1f7fc",
+                        "primary-fixed-dim": "#53f0bd",
+                        "on-tertiary-container": "#004553",
+                        "inverse-primary": "#006c51",
+                        "primary-fixed": "#64ffca",
+                        "surface-container-highest": "#1d272b",
+                        "primary-container": "#06c897",
+                        "error": "#ff716c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(29, 39, 43, 0.6);
+            backdrop-filter: blur(16px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(100, 255, 202, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar (Shared Component) -->
+<nav class="fixed top-0 w-full z-50 bg-[#080f12]/80 backdrop-blur-xl flex justify-between items-center px-12 py-6 max-w-[1920px] mx-auto shadow-[0_40px_40px_rgba(22,204,155,0.05)]">
+<div class="text-xl font-bold tracking-tighter text-white">Cyber-Elite</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-manrope font-bold text-sm tracking-tight text-[#16cc9b] border-b-2 border-[#16cc9b] pb-1 hover:text-white transition-colors duration-300" href="#">Solutions</a>
+<a class="font-manrope font-bold text-sm tracking-tight text-[#a5acb0] hover:text-white transition-colors duration-300" href="#">Architecture</a>
+<a class="font-manrope font-bold text-sm tracking-tight text-[#a5acb0] hover:text-white transition-colors duration-300" href="#">Intel</a>
+<a class="font-manrope font-bold text-sm tracking-tight text-[#a5acb0] hover:text-white transition-colors duration-300" href="#">About</a>
+</div>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-bold text-sm hover:scale-95 active:opacity-80 transition-transform">
+            Secure Portal
+        </button>
+</nav>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="relative px-12 pb-24 overflow-hidden">
+<!-- Abstract background curved lines -->
+<svg class="absolute top-0 right-0 w-1/2 h-full opacity-20 pointer-events-none" fill="none" viewbox="0 0 500 500">
+<path d="M500 0C500 276.142 276.142 500 0 500" stroke="#16cc9b" stroke-width="0.5"></path>
+<path d="M500 100C500 376.142 376.142 600 100 600" stroke="#16cc9b" stroke-width="0.5"></path>
+</svg>
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-8 space-y-8">
+<span class="inline-block px-4 py-1.5 rounded-full bg-secondary-container/30 border border-outline-variant/15 font-label text-[0.75rem] uppercase tracking-[0.1em] text-primary">Strategic Influence</span>
+<h1 class="font-headline text-[3.5rem] leading-[1.1] font-extrabold tracking-[-0.02em] uppercase">
+                        Master the Narrative with <span class="text-primary text-glow">PR &amp; Media</span> Sovereignty
+                    </h1>
+<p class="text-on-surface-variant text-lg max-w-2xl leading-relaxed">
+                        We don't just pitch stories; we architect authority. Our PR &amp; Media services position your brand at the center of the global conversation through precision outreach and elite media placement.
+                    </p>
+<div class="flex items-center gap-6">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold px-8 py-4 rounded-full shadow-[0_10px_40px_rgba(100,255,202,0.2)] hover:scale-105 transition-transform">
+                            Request Strategic Brief
+                        </button>
+<button class="flex items-center gap-2 text-primary font-bold hover:gap-4 transition-all group">
+                            Explore Case Studies
+                            <span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="lg:col-span-4 relative group">
+<div class="absolute -inset-4 bg-primary/10 blur-3xl rounded-full opacity-50 group-hover:opacity-75 transition-opacity"></div>
+<div class="relative glass-card rounded-2xl overflow-hidden aspect-[4/5]">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="Professional media broadcast studio with neon green lighting and high-tech equipment in a dark sleek environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC44RxFcRwYdk1ae5VM27NojsGfW--4RyBms3mW4KfdTs4Ph2GTrF6ssxP4-5AHl9Jfva8WD7n-sn1Y6QUjMLmPKaS6JssYHxAW_5JOrboUsdb3tyWbVCjJqU1xJdvxnER4i2_YmofQnSVujW4Ay3SZVGbwGjtoPUbUoJa7lEugKSz4OH4EUoI7rmAbKeciXnDzf_rPBDJ9j7g49-ZlCF1MAhHd00OxeEe7wVfXi9cGbsTlGh4p42kdPHfI-A2FViwCTJ0Q05x6tg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Media/Authority Section -->
+<section class="bg-surface-container py-24 px-12">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<p class="font-label text-xs uppercase tracking-[0.2em] text-on-surface-variant mb-4">Elite Network</p>
+<h2 class="font-headline text-3xl font-bold">Featured in Major Platforms</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="glass-card p-8 flex items-center justify-center rounded-xl grayscale hover:grayscale-0 transition-all duration-500 border border-white/5">
+<span class="text-2xl font-bold opacity-40">FORBES</span>
+</div>
+<div class="glass-card p-8 flex items-center justify-center rounded-xl grayscale hover:grayscale-0 transition-all duration-500 border border-white/5">
+<span class="text-2xl font-bold opacity-40">BLOOMBERG</span>
+</div>
+<div class="glass-card p-8 flex items-center justify-center rounded-xl grayscale hover:grayscale-0 transition-all duration-500 border border-white/5">
+<span class="text-2xl font-bold opacity-40">TECHCRUNCH</span>
+</div>
+<div class="glass-card p-8 flex items-center justify-center rounded-xl grayscale hover:grayscale-0 transition-all duration-500 border border-white/5">
+<span class="text-2xl font-bold opacity-40">REUTERS</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Breakdown -->
+<section class="py-32 px-12 relative overflow-hidden">
+<!-- Decorative accent -->
+<div class="absolute -left-20 top-1/4 w-40 h-40 bg-primary/5 blur-[100px] rounded-full"></div>
+<div class="max-w-7xl mx-auto">
+<div class="mb-20 max-w-2xl">
+<h2 class="font-headline text-4xl font-bold mb-6">Strategic Media Infrastructure</h2>
+<p class="text-on-surface-variant text-lg">Our comprehensive suite of PR tools is designed to secure maximum visibility and establish unshakeable credibility.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group p-8 rounded-2xl bg-surface-container-high transition-all duration-300 hover:bg-secondary-container/20 border border-transparent hover:border-primary/20 hover:shadow-[0_20px_50px_rgba(22,204,155,0.08)]">
+<div class="mb-6 w-12 h-12 flex items-center justify-center rounded-lg bg-surface-variant text-primary border border-primary/20">
+<span class="material-symbols-outlined text-[28px]">newsmode</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-4">Media Relations</h3>
+<p class="text-on-surface-variant leading-relaxed">Direct access to top-tier journalists, editors, and industry influencers to secure organic coverage.</p>
+</div>
+<!-- Card 2 -->
+<div class="group p-8 rounded-2xl bg-surface-container-high transition-all duration-300 hover:bg-secondary-container/20 border border-transparent hover:border-primary/20 hover:shadow-[0_20px_50px_rgba(22,204,155,0.08)]">
+<div class="mb-6 w-12 h-12 flex items-center justify-center rounded-lg bg-surface-variant text-primary border border-primary/20">
+<span class="material-symbols-outlined text-[28px]">record_voice_over</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-4">Thought Leadership</h3>
+<p class="text-on-surface-variant leading-relaxed">Crafting and placing expert commentary and op-eds to position your executives as the definitive voices.</p>
+</div>
+<!-- Card 3 -->
+<div class="group p-8 rounded-2xl bg-surface-container-high transition-all duration-300 hover:bg-secondary-container/20 border border-transparent hover:border-primary/20 hover:shadow-[0_20px_50px_rgba(22,204,155,0.08)]">
+<div class="mb-6 w-12 h-12 flex items-center justify-center rounded-lg bg-surface-variant text-primary border border-primary/20">
+<span class="material-symbols-outlined text-[28px]">campaign</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-4">Strategic Press Releases</h3>
+<p class="text-on-surface-variant leading-relaxed">Impactful distribution of mission-critical news to high-traffic outlets and premium news wires.</p>
+</div>
+<!-- Card 4 -->
+<div class="group p-8 rounded-2xl bg-surface-container-high transition-all duration-300 hover:bg-secondary-container/20 border border-transparent hover:border-primary/20 hover:shadow-[0_20px_50px_rgba(22,204,155,0.08)]">
+<div class="mb-6 w-12 h-12 flex items-center justify-center rounded-lg bg-surface-variant text-primary border border-primary/20">
+<span class="material-symbols-outlined text-[28px]">crisis_alert</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-4">Crisis Management</h3>
+<p class="text-on-surface-variant leading-relaxed">Protective communication strategies to mitigate reputation risks and maintain narrative control.</p>
+</div>
+<!-- Card 5 -->
+<div class="group p-8 rounded-2xl bg-surface-container-high transition-all duration-300 hover:bg-secondary-container/20 border border-transparent hover:border-primary/20 hover:shadow-[0_20px_50px_rgba(22,204,155,0.08)]">
+<div class="mb-6 w-12 h-12 flex items-center justify-center rounded-lg bg-surface-variant text-primary border border-primary/20">
+<span class="material-symbols-outlined text-[28px]">stadium</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-4">Event Media Support</h3>
+<p class="text-on-surface-variant leading-relaxed">Securing on-site media presence and managing broadcast opportunities for your most critical activations.</p>
+</div>
+<!-- Card 6 -->
+<div class="group p-8 rounded-2xl bg-surface-container-high transition-all duration-300 hover:bg-secondary-container/20 border border-transparent hover:border-primary/20 hover:shadow-[0_20px_50px_rgba(22,204,155,0.08)]">
+<div class="mb-6 w-12 h-12 flex items-center justify-center rounded-lg bg-surface-variant text-primary border border-primary/20">
+<span class="material-symbols-outlined text-[28px]">monitoring</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-4">Sentiment Monitoring</h3>
+<p class="text-on-surface-variant leading-relaxed">Real-time tracking of brand perception and media impact using high-precision digital tools.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 px-12">
+<div class="max-w-7xl mx-auto">
+<div class="relative p-16 md:p-24 rounded-3xl overflow-hidden bg-surface-container-highest border border-white/5">
+<!-- Background Glow -->
+<div class="absolute -right-20 -bottom-20 w-96 h-96 bg-primary/10 blur-[120px] rounded-full"></div>
+<div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
+<div class="max-w-xl">
+<h2 class="font-headline text-4xl md:text-5xl font-bold mb-8 leading-tight">Ready to Own the <span class="text-primary">Media Landscape</span>?</h2>
+<p class="text-on-surface-variant text-xl">Connect with our strategic architects to begin your ascent to industry dominance.</p>
+</div>
+<button class="shrink-0 bg-primary text-on-primary font-bold text-lg px-12 py-6 rounded-full shadow-[0_20px_60px_rgba(100,255,202,0.3)] hover:scale-110 hover:shadow-[0_20px_80px_rgba(100,255,202,0.5)] transition-all duration-500">
+                            Book a Strategy Call
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full border-t border-white/5 bg-[#080f12] flex flex-col md:flex-row justify-between items-center px-12 py-10">
+<div class="mb-8 md:mb-0">
+<div class="text-lg font-bold text-white mb-2">Cyber-Elite</div>
+<p class="font-inter text-xs uppercase tracking-[0.1em] text-[#a5acb0]">© 2024 Cyber-Elite Editorial. All Rights Reserved.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-inter text-xs uppercase tracking-[0.1em] text-[#a5acb0] hover:text-[#16cc9b] transition-all duration-200" href="#">Legal</a>
+<a class="font-inter text-xs uppercase tracking-[0.1em] text-[#a5acb0] hover:text-[#16cc9b] transition-all duration-200" href="#">Security Protocols</a>
+<a class="font-inter text-xs uppercase tracking-[0.1em] text-[#a5acb0] hover:text-[#16cc9b] transition-all duration-200" href="#">Privacy Vault</a>
+<a class="font-inter text-xs uppercase tracking-[0.1em] text-[#a5acb0] hover:text-[#16cc9b] transition-all duration-200" href="#">Terms of Sovereignty</a>
+</div>
+</footer>
+</body></html>

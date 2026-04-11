@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CYBER-ELITE | Verification Authority</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-variant": "#1d272b",
+                    "surface-container": "#121b1e",
+                    "surface-bright": "#232e32",
+                    "on-error": "#490006",
+                    "inverse-surface": "#f3fafe",
+                    "tertiary-fixed": "#00d5fe",
+                    "surface": "#080f12",
+                    "secondary-fixed": "#c8e8f4",
+                    "background": "#080f12",
+                    "on-secondary": "#395660",
+                    "on-primary-fixed": "#004b37",
+                    "tertiary-container": "#00d5fe",
+                    "inverse-on-surface": "#4f565a",
+                    "secondary": "#c8e8f4",
+                    "secondary-fixed-dim": "#bad9e6",
+                    "on-primary-container": "#003828",
+                    "on-surface": "#f1f7fc",
+                    "surface-container-low": "#0d1418",
+                    "surface-container-highest": "#1d272b",
+                    "on-tertiary-fixed-variant": "#004e5f",
+                    "on-tertiary-fixed": "#002f39",
+                    "error": "#ff716c",
+                    "surface-container-lowest": "#000000",
+                    "on-surface-variant": "#a5acb0",
+                    "outline": "#6f777a",
+                    "tertiary-fixed-dim": "#00c7ec",
+                    "on-background": "#f1f7fc",
+                    "surface-tint": "#64ffca",
+                    "surface-dim": "#080f12",
+                    "tertiary": "#73e0ff",
+                    "on-tertiary-container": "#004553",
+                    "on-secondary-fixed": "#26434e",
+                    "inverse-primary": "#006c51",
+                    "on-primary": "#005f46",
+                    "on-tertiary": "#004f5f",
+                    "surface-container-high": "#182125",
+                    "on-secondary-fixed-variant": "#43606b",
+                    "tertiary-dim": "#00c7ec",
+                    "primary-dim": "#53f0bd",
+                    "error-container": "#9f0519",
+                    "primary-fixed": "#64ffca",
+                    "primary": "#64ffca",
+                    "outline-variant": "#42494c",
+                    "error-dim": "#d7383b",
+                    "secondary-dim": "#bad9e6",
+                    "primary-container": "#06c897",
+                    "on-error-container": "#ffa8a3",
+                    "secondary-container": "#2e4b55",
+                    "on-secondary-container": "#b6d5e2",
+                    "primary-fixed-dim": "#53f0bd",
+                    "on-primary-fixed-variant": "#006b4f"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(28, 58, 68, 0.6);
+        backdrop-filter: blur(16px);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .hero-gradient {
+        background: radial-gradient(circle at 50% 50%, rgba(22, 204, 155, 0.05) 0%, transparent 70%);
+      }
+      .neon-glow {
+        box-shadow: 0 0 20px rgba(22, 204, 155, 0.2);
+      }
+      .curved-line {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        stroke: rgba(22, 204, 155, 0.15);
+        fill: none;
+      }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation Anchor -->
+<nav class="fixed top-0 w-full z-50 bg-[#080f12]/80 backdrop-blur-xl shadow-[0_0_40px_rgba(22,204,155,0.05)]">
+<div class="flex justify-between items-center px-12 py-6 max-w-[1920px] mx-auto font-headline font-bold tracking-tight">
+<div class="text-xl font-black tracking-tighter text-white uppercase">CYBER-ELITE</div>
+<div class="hidden md:flex items-center space-gap-8 gap-x-8">
+<a class="text-[#a5acb0] hover:text-white transition-colors" href="#">Work</a>
+<a class="text-[#16cc9b] border-b-2 border-[#16cc9b] pb-1" href="#">Expertise</a>
+<a class="text-[#a5acb0] hover:text-white transition-colors" href="#">DNA</a>
+<a class="text-[#a5acb0] hover:text-white transition-colors" href="#">The Vault</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-[#16cc9b]" data-icon="verified_user">verified_user</span>
+<button class="bg-gradient-to-br from-primary to-primary-container px-6 py-2 rounded-full text-on-primary-container font-bold text-sm tracking-tight transition-transform active:scale-95 duration-200 neon-glow">
+                    Secure Access
+                </button>
+</div>
+</div>
+</nav>
+<main class="relative overflow-hidden pt-32">
+<!-- Abstract Background Elements -->
+<svg class="curved-line" preserveaspectratio="none" viewbox="0 0 1000 1000">
+<path d="M-100,500 C200,300 800,700 1100,500" stroke-width="0.5"></path>
+<path d="M-100,600 C300,400 700,800 1100,600" stroke-width="0.5"></path>
+</svg>
+<!-- Hero Section -->
+<section class="relative px-12 pb-24 max-w-[1920px] mx-auto hero-gradient">
+<div class="max-w-5xl">
+<div class="mb-6 inline-flex items-center gap-2 px-3 py-1 bg-surface-container-high rounded-full">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-[0.75rem] font-bold tracking-[0.1em] text-on-surface-variant uppercase">Institutional Status</span>
+</div>
+<h1 class="font-headline font-extrabold text-[3.5rem] leading-[1.1] tracking-[-0.02em] text-white uppercase mb-8">
+                    SOCIAL MEDIA <span class="text-primary">VERIFICATION</span> FOR THE WORLD'S ELITE
+                </h1>
+<p class="text-on-surface-variant text-xl leading-relaxed max-w-3xl mb-12">
+                    We secure your digital identity and establish undisputed authority across global platforms. No templates. No generic applications. Just high-level strategic engineering for sovereign figures and brands.
+                </p>
+<div class="flex flex-col sm:flex-row gap-6">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary-container px-10 py-5 rounded-full font-bold text-lg transition-all hover:brightness-110 neon-glow flex items-center justify-center gap-3">
+                        INITIATE VERIFICATION
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="border border-white/10 hover:bg-white/5 transition-all px-10 py-5 rounded-full font-bold text-lg text-white flex items-center justify-center gap-3">
+                        REVIEW CASE STUDIES
+                    </button>
+</div>
+</div>
+</section>
+<!-- Proof Section / Bento Grid -->
+<section class="px-12 py-24 bg-surface-container-low">
+<div class="max-w-[1920px] mx-auto">
+<div class="mb-16">
+<span class="text-primary text-[0.75rem] font-bold tracking-[0.1em] uppercase block mb-4">Authority Protocol</span>
+<h2 class="font-headline font-bold text-[2rem] text-white">Dominate the Digital Realm</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Glass Card 1 -->
+<div class="md:col-span-8 glass-card rounded-xl p-10 relative group overflow-hidden">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="shield">shield</span>
+<h3 class="font-headline font-bold text-2xl text-white mb-4">PR Agency of Record</h3>
+<p class="text-on-surface-variant leading-relaxed max-w-2xl">
+                                Verification is not a form; it's a statement of presence. We craft the narrative through exclusive media placements and institutional validation that makes verification an inevitability, not a gamble.
+                            </p>
+</div>
+<div class="absolute top-0 right-0 p-12 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-[12rem]" data-icon="verified">verified</span>
+</div>
+</div>
+<!-- Side Card -->
+<div class="md:col-span-4 bg-surface-container-highest rounded-xl p-10 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="hub">hub</span>
+<h3 class="font-headline font-bold text-2xl text-white mb-4">Global Network</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">
+                                Direct access to portal-level submission channels for Instagram, Twitter, and Facebook.
+                            </p>
+</div>
+<div class="pt-8 border-t border-white/5 mt-8">
+<div class="flex justify-between items-center text-primary font-bold">
+<span>98% SUCCESS RATE</span>
+<span class="material-symbols-outlined">trending_up</span>
+</div>
+</div>
+</div>
+<!-- Services Grid -->
+<div class="md:col-span-4 glass-card rounded-xl p-8">
+<span class="material-symbols-outlined text-primary mb-4" data-icon="article">article</span>
+<h4 class="font-headline font-bold text-lg text-white mb-2">Editorial Authority</h4>
+<p class="text-on-surface-variant text-sm">Securing high-tier press features in Tier-1 publications globally.</p>
+</div>
+<div class="md:col-span-4 glass-card rounded-xl p-8">
+<span class="material-symbols-outlined text-primary mb-4" data-icon="lock">lock</span>
+<h4 class="font-headline font-bold text-lg text-white mb-2">Identity Shield</h4>
+<p class="text-on-surface-variant text-sm">Anti-impersonation protocols and profile security hardening.</p>
+</div>
+<div class="md:col-span-4 glass-card rounded-xl p-8">
+<span class="material-symbols-outlined text-primary mb-4" data-icon="star">star</span>
+<h4 class="font-headline font-bold text-lg text-white mb-2">Legacy Assets</h4>
+<p class="text-on-surface-variant text-sm">Wikipedia profile creation and Knowledge Graph management.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Detailed Service Explanation -->
+<section class="px-12 py-32 max-w-[1920px] mx-auto grid md:grid-cols-2 gap-24 items-center">
+<div class="relative">
+<div class="aspect-square rounded-2xl overflow-hidden glass-card p-2">
+<img alt="Cybersecurity infrastructure" class="w-full h-full object-cover rounded-xl opacity-60 mix-blend-luminosity" data-alt="Modern server room with glowing green lights and digital data streams reflecting on glass surfaces, futuristic cybersecurity aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUjlyKqm1teGl-Ll7KMCKlWVFwHqg1Y3LQoVuKlFyyfOOFEnfF262UJSSFtu7q69piUII_zm8ixkyELmusi68SP5nHArZBg5pBM0q3LJihazTWgtvWanScv1pGHnYyJabqCFSzJEu33ZYdDQQPaFL4JMYMvDmMxREIspeEHZS0QN0HHUS0UMr1hJDFui1FZGeDsyhbU5-aRN8wVMklmiVDVmDpKGVkBUZvVxJdbc6R_nJxKZczQx3TgkfMFpx2dLq6HOY-F_bRRg"/>
+</div>
+<!-- Absolute positioned element to break the grid -->
+<div class="absolute -bottom-8 -right-8 glass-card p-8 rounded-xl shadow-2xl max-w-xs">
+<p class="text-primary font-headline font-bold text-3xl mb-1">500+</p>
+<p class="text-on-surface-variant text-sm uppercase tracking-widest font-bold">Profiles Secured</p>
+</div>
+</div>
+<div>
+<span class="text-primary text-[0.75rem] font-bold tracking-[0.1em] uppercase block mb-4">The Methodology</span>
+<h2 class="font-headline font-bold text-[2rem] text-white leading-tight mb-8">Engineering Legitimacy Through Strategy</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center text-primary font-bold">01</div>
+<div>
+<h5 class="text-white font-bold mb-2">Audit &amp; Analysis</h5>
+<p class="text-on-surface-variant text-sm leading-relaxed">We perform a deep-dive scan of your digital footprint to identify gaps in your authority and media presence.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center text-primary font-bold">02</div>
+<div>
+<h5 class="text-white font-bold mb-2">Asset Reinforcement</h5>
+<p class="text-on-surface-variant text-sm leading-relaxed">Creation of missing institutional assets including professional press releases and expert commentary features.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<div class="flex-shrink-0 w-12 h-12 rounded-full border border-primary/30 flex items-center justify-center text-primary font-bold">03</div>
+<div>
+<h5 class="text-white font-bold mb-2">Institutional Submission</h5>
+<p class="text-on-surface-variant text-sm leading-relaxed">Direct submission through specialized PR portals with zero room for automated rejection.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="px-12 py-24">
+<div class="max-w-[1920px] mx-auto bg-surface-container rounded-3xl p-16 relative overflow-hidden text-center border border-white/5">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-gradient-to-b from-primary/5 to-transparent"></div>
+<div class="relative z-10 max-w-3xl mx-auto">
+<h2 class="font-headline font-extrabold text-[2.5rem] text-white uppercase mb-6 tracking-tight">READY FOR <span class="text-primary">SOVEREIGNTY?</span></h2>
+<p class="text-on-surface-variant mb-10 text-lg">Our intake is strictly limited to 5 clients per month to ensure concierge-level attention. Secure your position today.</p>
+<button class="bg-primary text-on-primary-container px-12 py-5 rounded-full font-bold text-lg neon-glow transition-transform hover:scale-105">
+                        REQUEST A CONSULTATION
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Anchor -->
+<footer class="bg-[#080f12] w-full border-t border-white/5">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-10 gap-6 max-w-[1920px] mx-auto">
+<div class="font-['Manrope'] font-bold text-[#16cc9b]">CYBER-ELITE ARCHITECTS</div>
+<div class="flex flex-wrap justify-center gap-8 font-['Inter'] text-sm tracking-wide">
+<a class="text-[#a5acb0] hover:text-[#16cc9b] transition-colors" href="#">Legal</a>
+<a class="text-[#a5acb0] hover:text-[#16cc9b] transition-colors" href="#">Privacy Policy</a>
+<a class="text-[#a5acb0] hover:text-[#16cc9b] transition-colors" href="#">Security Protocol</a>
+<a class="text-[#a5acb0] hover:text-[#16cc9b] transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="text-[#a5acb0] text-[10px] uppercase tracking-widest opacity-60">
+                © 2024 CYBER-ELITE ARCHITECTS. ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+</body></html>

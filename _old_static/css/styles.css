@@ -1,0 +1,488 @@
+/* ============================================
+   JOINZ AGENCY — Sovereign Architect Design System
+   ============================================ */
+
+/* --- Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Manrope:wght@700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
+
+/* --- CSS Custom Properties (Design Tokens) --- */
+:root {
+  /* Primary */
+  --color-primary: #16cc9b;
+  --color-primary-container: #06c897;
+  --color-primary-dim: #53f0bd;
+  --color-primary-fixed: #64ffca;
+  --color-on-primary: #005f46;
+  --color-on-primary-container: #003828;
+
+  /* Secondary */
+  --color-secondary: #c8e8f4;
+  --color-secondary-container: #1c3a44;
+  --color-secondary-dim: #bad9e6;
+  --color-on-secondary: #395660;
+  --color-on-secondary-container: #b6d5e2;
+
+  /* Tertiary */
+  --color-tertiary: #73e0ff;
+  --color-tertiary-container: #00d5fe;
+  --color-tertiary-dim: #00c7ec;
+
+  /* Error */
+  --color-error: #ff716c;
+  --color-error-container: #9f0519;
+  --color-error-dim: #d7383b;
+
+  /* Surface */
+  --color-background: #080f12;
+  --color-surface: #080f12;
+  --color-surface-dim: #080f12;
+  --color-surface-container: #121b1e;
+  --color-surface-container-low: #0d1418;
+  --color-surface-container-high: #182125;
+  --color-surface-container-highest: #1d272b;
+  --color-surface-container-lowest: #000000;
+  --color-surface-variant: #1d272b;
+  --color-surface-bright: #232e32;
+
+  /* Text */
+  --color-on-surface: #f1f7fc;
+  --color-on-surface-variant: #a5acb0;
+  --color-on-background: #f1f7fc;
+
+  /* Outline */
+  --color-outline: #6f777a;
+  --color-outline-variant: #42494c;
+
+  /* Inverse */
+  --color-inverse-surface: #f3fafe;
+  --color-inverse-on-surface: #4f565a;
+  --color-inverse-primary: #006c51;
+
+  /* Typography */
+  --font-headline: 'Manrope', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-label: 'Inter', sans-serif;
+}
+
+/* --- Base Reset & Defaults --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+  font-family: var(--font-body);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-on-primary-container);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+}
+
+/* --- Typography --- */
+.font-headline { font-family: var(--font-headline); }
+.font-body { font-family: var(--font-body); }
+.font-label { font-family: var(--font-label); }
+
+/* --- Glass Card --- */
+.glass-card {
+  background: rgba(28, 58, 68, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- Neon Glow --- */
+.neon-glow {
+  box-shadow: 0 0 20px rgba(22, 204, 155, 0.15);
+}
+
+.neon-glow-strong {
+  box-shadow: 0 0 40px rgba(22, 204, 155, 0.3);
+}
+
+/* --- Primary CTA Button --- */
+.primary-cta {
+  background: linear-gradient(135deg, #64ffca 0%, #06c897 100%);
+  box-shadow: 0 10px 40px rgba(22, 204, 155, 0.2);
+  color: var(--color-on-primary-container);
+  font-weight: 700;
+  border-radius: 9999px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.primary-cta:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 50px rgba(22, 204, 155, 0.35);
+}
+
+.primary-cta:active {
+  transform: scale(0.98);
+}
+
+/* --- Ghost/Outline Button --- */
+.ghost-btn {
+  border: 1px solid rgba(66, 73, 76, 0.3);
+  background: transparent;
+  color: var(--color-on-surface);
+  font-weight: 700;
+  border-radius: 9999px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.ghost-btn:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.ghost-btn:active {
+  transform: scale(0.98);
+}
+
+/* --- Text Neon Glow --- */
+.text-neon {
+  color: var(--color-primary);
+  text-shadow: 0 0 10px rgba(22, 204, 155, 0.3);
+}
+
+/* --- Glow Button Shadow --- */
+.glow-button {
+  box-shadow: 0 0 20px rgba(22, 204, 155, 0.3);
+}
+
+/* --- Highlight Border --- */
+.highlight-border {
+  border: 1px solid rgba(22, 204, 155, 0.5);
+  box-shadow: 0 0 30px rgba(22, 204, 155, 0.15);
+}
+
+/* --- Background Mesh --- */
+.bg-mesh {
+  background-image:
+    radial-gradient(at 0% 0%, rgba(22, 204, 155, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(22, 204, 155, 0.05) 0px, transparent 50%);
+}
+
+/* --- Hero Gradient --- */
+.hero-gradient {
+  background: radial-gradient(circle at 50% 50%, rgba(22, 204, 155, 0.05) 0%, transparent 70%);
+}
+
+/* --- Material Symbols --- */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* --- Section Backgrounds (No-Line Rule) --- */
+.section-surface { background-color: var(--color-surface); }
+.section-container { background-color: var(--color-surface-container); }
+.section-container-low { background-color: var(--color-surface-container-low); }
+.section-container-high { background-color: var(--color-surface-container-high); }
+
+/* --- Navigation --- */
+.nav-wrapper {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  background: rgba(8, 15, 18, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 40px 40px rgba(22, 204, 155, 0.05);
+  transition: background-color 0.3s ease;
+}
+
+.nav-link {
+  font-family: var(--font-headline);
+  font-weight: 700;
+  font-size: 0.875rem;
+  letter-spacing: -0.02em;
+  color: var(--color-on-surface-variant);
+  transition: color 0.3s ease;
+  padding-bottom: 4px;
+}
+
+.nav-link:hover {
+  color: var(--color-on-surface);
+}
+
+.nav-link.active {
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
+}
+
+/* --- Mobile Menu --- */
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(8, 15, 18, 0.98);
+  backdrop-filter: blur(20px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.mobile-menu.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-menu a {
+  font-family: var(--font-headline);
+  font-weight: 800;
+  font-size: 2rem;
+  color: var(--color-on-surface);
+  transition: color 0.3s ease;
+}
+
+.mobile-menu a:hover {
+  color: var(--color-primary);
+}
+
+/* --- Hamburger --- */
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 110;
+}
+
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--color-on-surface);
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* --- Scroll Animations --- */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+}
+
+/* Staggered children */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.stagger-children.visible > *:nth-child(1) { transition-delay: 0.05s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(2) { transition-delay: 0.1s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(3) { transition-delay: 0.15s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(4) { transition-delay: 0.2s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(5) { transition-delay: 0.25s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(6) { transition-delay: 0.3s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(7) { transition-delay: 0.35s; opacity: 1; transform: translateY(0); }
+.stagger-children.visible > *:nth-child(8) { transition-delay: 0.4s; opacity: 1; transform: translateY(0); }
+
+/* --- Footer --- */
+.footer-link {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-on-surface-variant);
+  transition: color 0.5s ease, transform 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+/* --- Service Card Hover --- */
+.service-card {
+  transition: transform 0.4s ease, border-color 0.4s ease, background-color 0.5s ease;
+  border: 1px solid transparent;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(22, 204, 155, 0.2);
+}
+
+/* --- Process Step --- */
+.process-step {
+  transition: all 0.4s ease;
+}
+
+.process-step:hover .step-number {
+  background-color: rgba(22, 204, 155, 0.1);
+  border-color: rgba(22, 204, 155, 0.5);
+}
+
+/* --- Curved Line SVG Background --- */
+.abstract-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.abstract-lines path {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 0.5;
+  opacity: 0.15;
+}
+
+/* --- Testimonial Card --- */
+.testimonial-card {
+  background-color: var(--color-surface-container-low);
+  border-left: 4px solid var(--color-primary);
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Form Inputs --- */
+.form-input {
+  background-color: var(--color-surface-container-lowest);
+  border: 1px solid transparent;
+  border-radius: 0.75rem;
+  padding: 1rem 1.25rem;
+  color: var(--color-on-surface);
+  font-family: var(--font-body);
+  font-size: 0.875rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.form-input::placeholder {
+  color: var(--color-on-surface-variant);
+  opacity: 0.6;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(22, 204, 155, 0.15);
+}
+
+/* --- Partner Logo --- */
+.partner-logo {
+  font-family: var(--font-headline);
+  font-weight: 900;
+  font-size: 1.5rem;
+  letter-spacing: -0.04em;
+  opacity: 0.4;
+  filter: grayscale(1);
+  transition: opacity 0.5s ease, filter 0.5s ease;
+}
+
+.partner-logo:hover {
+  opacity: 1;
+  filter: grayscale(0);
+}
+
+/* --- Media Feature Card --- */
+.media-logo-card {
+  transition: filter 0.5s ease, opacity 0.5s ease;
+  filter: grayscale(1);
+  opacity: 0.6;
+}
+
+.media-logo-card:hover {
+  filter: grayscale(0);
+  opacity: 1;
+}
+
+/* --- Responsive Utilities --- */
+@media (max-width: 768px) {
+  .hide-mobile { display: none !important; }
+}
+
+@media (min-width: 769px) {
+  .show-mobile-only { display: none !important; }
+}
+
+/* --- Animations Keyframes --- */
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(22, 204, 155, 0.15); }
+  50% { box-shadow: 0 0 40px rgba(22, 204, 155, 0.3); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}

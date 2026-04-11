@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-container": "#003828",
+                    "secondary": "#c8e8f4",
+                    "tertiary-container": "#00d5fe",
+                    "on-tertiary": "#004f5f",
+                    "error-dim": "#d7383b",
+                    "surface-dim": "#080f12",
+                    "tertiary-fixed": "#00d5fe",
+                    "inverse-surface": "#f3fafe",
+                    "on-primary-fixed": "#004b37",
+                    "on-background": "#f1f7fc",
+                    "on-secondary-fixed": "#26434e",
+                    "on-error": "#490006",
+                    "primary": "#16cc9b",
+                    "on-tertiary-fixed-variant": "#004e5f",
+                    "secondary-dim": "#bad9e6",
+                    "outline": "#6f777a",
+                    "tertiary-fixed-dim": "#00c7ec",
+                    "primary-fixed-dim": "#53f0bd",
+                    "on-primary-fixed-variant": "#006b4f",
+                    "surface-container-high": "#182125",
+                    "background": "#080f12",
+                    "on-primary": "#005f46",
+                    "secondary-container": "#1c3a44",
+                    "surface-bright": "#232e32",
+                    "surface-variant": "#1d272b",
+                    "primary-dim": "#53f0bd",
+                    "on-tertiary-container": "#004553",
+                    "secondary-fixed": "#c8e8f4",
+                    "surface-container-lowest": "#000000",
+                    "inverse-on-surface": "#4f565a",
+                    "on-secondary": "#395660",
+                    "primary-container": "#06c897",
+                    "on-tertiary-fixed": "#002f39",
+                    "outline-variant": "#42494c",
+                    "surface-container-low": "#0d1418",
+                    "inverse-primary": "#006c51",
+                    "on-secondary-fixed-variant": "#43606b",
+                    "error": "#ff716c",
+                    "surface-tint": "#16cc9b",
+                    "primary-fixed": "#16cc9b",
+                    "surface": "#080f12",
+                    "surface-container-highest": "#1d272b",
+                    "error-container": "#9f0519",
+                    "on-secondary-container": "#b6d5e2",
+                    "tertiary": "#73e0ff",
+                    "on-error-container": "#ffa8a3",
+                    "surface-container": "#121b1e",
+                    "on-surface-variant": "#a5acb0",
+                    "on-surface": "#f1f7fc",
+                    "tertiary-dim": "#00c7ec",
+                    "secondary-fixed-dim": "#bad9e6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { background-color: #080f12; color: #ffffff; font-family: 'Inter', sans-serif; }
+        .glass-card {
+            background: rgba(28, 58, 68, 0.6);
+            backdrop-filter: blur(16px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .neon-glow {
+            box-shadow: 0 0 20px rgba(22, 204, 155, 0.15);
+        }
+        .abstract-line {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(22, 204, 155, 0.05) 0%, transparent 70%);
+        }
+        .text-neon {
+            color: #16cc9b;
+            text-shadow: 0 0 10px rgba(22, 204, 155, 0.3);
+        }
+        .primary-cta {
+            background: linear-gradient(135deg, #64ffca 0%, #06c897 100%);
+            box-shadow: 0 10px 40px rgba(22, 204, 155, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#080f12]/70 backdrop-blur-md border-b border-white/[0.05] shadow-[0_40px_40px_rgba(22,204,155,0.05)]">
+<div class="flex justify-between items-center px-6 md:px-12 h-24 max-w-[1440px] mx-auto">
+<div class="text-2xl font-black tracking-tighter text-white">JOINZ</div>
+<div class="hidden md:flex gap-10 items-center">
+<a class="font-['Manrope'] font-bold tracking-[-0.02em] text-[#16cc9b] border-b-2 border-[#16cc9b] pb-1 hover:text-white transition-all duration-300" href="#">Work</a>
+<a class="font-['Manrope'] font-bold tracking-[-0.02em] text-[#a5acb0] hover:text-white transition-all duration-300" href="#">Expertise</a>
+<a class="font-['Manrope'] font-bold tracking-[-0.02em] text-[#a5acb0] hover:text-white transition-all duration-300" href="#">DNA</a>
+<a class="font-['Manrope'] font-bold tracking-[-0.02em] text-[#a5acb0] hover:text-white transition-all duration-300" href="#">The Vault</a>
+</div>
+<button class="primary-cta px-8 py-3 rounded-full font-bold text-on-primary-container text-sm tracking-tight transition-transform hover:scale-105">
+                Secure Access
+            </button>
+</div>
+</nav>
+<main class="relative overflow-hidden">
+<!-- Hero Section -->
+<section class="relative pt-48 pb-32 px-6 md:px-12 max-w-[1440px] mx-auto">
+<div class="abstract-line">
+<svg class="absolute top-0 right-0 w-full opacity-20" viewbox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+<path d="M0,500 C150,300 350,700 500,500 S850,300 1000,500" fill="none" stroke="#16cc9b" stroke-width="0.5"></path>
+<path d="M0,600 C200,400 400,800 600,600 S900,400 1000,600" fill="none" opacity="0.5" stroke="#16cc9b" stroke-width="0.5"></path>
+</svg>
+</div>
+<div class="relative z-10 max-w-5xl">
+<p class="font-label text-xs tracking-[0.1em] uppercase text-primary mb-6">Sovereign Architectural Interface</p>
+<h1 class="font-headline font-extrabold text-5xl md:text-[5rem] leading-[1.05] tracking-tight mb-10">
+                    TAKE FULL CONTROL OF YOUR <span class="text-neon">DIGITAL PRESENCE</span>.
+                </h1>
+<p class="font-body text-xl text-on-surface-variant max-w-2xl mb-12 leading-relaxed">
+                    Elevating elite status through precision security and architectural branding. We operate where standard digital strategies fail.
+                </p>
+<div class="flex flex-wrap gap-6">
+<button class="primary-cta px-10 py-5 rounded-full font-bold text-on-primary-container tracking-tight transition-all hover:scale-105">
+                        Initiate Protocol
+                    </button>
+<button class="px-10 py-5 rounded-full border border-outline-variant/30 font-bold hover:bg-surface-bright transition-colors">
+                        The Vault Catalog
+                    </button>
+</div>
+</div>
+</section>
+<!-- Elite Digital Services -->
+<section class="py-32 px-6 md:px-12 bg-surface-container-low">
+<div class="max-w-[1440px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-2xl">
+<p class="font-label text-xs tracking-[0.1em] uppercase text-primary mb-4">Core Competencies</p>
+<h2 class="font-headline text-4xl md:text-5xl font-bold leading-tight">Elite Digital Services</h2>
+</div>
+<p class="font-body text-on-surface-variant max-w-xs text-right">High-security solutions for global figures and sovereign brands.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="glass-card p-8 rounded-xl neon-glow flex flex-col h-[300px] justify-between group hover:translate-y-[-4px] transition-all">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">verified</span>
+<div>
+<h3 class="font-headline text-xl mb-3">Social Media Verification</h3>
+<p class="font-body text-sm text-on-surface-variant">Guaranteed authentication for public figures and business entities across all platforms.</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="glass-card p-8 rounded-xl neon-glow flex flex-col h-[300px] justify-between group hover:translate-y-[-4px] transition-all">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">security</span>
+<div>
+<h3 class="font-headline text-xl mb-3">Reputation Management</h3>
+<p class="font-body text-sm text-on-surface-variant">Strategic suppression of negative digital footprints and precision narrative control.</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="glass-card p-8 rounded-xl neon-glow flex flex-col h-[300px] justify-between group hover:translate-y-[-4px] transition-all">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">lock_reset</span>
+<div>
+<h3 class="font-headline text-xl mb-3">Account Recovery</h3>
+<p class="font-body text-sm text-on-surface-variant">Advanced protocol for reclaiming compromised assets with zero-loss integrity.</p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="glass-card p-8 rounded-xl neon-glow flex flex-col h-[300px] justify-between group hover:translate-y-[-4px] transition-all">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">alternate_email</span>
+<div>
+<h3 class="font-headline text-xl mb-3">Username Claim</h3>
+<p class="font-body text-sm text-on-surface-variant">Securing premium digital real estate through legal and administrative channels.</p>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="glass-card p-8 rounded-xl neon-glow flex flex-col h-[300px] justify-between group hover:translate-y-[-4px] transition-all">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">palette</span>
+<div>
+<h3 class="font-headline text-xl mb-3">Branding</h3>
+<p class="font-body text-sm text-on-surface-variant">Identity architecture designed for high-end luxury and sovereign digital presence.</p>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="glass-card p-8 rounded-xl neon-glow flex flex-col h-[300px] justify-between group hover:translate-y-[-4px] transition-all">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">web</span>
+<div>
+<h3 class="font-headline text-xl mb-3">Website Development</h3>
+<p class="font-body text-sm text-on-surface-variant">Bespoke digital environments built on high-performance infrastructure.</p>
+</div>
+</div>
+<!-- Card 7 -->
+<div class="glass-card p-8 rounded-xl neon-glow flex flex-col h-[300px] justify-between group hover:translate-y-[-4px] transition-all">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">newspaper</span>
+<div>
+<h3 class="font-headline text-xl mb-3">PR &amp; Media</h3>
+<p class="font-body text-sm text-on-surface-variant">Strategic exposure in tier-one publications and global media outlets.</p>
+</div>
+</div>
+<!-- Card 8 -->
+<div class="glass-card p-8 rounded-xl neon-glow flex flex-col h-[300px] justify-between group hover:translate-y-[-4px] transition-all">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+<div>
+<h3 class="font-headline text-xl mb-3">Growth &amp; Engagement</h3>
+<p class="font-body text-sm text-on-surface-variant">Engineered reach using algorithm-compliant amplification strategies.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Built on Trust -->
+<section class="py-40 px-6 md:px-12 bg-surface">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div class="relative">
+<div class="aspect-[4/5] rounded-3xl overflow-hidden shadow-2xl relative z-10">
+<img class="w-full h-full object-cover" data-alt="high-tech secure server room with glowing green lights and glass reflections in a dark obsidian environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAL701_Iwig4Zyvpgdfx5Li5rfjyoryvjqh8EKyU0kitAtBVxOUDhpGpsyh4qCx0tyvofhEgK5-oPD29wGu0Xb1E-UoTRlHFRwNK1CMlXXKIVZN0jZCZCPFMAHt4kwQl_gwDKF1SD3-RZEscaMOwVkPVw6yqqiAQgM48FjUxbTTsG3eWQ179AUSMy2E8gr6WWfffJdGjAAlLBtbIMTJUcZ_v4u60kN_w2rfrjAachdtNzRBsa6AQK5SxLk7xbKTm3HMHuTDxYToNw"/>
+</div>
+<div class="absolute -bottom-10 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-[80px]"></div>
+</div>
+<div class="flex flex-col gap-8">
+<p class="font-label text-xs tracking-[0.1em] uppercase text-primary">Security Integrity</p>
+<h2 class="font-headline text-5xl md:text-6xl font-bold tracking-tight">Built on Trust</h2>
+<p class="font-body text-xl text-on-surface-variant leading-relaxed">
+                        In an era of digital vulnerability, JOINZ operates as a fortress. We don't just provide services; we engineer sovereignty. Every interaction is encrypted, every strategy is confidential, and every result is permanent.
+                    </p>
+<div class="grid grid-cols-2 gap-12 pt-8">
+<div>
+<p class="text-4xl font-bold text-white mb-2">99.9%</p>
+<p class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Recovery Success</p>
+</div>
+<div>
+<p class="text-4xl font-bold text-white mb-2">15k+</p>
+<p class="text-xs font-label uppercase tracking-widest text-on-surface-variant">Verified Assets</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Real Case Results -->
+<section class="py-32 px-6 md:px-12 bg-surface-container">
+<div class="max-w-[1440px] mx-auto">
+<h2 class="font-headline text-4xl font-bold mb-16 text-center">Case Intelligence</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Case 1 -->
+<div class="bg-surface-container-low p-10 rounded-2xl border-l-4 border-primary shadow-xl">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body italic text-lg mb-8 leading-relaxed">"The level of discretion and speed provided by JOINZ in reclaiming our legacy brand handle was unmatched. A truly sovereign experience."</p>
+<div>
+<p class="font-headline font-bold text-white">Chief Security Officer</p>
+<p class="text-xs font-label uppercase text-primary tracking-widest">Fortune 500 Tech</p>
+</div>
+</div>
+<!-- Case 2 -->
+<div class="bg-surface-container-low p-10 rounded-2xl border-l-4 border-primary shadow-xl">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body italic text-lg mb-8 leading-relaxed">"Verification felt like an impossible hurdle until we engaged JOINZ. Their direct architectural approach delivered results in under 72 hours."</p>
+<div>
+<p class="font-headline font-bold text-white">Global Talent Agency</p>
+<p class="text-xs font-label uppercase text-primary tracking-widest">Publicity Lead</p>
+</div>
+</div>
+<!-- Case 3 -->
+<div class="bg-surface-container-low p-10 rounded-2xl border-l-4 border-primary shadow-xl">
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body italic text-lg mb-8 leading-relaxed">"Their reputation management protocols saved our launch from a coordinated digital attack. Precise, ruthless, and highly effective."</p>
+<div>
+<p class="font-headline font-bold text-white">Crypto Exchange CEO</p>
+<p class="text-xs font-label uppercase text-primary tracking-widest">Founder</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trusted by brands -->
+<section class="py-24 px-6 md:px-12 bg-surface text-center">
+<p class="font-label text-xs tracking-[0.2em] uppercase text-on-surface-variant mb-12">Authorized Digital Partners</p>
+<div class="flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-40 grayscale hover:grayscale-0 transition-all duration-700">
+<span class="font-headline font-black text-2xl tracking-tighter">NEXUS</span>
+<span class="font-headline font-black text-2xl tracking-tighter">AETHER</span>
+<span class="font-headline font-black text-2xl tracking-tighter">VANTAGE</span>
+<span class="font-headline font-black text-2xl tracking-tighter">PRISM</span>
+<span class="font-headline font-black text-2xl tracking-tighter">KRYPTOS</span>
+</div>
+</section>
+<!-- Ready to dominate -->
+<section class="py-32 px-6 md:px-12">
+<div class="max-w-4xl mx-auto glass-card rounded-[3rem] p-16 md:p-24 text-center neon-glow">
+<h2 class="font-headline text-5xl md:text-6xl font-bold mb-8 leading-tight">Ready to Dominate?</h2>
+<p class="font-body text-xl text-on-surface-variant mb-12 max-w-xl mx-auto">Access the vault and secure your digital sovereignty. Limited intakes per quarter to ensure elite delivery standards.</p>
+<button class="primary-cta px-12 py-6 rounded-full font-bold text-on-primary-container text-lg tracking-tight transition-transform hover:scale-105">
+                    Secure Access Now
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-[#080f12] w-full py-20 border-t border-white/[0.05]">
+<div class="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-16 items-end">
+<div>
+<div class="text-4xl font-black text-[#121b1e] mb-12">JOINZ</div>
+<p class="font-['Inter'] text-xs tracking-[0.1em] uppercase text-[#a5acb0]">© 2024 JOINZ AGENCY. SOVEREIGN ARCHITECTURAL DIGITAL INTERFACES.</p>
+</div>
+<div class="flex flex-wrap gap-8 md:justify-end">
+<a class="font-['Inter'] text-xs tracking-[0.1em] uppercase text-[#a5acb0] hover:text-[#16cc9b] transition-colors duration-500 hover:-translate-y-1" href="#">Secure Contact</a>
+<a class="font-['Inter'] text-xs tracking-[0.1em] uppercase text-[#a5acb0] hover:text-[#16cc9b] transition-colors duration-500 hover:-translate-y-1" href="#">Privacy Protocol</a>
+<a class="font-['Inter'] text-xs tracking-[0.1em] uppercase text-[#a5acb0] hover:text-[#16cc9b] transition-colors duration-500 hover:-translate-y-1" href="#">System Status</a>
+<a class="font-['Inter'] text-xs tracking-[0.1em] uppercase text-[#a5acb0] hover:text-[#16cc9b] transition-colors duration-500 hover:-translate-y-1" href="#">Terms of Service</a>
+</div>
+</div>
+</footer>
+</body></html>

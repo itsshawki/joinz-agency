@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Username Acquisition | CYBER-ELITE</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#0d1418",
+                    "surface-container": "#121b1e",
+                    "on-surface-variant": "#a5acb0",
+                    "on-tertiary": "#004f5f",
+                    "on-secondary-container": "#b6d5e2",
+                    "on-primary-container": "#003828",
+                    "tertiary-container": "#00d5fe",
+                    "inverse-on-surface": "#4f565a",
+                    "on-primary-fixed": "#004b37",
+                    "secondary-fixed-dim": "#bad9e6",
+                    "tertiary-fixed-dim": "#00c7ec",
+                    "on-secondary-fixed-variant": "#43606b",
+                    "primary": "#64ffca",
+                    "secondary": "#c8e8f4",
+                    "primary-dim": "#53f0bd",
+                    "secondary-fixed": "#c8e8f4",
+                    "on-tertiary-fixed-variant": "#004e5f",
+                    "secondary-dim": "#bad9e6",
+                    "on-tertiary-fixed": "#002f39",
+                    "inverse-surface": "#f3fafe",
+                    "on-surface": "#f1f7fc",
+                    "on-error": "#490006",
+                    "surface-dim": "#080f12",
+                    "surface-container-highest": "#1d272b",
+                    "error": "#ff716c",
+                    "background": "#080f12",
+                    "tertiary-dim": "#00c7ec",
+                    "outline-variant": "#42494c",
+                    "error-container": "#9f0519",
+                    "outline": "#6f777a",
+                    "surface": "#080f12",
+                    "secondary-container": "#2e4b55",
+                    "surface-variant": "#1d272b",
+                    "on-tertiary-container": "#004553",
+                    "on-background": "#f1f7fc",
+                    "surface-tint": "#64ffca",
+                    "surface-container-high": "#182125",
+                    "tertiary": "#73e0ff",
+                    "on-secondary-fixed": "#26434e",
+                    "on-secondary": "#395660",
+                    "surface-container-lowest": "#000000",
+                    "primary-fixed": "#64ffca",
+                    "primary-fixed-dim": "#53f0bd",
+                    "on-primary-fixed-variant": "#006b4f",
+                    "inverse-primary": "#006c51",
+                    "surface-bright": "#232e32",
+                    "on-primary": "#005f46",
+                    "tertiary-fixed": "#00d5fe",
+                    "on-error-container": "#ffa8a3",
+                    "error-dim": "#d7383b",
+                    "primary-container": "#06c897"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(29, 39, 43, 0.6);
+            backdrop-filter: blur(16px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .text-glow {
+            text-shadow: 0 0 15px rgba(22, 204, 155, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#080f12] backdrop-blur-xl bg-opacity-80 flex justify-between items-center px-8 py-6 max-w-full mx-auto shadow-[0_4px_30px_rgba(22,204,155,0.05)]">
+<div class="text-xl font-black tracking-tighter text-white font-headline">CYBER-ELITE</div>
+<div class="hidden md:flex gap-10 font-headline font-bold tracking-tight">
+<a class="text-[#a5acb0] hover:text-white transition-colors transition-all duration-300" href="#">Work</a>
+<a class="text-[#16cc9b] border-b-2 border-[#16cc9b] pb-1 transition-all duration-300" href="#">Expertise</a>
+<a class="text-[#a5acb0] hover:text-white transition-colors transition-all duration-300" href="#">DNA</a>
+<a class="text-[#a5acb0] hover:text-white transition-colors transition-all duration-300" href="#">The Vault</a>
+</div>
+<button class="bg-primary-container text-[#003828] font-headline font-bold px-6 py-2 rounded-full scale-95 active:scale-90 transition-transform shadow-[0_0_20px_rgba(22,204,155,0.2)]">
+            Secure Portal
+        </button>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center px-8 md:px-24 overflow-hidden">
+<!-- Background Abstract Lines -->
+<svg class="absolute inset-0 w-full h-full opacity-20 pointer-events-none" viewbox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
+<path d="M-100 800 Q 400 300 1100 850" fill="none" stroke="#16cc9b" stroke-width="0.5"></path>
+<path d="M-100 200 Q 500 700 1100 150" fill="none" stroke="#16cc9b" stroke-width="0.5"></path>
+</svg>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-[120px] pointer-events-none"></div>
+<div class="relative z-10 max-w-4xl">
+<span class="font-label text-primary tracking-[0.3em] uppercase text-xs mb-4 block">Exclusive Handle Recovery</span>
+<h1 class="font-headline font-extrabold text-[4rem] md:text-[6.5rem] leading-[0.95] tracking-tighter mb-8 uppercase">
+                    CLAIM YOUR <br/> <span class="text-primary text-glow">DIGITAL IDENTITY</span>
+</h1>
+<p class="text-on-surface-variant text-xl md:text-2xl max-w-2xl mb-12 leading-relaxed">
+                    We secure <span class="text-on-surface font-semibold">inactive or trademarked</span> handles that define your brand. Sovereignty over your digital presence starts here.
+                </p>
+<div class="flex flex-col sm:flex-row gap-6">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary-container font-headline font-bold px-10 py-5 rounded-full text-lg shadow-[0_10px_30px_rgba(22,204,155,0.2)] hover:scale-105 transition-transform">
+                        SECURE YOUR HANDLE
+                    </button>
+<button class="border border-outline-variant/20 bg-white/5 backdrop-blur-md text-white font-headline font-bold px-10 py-5 rounded-full text-lg hover:bg-white/10 transition-colors">
+                        VIEW PROTOCOLS
+                    </button>
+</div>
+</div>
+</section>
+<!-- Value Proposition (Asymmetric Bento) -->
+<section class="px-8 md:px-24 py-32 bg-surface-container">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<div class="md:col-span-7 glass-card p-12 rounded-3xl flex flex-col justify-end min-h-[400px] relative overflow-hidden group">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-30 transition-opacity" data-alt="abstract digital connection network with neon green glowing lines on a dark obsidian background high tech aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADjTIg_yVKHfu-UArOBZLioOHaZQyXU6vrZ3pbK9Ux9bNZ2pyjC3lHuiy3-mjxWyBL3fXfL4puy_oXpXSPJhKsll3xeolPQafZ8Q_7vlrOL9TzcHWDril_2kNuNXDPGndeWqeDkVlcaQlYDLps7GnNB-cHnGbFOJ_inIOknQ1B9YRCkZgAzzScuIO5x8PuloWCyAfCc6eTdrh-J9NHMonVBLNkjHR7LgCWfZ0ifVLZJeG_g8XrCvxODJGcLR98UfiEcDK3VDnSLQ"/>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-4xl mb-6" data-icon="lock_open">lock_open</span>
+<h3 class="font-headline text-3xl font-bold mb-4">Secure the Unattainable</h3>
+<p class="text-on-surface-variant text-lg max-w-md">Our specialized legal and technical teams navigate complex platform bureaucracies to recover legacy accounts.</p>
+</div>
+</div>
+<div class="md:col-span-5 bg-[#1c3a44] p-12 rounded-3xl flex flex-col justify-between border border-primary/10 shadow-[0_0_40px_rgba(22,204,155,0.05)]">
+<div class="relative">
+<div class="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="verified_user">verified_user</span>
+</div>
+<h3 class="font-headline text-3xl font-bold mb-4">Protect Your Identity</h3>
+<p class="text-on-surface-variant text-lg">Defensive positioning for your brand assets across all major social ecosystems.</p>
+</div>
+<div class="mt-8 pt-8 border-t border-white/5">
+<div class="flex items-center gap-4">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-surface-variant"></div>
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-primary"></div>
+<div class="w-10 h-10 rounded-full border-2 border-surface bg-secondary"></div>
+</div>
+<span class="text-xs font-label text-on-surface-variant">TRUSTED BY 500+ GLOBAL BRANDS</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Service Features Grid -->
+<section class="px-8 md:px-24 py-32">
+<div class="mb-20 text-left max-w-2xl">
+<span class="font-label text-primary tracking-widest text-xs uppercase mb-4 block">Architectural Precision</span>
+<h2 class="font-headline text-5xl font-bold mb-6 leading-tight">Advanced Account Acquisition Protocols</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group p-10 rounded-2xl border border-outline-variant/10 hover:border-primary/30 transition-all duration-500 bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-4xl mb-8 group-hover:scale-110 transition-transform" data-icon="gavel">gavel</span>
+<h4 class="font-headline text-xl font-bold mb-4">Trademark Protection</h4>
+<p class="text-on-surface-variant leading-relaxed mb-6">Leveraging intellectual property rights to reclaim handles occupied by squatters or impersonators.</p>
+<a class="text-primary font-bold inline-flex items-center gap-2 group-hover:gap-4 transition-all" href="#">Explore Protocol <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+<!-- Card 2 -->
+<div class="group p-10 rounded-2xl border border-outline-variant/10 hover:border-primary/30 transition-all duration-500 bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-4xl mb-8 group-hover:scale-110 transition-transform" data-icon="history_toggle_off">history_toggle_off</span>
+<h4 class="font-headline text-xl font-bold mb-4">Inactive Account Recovery</h4>
+<p class="text-on-surface-variant leading-relaxed mb-6">Strategic outreach and platform negotiations for handles that have shown zero activity for 12+ months.</p>
+<a class="text-primary font-bold inline-flex items-center gap-2 group-hover:gap-4 transition-all" href="#">Explore Protocol <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+<!-- Card 3 -->
+<div class="group p-10 rounded-2xl border border-outline-variant/10 hover:border-primary/30 transition-all duration-500 bg-surface-container-low">
+<span class="material-symbols-outlined text-primary text-4xl mb-8 group-hover:scale-110 transition-transform" data-icon="language">language</span>
+<h4 class="font-headline text-xl font-bold mb-4">Global Digital Presence</h4>
+<p class="text-on-surface-variant leading-relaxed mb-6">Unified username synchronization across Instagram, X, TikTok, and emerging Web3 namespaces.</p>
+<a class="text-primary font-bold inline-flex items-center gap-2 group-hover:gap-4 transition-all" href="#">Explore Protocol <span class="material-symbols-outlined text-sm" data-icon="arrow_forward">arrow_forward</span></a>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="px-8 md:px-24 py-32 bg-surface-container-lowest relative overflow-hidden">
+<div class="absolute right-0 top-0 w-1/2 h-full opacity-10">
+<img class="w-full h-full object-cover" data-alt="close up of sophisticated computer circuit board with neon green glowing traces and premium microchips" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDnn0FZC4wEAPSAHE0-21DBpj-5HIOLys4BT49KKbaC7k-NJfI61565ZaXiJhmWdQkUXSu9OfrDwENFl_JV5zkVQ1V34AeKO7S4qA_5-B_3SKlboij81Yvx8diVYeNOV1OwVx9yKf3Vs8h7FGzqQoFYhWDYfBIgiIvvQ5MdSQSsuxsUm-2sviGQvB566TIZWjrlPdDqnZZWm9N6XgkNJU97WL02T1OXs6jihu7t33f3oeaqnmltPhSAYvD1GHPt9mww8oUdYvSfw"/>
+</div>
+<div class="relative z-10">
+<h2 class="font-headline text-5xl font-bold mb-20">The Acquisition Flow</h2>
+<div class="space-y-12 max-w-3xl">
+<div class="flex gap-8 items-start">
+<div class="flex-shrink-0 w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary font-headline font-bold">01</div>
+<div>
+<h5 class="text-2xl font-bold mb-2 flex items-center gap-3">Target Assessment <span class="material-symbols-outlined text-primary" data-icon="radar">radar</span></h5>
+<p class="text-on-surface-variant text-lg">We perform a deep-dive audit of the current handle owner, activity status, and platform-specific reclamation paths.</p>
+</div>
+</div>
+<div class="flex gap-8 items-start">
+<div class="flex-shrink-0 w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary font-headline font-bold">02</div>
+<div>
+<h5 class="text-2xl font-bold mb-2 flex items-center gap-3">Strategic Negotiation <span class="material-symbols-outlined text-primary" data-icon="handshake">handshake</span></h5>
+<p class="text-on-surface-variant text-lg">Discreet engagement through official legal channels or platform partnership programs to facilitate the transfer.</p>
+</div>
+</div>
+<div class="flex gap-8 items-start">
+<div class="flex-shrink-0 w-12 h-12 rounded-full border border-primary flex items-center justify-center text-primary font-headline font-bold">03</div>
+<div>
+<h5 class="text-2xl font-bold mb-2 flex items-center gap-3">Secure Transfer <span class="material-symbols-outlined text-primary" data-icon="swap_horiz">swap_horiz</span></h5>
+<p class="text-on-surface-variant text-lg">Escrowed hand-off and internal security locking to ensure the username is permanently anchored to your identity.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="px-8 md:px-24 py-32">
+<div class="bg-gradient-to-r from-surface-container-highest to-surface-container p-16 rounded-[3rem] border border-primary/20 text-center relative overflow-hidden">
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+<h2 class="font-headline text-5xl font-extrabold mb-8 uppercase tracking-tighter">Ready to secure your <span class="text-primary">legacy</span>?</h2>
+<p class="text-xl text-on-surface-variant max-w-2xl mx-auto mb-12">Join the elite brands that own their identity across the entire digital landscape.</p>
+<button class="bg-primary text-on-primary font-headline font-black px-12 py-6 rounded-full text-xl shadow-[0_15px_40px_rgba(22,204,155,0.3)] hover:scale-105 transition-transform active:scale-95">
+                    INITIATE ACQUISITION
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-[#16cc9b]/10 bg-[#000000] flex flex-col md:flex-row justify-between items-center px-12 py-10 w-full font-['Inter'] text-xs font-bold uppercase tracking-widest text-[#a5acb0]">
+<div class="mb-6 md:mb-0">
+            © 2024 SOVEREIGN ARCHITECT. ALL RIGHTS RESERVED.
+        </div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="hover:text-[#16cc9b] transition-colors opacity-80 hover:opacity-100" href="#">Legal</a>
+<a class="hover:text-[#16cc9b] transition-colors opacity-80 hover:opacity-100" href="#">Security Protocols</a>
+<a class="hover:text-[#16cc9b] transition-colors opacity-80 hover:opacity-100" href="#">Privacy Vault</a>
+<a class="hover:text-[#16cc9b] transition-colors opacity-80 hover:opacity-100" href="#">Encryption Standards</a>
+</div>
+</footer>
+</body></html>

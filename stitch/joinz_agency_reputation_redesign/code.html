@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sovereign Rep | Digital Reputation Management</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@700;800&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#182125",
+                    "on-primary-fixed-variant": "#006b4f",
+                    "on-secondary": "#395660",
+                    "tertiary": "#73e0ff",
+                    "on-surface-variant": "#a5acb0",
+                    "surface-container-lowest": "#000000",
+                    "on-secondary-fixed": "#26434e",
+                    "error-container": "#9f0519",
+                    "on-secondary-container": "#b6d5e2",
+                    "surface-variant": "#1d272b",
+                    "surface-dim": "#080f12",
+                    "on-primary-container": "#003828",
+                    "on-tertiary-container": "#004553",
+                    "error-dim": "#d7383b",
+                    "secondary": "#c8e8f4",
+                    "on-tertiary-fixed-variant": "#004e5f",
+                    "on-secondary-fixed-variant": "#43606b",
+                    "primary-container": "#06c897",
+                    "tertiary-fixed-dim": "#00c7ec",
+                    "error": "#ff716c",
+                    "outline": "#6f777a",
+                    "surface-container": "#121b1e",
+                    "secondary-fixed-dim": "#bad9e6",
+                    "secondary-dim": "#bad9e6",
+                    "outline-variant": "#42494c",
+                    "on-error": "#490006",
+                    "on-background": "#f1f7fc",
+                    "on-tertiary": "#004f5f",
+                    "inverse-surface": "#f3fafe",
+                    "inverse-on-surface": "#4f565a",
+                    "primary": "#16cc9b",
+                    "surface-tint": "#16cc9b",
+                    "primary-fixed-dim": "#53f0bd",
+                    "inverse-primary": "#006c51",
+                    "surface-container-highest": "#1d272b",
+                    "primary-dim": "#53f0bd",
+                    "primary-fixed": "#16cc9b",
+                    "on-primary-fixed": "#004b37",
+                    "on-tertiary-fixed": "#002f39",
+                    "surface-container-low": "#0d1418",
+                    "on-surface": "#f1f7fc",
+                    "tertiary-dim": "#00c7ec",
+                    "on-primary": "#005f46",
+                    "background": "#080f12",
+                    "secondary-container": "#1c3a44",
+                    "on-error-container": "#ffa8a3",
+                    "surface-bright": "#232e32",
+                    "surface": "#080f12",
+                    "secondary-fixed": "#c8e8f4",
+                    "tertiary-fixed": "#00d5fe",
+                    "tertiary-container": "#00d5fe"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #080f12; color: #f1f7fc; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+        .glass-card {
+            background: rgba(28, 58, 68, 0.6);
+            backdrop-filter: blur(16px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glow-accent {
+            box-shadow: 0 0 40px rgba(22, 204, 155, 0.05);
+        }
+        .btn-gradient {
+            background: linear-gradient(135deg, #64ffca 0%, #16cc9b 100%);
+        }
+        .curved-line {
+            stroke: #16cc9b;
+            stroke-opacity: 0.15;
+            fill: none;
+            stroke-width: 0.5;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="selection:bg-primary/30">
+<!-- Top Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-[#080f12]/80 backdrop-blur-xl shadow-[0_0_40px_rgba(22,204,155,0.05)]">
+<div class="flex justify-between items-center px-12 py-6 max-w-[1920px] mx-auto">
+<div class="text-xl font-bold tracking-tighter text-white font-headline">Sovereign Rep</div>
+<div class="hidden md:flex items-center gap-8 font-headline font-bold text-white tracking-tight">
+<a class="text-[#a5acb0] hover:text-white transition-colors" href="#">Intelligence</a>
+<a class="text-[#a5acb0] hover:text-white transition-colors" href="#">The Vault</a>
+<a class="text-[#16cc9b] border-b-2 border-[#16cc9b] pb-1" href="#">Security</a>
+<a class="text-[#a5acb0] hover:text-white transition-colors" href="#">Advisory</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-6 py-2 rounded-full border border-white/10 text-sm font-semibold hover:bg-surface-bright transition-all">Inquiry</button>
+<button class="px-6 py-2 rounded-full btn-gradient text-on-primary font-bold text-sm shadow-[0_0_20px_rgba(22,204,155,0.3)] active:scale-95 transition-all">Access Vault</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative pt-48 pb-32 overflow-hidden">
+<svg class="absolute top-0 left-0 w-full h-full -z-10" viewbox="0 0 1440 800" xmlns="http://www.w3.org/2000/svg">
+<path class="curved-line" d="M-100,200 Q400,100 800,500 T1600,300"></path>
+<path class="curved-line" d="M-100,400 Q500,600 900,200 T1600,500"></path>
+</svg>
+<div class="max-w-7xl mx-auto px-12 relative">
+<div class="inline-block px-4 py-1.5 mb-6 rounded-full bg-surface-container border border-outline-variant/20">
+<span class="text-[0.75rem] font-bold tracking-widest text-primary uppercase">Executive Reputation Protocol</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-headline font-extrabold leading-[0.9] tracking-tighter mb-8 max-w-4xl uppercase">
+                YOUR REPUTATION IS YOUR <span class="text-primary">ULTIMATE CURRENCY.</span>
+</h1>
+<p class="text-xl text-on-surface-variant max-w-2xl mb-10 leading-relaxed">
+                In the digital age, your image is often your first—and only—impression. We provide sovereign-level protection and strategic elevation for high-net-worth individuals and elite enterprises.
+            </p>
+<div class="flex flex-col sm:flex-row gap-6">
+<button class="px-10 py-5 rounded-full btn-gradient text-on-primary font-bold text-lg shadow-[0_0_30px_rgba(22,204,155,0.25)] flex items-center gap-3 group">
+                    Begin Security Audit
+                    <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+<div class="flex items-center gap-4 px-6 py-4 rounded-full bg-surface-container border border-outline-variant/15">
+<div class="flex -space-x-3">
+<img class="w-8 h-8 rounded-full border-2 border-background" data-alt="Portrait of a professional executive in a dark suit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5eJ5QnNn3wKKdiGNicIkzuqu5JHKzYNHaTGG8duVTR3ndxcqvTk-SL-TN7SZBnOgg_A72nxHW2bz_W38ANevqWa8h8TIAE8n00lA9lrTXMn5fGqiHI9EspdaCAwDyHHxMLTYYeyOVGrfJe269CxleIgsZ_jVZldufNsH5dEEw7NiPB8RZyIsgtVMloDcjYyXIsTTv3odAE78-Ipvma3zsgZhugmHgstozRcW_-6zzHRXAxyFB0QfsDb7ldD0M1yooMk_URa3buQ"/>
+<img class="w-8 h-8 rounded-full border-2 border-background" data-alt="Portrait of a focused corporate leader" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKqQBkGXrB0vpZKkUr8AwP8lVp1kdJtM1iMmS0yV-mAFZyKGTOHOwaHdCGJGQp4UWXPFXf0BDDF9k1clVetNcNF1pOm-ZrhWE6WQp7J-TVNFYD4i23oPUxykRk7xl79nOjPvL0CEwvhYHkEEG3VP9jhm0P8oqvrgIj_iM76Ad7OtSv576AzAUZEQ8sOMEYE8wjmjI-fYrMjpXxARWspgCYlZk1OF4PS9SIQVLJvtz5Gqnqsg7C-xhhJ8_boIqoar9HchONfBlZwA"/>
+<img class="w-8 h-8 rounded-full border-2 border-background" data-alt="Portrait of an elite legal professional" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABVRVlmSzzT4MpLwPj3vaSEcp5ye4VjfNLyTm7iETsfK-vpIQldC1AAngymPV_nVqUGVSCSGjEvsG1mQGuMIujCnqAoK3rErFJhIys_lMGJCwu-yoTujiImVRhVSlQvdnGeZsZgrZ2lXS2dTubE4hEoBiUqNru5_IHK_X2lBXREPYqDCEvksvv94txIPsxFkSYjn49T9iSBxpxXnXAUN_TyPwGxm4-b2BArh463lvV-44cr2uTlcbxtpAnPrv2sO0rztv_9ZBdLQ"/>
+</div>
+<span class="text-sm font-semibold text-white">Trusted by 500+ Global Elites</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Core Content: The Stakes -->
+<section class="py-24 bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="aspect-square glass-card rounded-[2rem] overflow-hidden p-2 relative">
+<img class="w-full h-full object-cover rounded-[1.8rem] grayscale hover:grayscale-0 transition-all duration-700" data-alt="Futuristic server room with green glowing lights and data architecture" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMgIfI-wfn7-6vA3EQQtk3mkXp58LvsLbifWATxYi_KiFKWH2R8X2vOWfK6i6fPesx-1vewEcklg6UkL4Tbb5p26iZJ8hP9NsraQhNt-Saa73UwhLj4-yAoMhF092i7BT4FETNcqobvjOvgMes9pRYv--54SSyyYyTem4YPGhlUueQKDuEKmPPM2K31v0eGUg69iraCay3RT9Dvbi_ImMvPwGyE_spRlQdOSLR7pLT3lPn-m6TC2OWpd0MTKbjlGwyOstWTzEb4w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+<div class="absolute bottom-8 left-8 right-8">
+<div class="glass-card p-6 rounded-2xl border border-white/5">
+<span class="text-primary font-bold block mb-2">Live Monitoring</span>
+<div class="flex items-end gap-2">
+<div class="h-8 w-1 bg-primary/20 rounded-full"></div>
+<div class="h-12 w-1 bg-primary/40 rounded-full"></div>
+<div class="h-6 w-1 bg-primary rounded-full"></div>
+<div class="h-10 w-1 bg-primary/60 rounded-full"></div>
+<p class="text-sm text-on-surface-variant ml-4 italic">"Securing digital footprints in real-time."</p>
+</div>
+</div>
+</div>
+</div>
+<div class="absolute -top-6 -right-6 w-32 h-32 glass-card rounded-full flex items-center justify-center border border-primary/20">
+<span class="material-symbols-outlined text-primary text-4xl" data-weight="fill">verified_user</span>
+</div>
+</div>
+<div>
+<span class="text-primary font-label text-xs uppercase tracking-widest font-bold mb-4 block">The Necessity</span>
+<h2 class="text-4xl md:text-5xl font-headline font-bold mb-8 leading-tight">PRESERVE THE INTEGRITY OF YOUR DIGITAL IDENTITY.</h2>
+<div class="space-y-6">
+<div class="glass-card p-8 rounded-2xl border border-white/5 hover:border-primary/20 transition-all group">
+<h3 class="text-xl font-bold mb-3 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">security</span>
+                            Defensive Positioning
+                        </h3>
+<p class="text-on-surface-variant">We suppress negative search results and harmful content through advanced SEO and proprietary suppression algorithms, ensuring only the truth prevails.</p>
+</div>
+<div class="glass-card p-8 rounded-2xl border border-white/5 hover:border-primary/20 transition-all group">
+<h3 class="text-xl font-bold mb-3 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">trending_up</span>
+                            Strategic Narrative
+                        </h3>
+<p class="text-on-surface-variant">Don't just react—curate. We build authoritative profiles across high-impact platforms to establish a legacy of excellence and trust.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Bento Grid -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-12">
+<div class="text-center mb-20">
+<h2 class="text-4xl font-headline font-bold mb-4">SOVEREIGN SERVICES</h2>
+<div class="h-1 w-24 bg-primary mx-auto mb-6"></div>
+<p class="text-on-surface-variant max-w-xl mx-auto">Comprehensive reputation management for those who cannot afford failure.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="md:col-span-2 glass-card p-10 rounded-[2.5rem] border border-white/5 relative group overflow-hidden">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">travel_explore</span>
+<h3 class="text-2xl font-bold mb-4">SERP Authority &amp; Suppression</h3>
+<p class="text-on-surface-variant text-lg mb-8 max-w-lg">Advanced engineering to push unwanted links to the periphery. We control the first page of Google to reflect your chosen narrative.</p>
+<button class="text-primary font-bold flex items-center gap-2 group-hover:translate-x-2 transition-transform">
+                            Details <span class="material-symbols-outlined">trending_flat</span>
+</button>
+</div>
+<div class="absolute -bottom-20 -right-20 w-80 h-80 bg-primary/5 rounded-full blur-3xl group-hover:bg-primary/10 transition-all"></div>
+</div>
+<!-- Card 2 -->
+<div class="glass-card p-10 rounded-[2.5rem] border border-white/5 relative group">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">emergency</span>
+<h3 class="text-2xl font-bold mb-4">Crisis Containment</h3>
+<p class="text-on-surface-variant mb-8">Rapid response protocols for viral threats, negative press, or coordinated digital attacks. 24/7 surveillance.</p>
+<button class="text-primary font-bold flex items-center gap-2 group-hover:translate-x-2 transition-transform mt-auto">
+                        Protocol <span class="material-symbols-outlined">trending_flat</span>
+</button>
+</div>
+<!-- Card 3 -->
+<div class="glass-card p-10 rounded-[2.5rem] border border-white/5 relative group">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">person_search</span>
+<h3 class="text-2xl font-bold mb-4">Identity Monitoring</h3>
+<p class="text-on-surface-variant mb-8">Deep web scans and social listening to identify threats before they surface on public channels.</p>
+<button class="text-primary font-bold flex items-center gap-2 group-hover:translate-x-2 transition-transform">
+                        Explore <span class="material-symbols-outlined">trending_flat</span>
+</button>
+</div>
+<!-- Card 4 -->
+<div class="md:col-span-2 glass-card p-10 rounded-[2.5rem] border border-white/5 relative group overflow-hidden">
+<div class="flex flex-col md:flex-row gap-10 items-center">
+<div class="flex-1">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">edit_note</span>
+<h3 class="text-2xl font-bold mb-4">Editorial Placement</h3>
+<p class="text-on-surface-variant text-lg">Securing high-tier media mentions and guest contributions in authoritative publications to cement your status as an industry architect.</p>
+</div>
+<div class="w-full md:w-64 aspect-video rounded-2xl overflow-hidden grayscale">
+<img class="w-full h-full object-cover" data-alt="High-end office space with minimalist luxury design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVpDeHvaVRRjW0RimRK88VpmJTuu5X-x11Bgl0ksgolZcGk2S3erwq5_mOK-YZyam6nS-qtWzIQyGTJ-M238j_trlaDD6weSOebZadDtmaHKne_vqJJb15fEaxzz_Yur1JuA2VUhhuBHuO8QL48ZsSh5IQNK6zxd5zie3FkaI2kZvaCtY2bVV6CSfW4Ve_3zX7KZNCFC3Pl1s11cN01cGUHgpvMeJMmW9Hd1a9Db7LqKf-aeNNPKBNhOUFdjXQi828hEkpz-CQYA"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Process: Step by Step Flow -->
+<section class="py-24 bg-surface-container relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-12">
+<h2 class="text-4xl font-headline font-bold mb-16 text-center">THE ARCHITECTURAL PROCESS</h2>
+<div class="relative grid grid-cols-1 md:grid-cols-4 gap-4">
+<!-- Line background for md+ -->
+<div class="hidden md:block absolute top-1/2 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/30 to-transparent -translate-y-1/2"></div>
+<!-- Step 1 -->
+<div class="relative group">
+<div class="w-16 h-16 rounded-full glass-card border border-primary/40 flex items-center justify-center mb-6 mx-auto relative z-10 bg-surface group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary">search_check</span>
+</div>
+<div class="text-center">
+<h4 class="font-bold mb-2">I. Discovery</h4>
+<p class="text-xs text-on-surface-variant uppercase tracking-tighter">Audit &amp; Vulnerability Analysis</p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative group">
+<div class="w-16 h-16 rounded-full glass-card border border-primary/40 flex items-center justify-center mb-6 mx-auto relative z-10 bg-surface group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary">architecture</span>
+</div>
+<div class="text-center">
+<h4 class="font-bold mb-2">II. Blueprint</h4>
+<p class="text-xs text-on-surface-variant uppercase tracking-tighter">Custom Strategy Development</p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative group">
+<div class="w-16 h-16 rounded-full glass-card border border-primary/40 flex items-center justify-center mb-6 mx-auto relative z-10 bg-surface group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary">shield_locked</span>
+</div>
+<div class="text-center">
+<h4 class="font-bold mb-2">III. Execution</h4>
+<p class="text-xs text-on-surface-variant uppercase tracking-tighter">Active Suppression &amp; Content</p>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="relative group">
+<div class="w-16 h-16 rounded-full glass-card border border-primary/40 flex items-center justify-center mb-6 mx-auto relative z-10 bg-surface group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary">radar</span>
+</div>
+<div class="text-center">
+<h4 class="font-bold mb-2">IV. Vigilance</h4>
+<p class="text-xs text-on-surface-variant uppercase tracking-tighter">Continuous Monitoring</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust / Authority -->
+<section class="py-24 bg-surface">
+<div class="max-w-5xl mx-auto px-12 text-center">
+<span class="text-primary font-bold text-sm tracking-widest block mb-6">CLIENT SUCCESS</span>
+<blockquote class="text-3xl md:text-4xl font-headline font-bold leading-snug mb-10 text-white">
+                "In a world where one false headline can dismantle decades of work, Sovereign Rep provided the security I needed to protect my legacy."
+            </blockquote>
+<div class="flex items-center justify-center gap-4">
+<div class="w-12 h-[1px] bg-outline-variant"></div>
+<span class="text-on-surface-variant font-semibold">Chief Investment Officer, Fortune 100</span>
+<div class="w-12 h-[1px] bg-outline-variant"></div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 relative">
+<div class="max-w-7xl mx-auto px-12">
+<div class="glass-card rounded-[3rem] p-12 md:p-24 text-center border border-primary/10 overflow-hidden relative">
+<div class="absolute inset-0 bg-primary/5 -z-10"></div>
+<h2 class="text-4xl md:text-6xl font-headline font-extrabold mb-8 max-w-3xl mx-auto uppercase">
+                    TAKE BACK <span class="text-primary">CONTROL</span> OF YOUR DIGITAL NARRATIVE.
+                </h2>
+<p class="text-xl text-on-surface-variant mb-12 max-w-2xl mx-auto">
+                    Confidentiality is our baseline. Precision is our hallmark. Contact us today for a private reputation audit.
+                </p>
+<div class="flex flex-wrap justify-center gap-6">
+<button class="px-12 py-6 rounded-full btn-gradient text-on-primary font-bold text-xl shadow-[0_0_50px_rgba(22,204,155,0.4)] hover:scale-105 active:scale-95 transition-all">
+                        Secure Your Assets
+                    </button>
+<button class="px-12 py-6 rounded-full border border-white/20 hover:bg-white/5 text-white font-bold text-xl transition-all">
+                        View Whitepapers
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full border-t border-white/10 bg-[#000000]">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 px-12 py-16 w-full max-w-[1920px] mx-auto">
+<div>
+<div class="text-lg font-black text-white uppercase tracking-widest mb-6">SOVEREIGN ARCHITECT</div>
+<p class="font-['Inter'] text-sm tracking-wide text-[#a5acb0] max-w-md">
+                    © 2024 Sovereign Architect. All rights reserved. Precision reputation management and digital security for global leadership.
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-12">
+<div class="flex flex-col gap-4">
+<span class="text-white font-bold text-xs uppercase tracking-widest">Protocol</span>
+<a class="font-['Inter'] text-sm tracking-wide text-[#a5acb0] hover:text-[#16cc9b] transition-colors" href="#">Privacy Protocol</a>
+<a class="font-['Inter'] text-sm tracking-wide text-[#a5acb0] hover:text-[#16cc9b] transition-colors" href="#">Security Audit</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-white font-bold text-xs uppercase tracking-widest">Engagement</span>
+<a class="font-['Inter'] text-sm tracking-wide text-[#a5acb0] hover:text-[#16cc9b] transition-colors" href="#">Terms of Engagement</a>
+<a class="font-['Inter'] text-sm tracking-wide text-[#a5acb0] hover:text-[#16cc9b] transition-colors" href="#">Contact Alpha</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
