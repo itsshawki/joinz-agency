@@ -54,7 +54,6 @@ export default function ServicesPage() {
   return (
     <>
       <Hero
-        tagline="Curated Excellence"
         title={
           <>
             Expert Digital <span className="text-neon">Solutions</span>

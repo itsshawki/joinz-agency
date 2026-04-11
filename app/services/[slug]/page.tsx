@@ -50,7 +50,6 @@ export default async function ServiceDetailPage({
     <>
       {/* Hero */}
       <Hero
-        tagline={service.tagline}
         title={
           <span className="flex flex-col items-center">
             <span className="block">{service.heroTitle}</span>

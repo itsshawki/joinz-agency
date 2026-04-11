@@ -20,7 +20,7 @@ export default function ContactPage() {
             <span className="text-neon">Extraordinary</span>
           </>
         }
-        description="Ready to elevate your digital presence? Reach out through our secure contact form and a strategist will respond within 24 hours"
+        description="Ready to elevate your digital presence? Reach out through our secure contact form and a strategist will respond within 24 hours."
       />
 
       <Section>
