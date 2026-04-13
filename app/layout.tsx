@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import SovereignBackground from "@/components/SovereignBackground";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const manrope = Manrope({
   subsets: ["latin"],
@@ -67,6 +68,7 @@ export default function RootLayout({
         <Footer />
         <WhatsAppButton />
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
