@@ -18,7 +18,7 @@ export default function WhatsAppButton() {
       </div>
 
       {/* Pulse Effect */}
-      <div className="absolute inset-0 rounded-full bg-[#25D366]/20 animate-ping pointer-events-none"></div>
+      <div className="absolute inset-0 rounded-full bg-[#25D366]/20 animate-pulse pointer-events-none"></div>
 
       {/* Button */}
       <a

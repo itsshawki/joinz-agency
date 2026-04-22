@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 
 interface HeroProps {
@@ -36,11 +35,8 @@ export default function Hero({
   secondaryCtaHref,
   rightContent,
 }: HeroProps) {
-  // Use pathname as key to force re-mount and re-animate on route change
-  const pathname = usePathname();
-
   return (
-    <section className="hero-section" key={pathname}>
+    <section className="hero-section">
       {/* FULL WIDTH BACKGROUND LAYER */}
       <div className="hero-background hero-gradient">
         {/* Abstract SVG Lines */}

@@ -175,15 +175,11 @@ export default function ServiceHeroVisual({ slug }: { slug: string }) {
   return (
     <div className="relative w-full max-w-[440px] mx-auto">
       {/* Ambient glow behind everything */}
-      <motion.div
-        className="absolute -top-10 -right-10 w-72 h-72 bg-primary/8 rounded-full blur-[80px] pointer-events-none"
-        animate={{ scale: [1, 1.15, 1], opacity: [0.5, 0.8, 0.5] }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+      <div
+        className="absolute -top-10 -right-10 w-72 h-72 bg-primary/8 rounded-full blur-[80px] pointer-events-none animate-pulse-glow"
       />
-      <motion.div
+      <div
         className="absolute -bottom-8 -left-8 w-48 h-48 bg-primary/5 rounded-full blur-[60px] pointer-events-none"
-        animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.6, 0.3] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
       />
 
       {/* Main glass card */}
@@ -270,18 +266,18 @@ export default function ServiceHeroVisual({ slug }: { slug: string }) {
         </span>
       </motion.div>
 
-      {/* Floating particles */}
-      {config.particles.map((p, i) => (
+      {/* Floating particles — limited to 2 for performance */}
+      {config.particles.slice(0, 2).map((p, i) => (
         <motion.div
           key={i}
           className="absolute rounded-full bg-primary/30 pointer-events-none"
           style={{ top: p.top, left: p.left, width: p.size, height: p.size }}
           animate={{
-            y: [-8, 8, -8],
-            opacity: [0.2, 0.6, 0.2],
+            y: [-6, 6, -6],
+            opacity: [0.2, 0.5, 0.2],
           }}
           transition={{
-            duration: 3 + i,
+            duration: 6 + i * 2,
             repeat: Infinity,
             delay: p.delay,
             ease: "easeInOut",

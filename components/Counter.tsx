@@ -10,7 +10,8 @@ interface CounterProps {
 export default function Counter({ target, label }: CounterProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [value, setValue] = useState("0");
-  const [hasAnimated, setHasAnimated] = useState(false);
+  const hasAnimatedRef = useRef(false);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   useEffect(() => {
     const el = ref.current;
@@ -18,8 +19,8 @@ export default function Counter({ target, label }: CounterProps) {
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated) {
-          setHasAnimated(true);
+        if (entry.isIntersecting && !hasAnimatedRef.current) {
+          hasAnimatedRef.current = true;
           animateCounter();
         }
       },
@@ -27,9 +28,12 @@ export default function Counter({ target, label }: CounterProps) {
     );
 
     observer.observe(el);
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [hasAnimated]);
+  }, []);
 
   const animateCounter = () => {
     const numericMatch = target.match(/\d+/);
@@ -50,11 +54,12 @@ export default function Counter({ target, label }: CounterProps) {
     const steps = duration / stepTime;
     const increment = end / steps;
 
-    const timer = setInterval(() => {
+    timerRef.current = setInterval(() => {
       start += increment;
       if (start >= end) {
         setValue(`${prefix}${end}${suffix}`);
-        clearInterval(timer);
+        if (timerRef.current) clearInterval(timerRef.current);
+        timerRef.current = null;
       } else {
         setValue(`${prefix}${Math.floor(start)}${suffix}`);
       }

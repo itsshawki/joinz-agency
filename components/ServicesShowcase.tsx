@@ -147,13 +147,11 @@ function ServiceRow({
             {/* Animated Gradient Orb */}
             <motion.div
               animate={{
-                scale: [1, 1.1, 1],
-                opacity: [0.3, 0.5, 0.3],
-                x: [0, 20, 0],
-                y: [0, -20, 0],
+                scale: [1, 1.08, 1],
+                opacity: [0.3, 0.45, 0.3],
               }}
               transition={{
-                duration: 8,
+                duration: 12,
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
@@ -207,23 +205,22 @@ function ServiceRow({
 
             {/* Motion Particles (Simulated) */}
             <div className="absolute inset-0 pointer-events-none">
-              {[...Array(6)].map((_, i) => (
+              {[0, 1, 2].map((i) => (
                 <motion.div
                   key={i}
                   animate={{
-                    y: [-20, 20, -20],
-                    x: [-10, 10, -10],
-                    opacity: [0.1, 0.3, 0.1],
+                    y: [-10, 10, -10],
+                    opacity: [0.1, 0.25, 0.1],
                   }}
                   transition={{
-                    duration: 3 + i,
+                    duration: 5 + i * 2,
                     repeat: Infinity,
-                    delay: i * 0.5,
+                    delay: i * 0.8,
                   }}
                   className="absolute w-1 h-1 bg-primary rounded-full"
                   style={{
-                    top: `${20 + (i * 15)}%`,
-                    left: `${15 + (i * 12)}%`,
+                    top: `${20 + (i * 25)}%`,
+                    left: `${15 + (i * 20)}%`,
                   }}
                 />
               ))}
