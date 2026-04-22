@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Hero from "@/components/Hero";
+import ServiceHeroVisual from "@/components/ServiceHeroVisual";
 import ScrollReveal from "@/components/ScrollReveal";
 import ClosingCta from "@/components/ClosingCta";
 import Section from "@/components/Section";
@@ -48,7 +49,7 @@ export default async function ServiceDetailPage({
 
   return (
     <>
-      {/* Hero */}
+      {/* Hero — cinematic full-width, matching homepage style */}
       <Hero
         eyebrow={service.tagline}
         title={
@@ -62,6 +63,7 @@ export default async function ServiceDetailPage({
         ctaHref="/contact"
         secondaryCta={service.secondaryCta}
         secondaryCtaHref={service.secondaryCtaAnchor}
+        rightContent={<ServiceHeroVisual slug={service.slug} />}
       />
 
       {/* Bento Feature Grid */}
