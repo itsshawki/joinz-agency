@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, Variants } from "framer-motion";
 
 interface ServiceShowcaseItem {
   slug: string;
@@ -26,14 +26,14 @@ function ServiceRow({
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
-  const containerVariants = {
+  const containerVariants: Variants = {
     hidden: { opacity: 0, y: 40 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
         duration: 0.8,
-        ease: [0.22, 1, 0.36, 1],
+        ease: "easeInOut",
         staggerChildren: 0.1,
       },
     },
@@ -261,7 +261,7 @@ export default function ServicesShowcase({
           className="mb-20 md:mb-28 text-center md:text-left"
           initial={{ opacity: 0, y: 40 }}
           animate={headerInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
+          transition={{ duration: 0.7, ease: "easeInOut" }}
         >
           <span className="text-primary text-xs font-bold uppercase tracking-[0.3em] mb-4 block">
             Core Expertise
