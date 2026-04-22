@@ -15,19 +15,20 @@ export default function AboutPage() {
   return (
     <>
       <Hero
+        eyebrow="About Joinz"
         title={
           <>
             Who We <span className="text-neon">Are</span>
           </>
         }
-        description="We are the silent partners behind the world’s leading digital profiles. Joinz is a premier digital service agency specializing in secure, confidential, and guaranteed social media solutions."
+        description="We are the silent partners behind the world's leading digital profiles. Joinz is a premier digital service agency specializing in secure, confidential, and guaranteed social media solutions."
       />
 
       {/* Story + Expertise */}
       <Section containerLow>
         <div className="grid md:grid-cols-5 gap-8">
           <ScrollReveal className="md:col-span-3">
-            <div className="glass-card rounded-2xl p-8 md:p-12 h-full">
+            <div className="glass-card rounded-3xl p-8 md:p-12 h-full">
               <h2 className="font-headline font-bold text-2xl text-white mb-6">
                 Our Story
               </h2>
@@ -51,7 +52,7 @@ export default function AboutPage() {
             </div>
           </ScrollReveal>
           <ScrollReveal className="md:col-span-2" delay={150}>
-            <div className="glass-card rounded-2xl p-8 md:p-12 h-full">
+            <div className="glass-card rounded-3xl p-8 md:p-12 h-full">
               <h2 className="font-headline font-bold text-2xl text-white mb-2">
                 Our Expertise
               </h2>
@@ -99,6 +100,9 @@ export default function AboutPage() {
       <Section containerLow>
         <ScrollReveal>
           <div className="mb-16">
+            <span className="text-primary text-xs font-bold uppercase tracking-[0.2em] mb-3 block">
+              Our Edge
+            </span>
             <h2 className="font-headline font-bold text-[2rem] text-white">
               What Makes Us Different
             </h2>
@@ -126,10 +130,12 @@ export default function AboutPage() {
             },
           ].map((card, i) => (
             <ScrollReveal key={card.title} delay={i * 120}>
-              <div className="glass-card rounded-2xl p-8 h-full">
-                <span className="material-symbols-outlined text-primary text-3xl mb-4">
-                  {card.icon}
-                </span>
+              <div className="glass-card rounded-3xl p-8 h-full group transition-all duration-400 hover:-translate-y-2 hover:border-primary/20">
+                <div className="w-12 h-12 rounded-2xl bg-white/[0.04] border border-white/[0.06] flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
+                  <span className="material-symbols-outlined text-primary text-2xl">
+                    {card.icon}
+                  </span>
+                </div>
                 <h3 className="font-headline font-bold text-xl text-white mb-3">
                   {card.title}
                 </h3>

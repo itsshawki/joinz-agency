@@ -50,11 +50,12 @@ export default async function ServiceDetailPage({
     <>
       {/* Hero */}
       <Hero
+        eyebrow={service.tagline}
         title={
-          <span className="flex flex-col items-center">
-            <span className="block">{service.heroTitle}</span>
-            <span className="text-neon block">{service.heroHighlight}</span>
-          </span>
+          <>
+            {service.heroTitle}{" "}
+            <span className="text-neon">{service.heroHighlight}</span>
+          </>
         }
         description={service.heroDescription}
         ctaText={service.ctaText}
@@ -67,6 +68,9 @@ export default async function ServiceDetailPage({
       <Section containerLow>
         <ScrollReveal>
           <div className="mb-16">
+            <span className="text-primary text-xs font-bold uppercase tracking-[0.2em] mb-3 block">
+              {service.sectionSubtitle}
+            </span>
             <h2 className="font-headline font-bold text-[2rem] text-white">
               {service.sectionTitle}
             </h2>
@@ -76,7 +80,7 @@ export default async function ServiceDetailPage({
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           {/* Main Feature (Top Left - Large) */}
           <ScrollReveal className="md:col-span-8">
-            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 md:p-10 relative group overflow-hidden h-full flex flex-col justify-between">
+            <div className="glass-card rounded-3xl p-8 md:p-10 relative group overflow-hidden h-full flex flex-col justify-between">
               <div>
                 <span className="material-symbols-outlined text-[#16cc9b] text-4xl mb-6">
                   {service.mainFeature.icon}
@@ -105,7 +109,7 @@ export default async function ServiceDetailPage({
 
           {/* Side Feature (Top Right - Small Vertical) */}
           <ScrollReveal className="md:col-span-4" delay={120}>
-            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 md:p-10 flex flex-col justify-between h-full">
+            <div className="glass-card rounded-3xl p-8 md:p-10 flex flex-col justify-between h-full">
               <div>
                 <span className="material-symbols-outlined text-[#16cc9b] text-4xl mb-6">
                   {service.sideFeature.icon}
@@ -135,7 +139,7 @@ export default async function ServiceDetailPage({
               className={feat.span || "md:col-span-4"}
               delay={(i + 2) * 80}
             >
-              <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-8 h-full flex items-center justify-between group">
+              <div className="glass-card rounded-3xl p-8 h-full flex items-center justify-between group">
                 <div>
                   <span className="material-symbols-outlined text-[#16cc9b] mb-4">
                     {feat.icon}
@@ -148,7 +152,7 @@ export default async function ServiceDetailPage({
                   </p>
                 </div>
                 {feat.badge && (
-                  <div className="hidden sm:flex flex-col items-end text-right ml-4 px-4 py-2 rounded-lg bg-white/5 border border-white/10">
+                  <div className="hidden sm:flex flex-col items-end text-right ml-4 px-4 py-2 rounded-xl bg-white/[0.03] border border-white/[0.06]">
                     <span className="text-[#16cc9b] font-bold text-sm tracking-tight whitespace-nowrap">{feat.badge}</span>
                     <span className="text-white/30 text-[10px] uppercase font-bold tracking-widest whitespace-nowrap">{feat.badgeSub}</span>
                   </div>
@@ -161,10 +165,9 @@ export default async function ServiceDetailPage({
         {/* Supported Platforms (Verification only) - Premium Luxury Centerpiece */}
         {service.slug === "verification" && (
           <ScrollReveal delay={300}>
-            <div className="mt-24 md:mt-32 rounded-[2.5rem] md:rounded-[4rem] p-12 md:p-24 relative overflow-hidden bg-gradient-to-b from-[#0c1215] to-background border border-white/10 shadow-2xl group/centerpiece">
+            <div className="mt-24 md:mt-32 rounded-[2.5rem] md:rounded-[3rem] p-12 md:p-24 relative overflow-hidden glass-card group/centerpiece">
               {/* Luxury Background Layers */}
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(22,204,155,0.08),transparent_60%)] pointer-events-none" />
-              <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')] mix-blend-overlay" />
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 via-transparent to-primary/5 pointer-events-none opacity-30" />
 
               {/* Scan Line Detail */}
@@ -246,7 +249,7 @@ export default async function ServiceDetailPage({
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
             {service.mediaLogos.map((logo, i) => (
               <ScrollReveal key={logo} delay={i * 60}>
-                <div className="glass-card rounded-xl p-8 flex items-center justify-center media-logo-card">
+                <div className="glass-card rounded-2xl p-8 flex items-center justify-center media-logo-card">
                   <span className="font-headline font-bold text-xl text-white">
                     {logo}
                   </span>
@@ -260,7 +263,7 @@ export default async function ServiceDetailPage({
       {/* Verification Framework Section */}
       <section
         id="method"
-        className="px-6 md:px-12 py-24 md:py-32 max-w-[1440px] mx-auto overflow-hidden text-center"
+        className="px-6 md:px-12 py-24 md:py-32 max-w-[1300px] mx-auto overflow-hidden text-center"
       >
         <ScrollReveal>
           <div className="mb-16 md:mb-24">
@@ -280,7 +283,7 @@ export default async function ServiceDetailPage({
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
             {service.processSteps.map((step, i) => (
               <ScrollReveal key={step.number} delay={i * 150}>
-                <div className="group relative flex flex-col p-8 md:p-10 rounded-3xl bg-white/5 border border-white/10 transition-all duration-500 hover:bg-white/[0.08] hover:border-primary/40 hover:-translate-y-3 hover:scale-[1.05] hover:shadow-[0_20px_50px_rgba(22,204,155,0.15)] text-left h-full">
+                <div className="group relative flex flex-col p-8 md:p-10 rounded-3xl glass-card transition-all duration-500 hover:bg-white/[0.06] hover:border-primary/30 hover:-translate-y-3 hover:scale-[1.03] hover:shadow-[0_20px_50px_rgba(22,204,155,0.12)] text-left h-full">
                   {/* Step Number Badge */}
                   <div className="w-16 h-16 rounded-full border-2 border-primary/30 flex items-center justify-center text-primary font-bold text-2xl mb-8 relative group-hover:border-primary group-hover:shadow-[0_0_25px_rgba(22,204,155,0.4)] transition-all duration-500 bg-background/80 backdrop-blur-sm">
                     <div className="absolute inset-0 rounded-full bg-primary/20 scale-0 group-hover:scale-110 transition-transform duration-500 blur-md" />
@@ -297,7 +300,7 @@ export default async function ServiceDetailPage({
                   </div>
 
                   {/* Glass Shimmer Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none" />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none rounded-3xl" />
                 </div>
               </ScrollReveal>
             ))}

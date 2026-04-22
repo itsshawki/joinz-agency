@@ -54,6 +54,7 @@ export default function ServicesPage() {
   return (
     <>
       <Hero
+        eyebrow="Our Services"
         title={
           <>
             Expert Digital <span className="text-neon">Solutions</span>

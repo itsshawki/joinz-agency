@@ -48,55 +48,60 @@ export default function Navbar() {
 
   return (
     <>
-      <nav
-        className={`navbar fixed top-0 left-0 w-full z-[1100] transition-all duration-500 ${
-          scrolled
-            ? "bg-background/80 backdrop-blur-xl"
-            : "bg-transparent"
-        }`}
-      >
-        <div className="flex justify-between items-center w-full max-w-7xl mx-auto px-6 md:px-12">
-          <Link
-            href="/"
-            className="text-2xl font-black tracking-tighter text-white font-headline"
-          >
-            Joinz
-          </Link>
-
-          {/* Desktop Nav */}
-          <div className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`nav-link ${isActive(link.href) ? "active" : ""}`}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-
-          <div className="flex items-center gap-4 lg:gap-6">
+      <header className="fixed top-0 left-0 w-full z-[1100] px-4 md:px-8 pt-4">
+        <nav
+          className={`navbar-float transition-all duration-500 ${
+            scrolled
+              ? "navbar-float--scrolled"
+              : ""
+          }`}
+        >
+          <div className="flex justify-between items-center w-full">
+            {/* Logo — Left */}
             <Link
-              href="/contact"
-              className="primary-cta px-6 py-2.5 text-sm !hidden lg:!flex"
+              href="/"
+              className="text-[1.4rem] font-black tracking-[-0.04em] text-white font-headline flex-shrink-0"
             >
-              Get Started
+              Joinz
             </Link>
 
-            {/* Hamburger Button */}
-            <button
-              onClick={() => setMenuOpen(!menuOpen)}
-              className={`hamburger lg:hidden ${menuOpen ? "active" : ""}`}
-              aria-label="Toggle Menu"
-            >
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
+            {/* Nav Links — Center */}
+            <div className="hidden lg:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
+              {navLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`nav-pill ${isActive(link.href) ? "nav-pill--active" : ""}`}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+
+            {/* CTA + Hamburger — Right */}
+            <div className="flex items-center gap-4 lg:gap-5">
+              <Link
+                href="/contact"
+                className="nav-cta-button !hidden lg:!flex"
+              >
+                Get Started
+                <span className="material-symbols-outlined !text-[16px]">arrow_forward</span>
+              </Link>
+
+              {/* Hamburger Button */}
+              <button
+                onClick={() => setMenuOpen(!menuOpen)}
+                className={`hamburger lg:hidden ${menuOpen ? "active" : ""}`}
+                aria-label="Toggle Menu"
+              >
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
+      </header>
 
       {/* Mobile Menu */}
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
@@ -114,7 +119,7 @@ export default function Navbar() {
           ))}
           <Link
             href="/contact"
-            className="mobile-nav-link primary-cta mt-6 px-12 py-4 text-xl delay-5"
+            className="mobile-nav-link nav-cta-button mt-6 px-12 py-4 text-xl delay-5"
           >
             Get Started
           </Link>

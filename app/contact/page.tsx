@@ -14,6 +14,7 @@ export default function ContactPage() {
   return (
     <>
       <Hero
+        eyebrow="Contact Us"
         title={
           <>
             Let&apos;s Build Something{" "}
@@ -96,7 +97,7 @@ export default function ContactPage() {
               ].map((item) => (
                 <div
                   key={item.title}
-                  className="glass-card rounded-xl p-8 flex gap-6 items-start"
+                  className="glass-card rounded-2xl p-8 flex gap-6 items-start"
                 >
                   <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                     <span className="material-symbols-outlined text-primary">
@@ -118,7 +119,7 @@ export default function ContactPage() {
               ))}
 
               {/* Visual accent */}
-              <div className="glass-card rounded-xl p-8 text-center">
+              <div className="glass-card rounded-2xl p-8 text-center">
                 <span className="material-symbols-outlined text-primary text-5xl mb-3">
                   lock
                 </span>

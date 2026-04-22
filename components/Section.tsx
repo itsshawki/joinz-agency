@@ -14,11 +14,11 @@ export default function Section({
   return (
     <section
       id={id}
-      className={`px-6 md:px-12 py-24 ${
+      className={`px-6 md:px-12 py-24 md:py-32 ${
         containerLow ? "bg-surface-container-low" : ""
       } ${className}`}
     >
-      <div className="max-w-[1440px] mx-auto">{children}</div>
+      <div className="max-w-[1300px] mx-auto">{children}</div>
     </section>
   );
 }

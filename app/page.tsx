@@ -1,50 +1,106 @@
 import Hero from "@/components/Hero";
-import ServiceCard from "@/components/ServiceCard";
 import Counter from "@/components/Counter";
 import ScrollReveal from "@/components/ScrollReveal";
 import ClosingCta from "@/components/ClosingCta";
 import Section from "@/components/Section";
 import PlatformShowcase from "@/components/PlatformShowcase";
-import { serviceCards as originalServiceCards } from "@/lib/services";
+import HomeHeroVisual from "@/components/HomeHeroVisual";
+import ServicesShowcase from "@/components/ServicesShowcase";
 
 /**
  * HOME PAGE COPY UPDATE
  * Strictly following provided text-only replacement rules.
  */
 
-// Home-specific service card data to avoid modifying other pages
-const homeServiceCards = [
+// Build premium showcase data from the canonical services list
+const homeServices = [
   {
-    ...originalServiceCards[0],
-    description: "Get verified on major platforms and build real trust with your audience. We handle the full process until your badge is approved.",
+    slug: "verification",
+    icon: "verified",
+    title: "Social Media Verification",
+    label: "Authority Protocol",
+    description:
+      "Get verified on major platforms and build real trust with your audience. We handle the full process until your badge is approved.",
+    statsValue: "98%",
+    statsLabel: "Success Rate",
+    keywords: ["Official Badge", "Entity Trust", "Global Authority"]
   },
   {
-    ...originalServiceCards[1],
-    description: "Take control of what people see when they search your name. We remove harmful content and protect your digital image 24/7.",
+    slug: "reputation",
+    icon: "shield",
+    title: "Reputation Management",
+    label: "Narrative Control",
+    description:
+      "Take control of what people see when they search your name. We remove harmful content and protect your digital image 24/7.",
+    statsValue: "24/7",
+    statsLabel: "Monitoring",
+    keywords: ["Crisis Control", "Search Shield", "Narrative Fix"]
   },
   {
-    ...originalServiceCards[2],
-    description: "Lost access to your account? We recover hacked or disabled profiles quickly and securely through trusted channels.",
+    slug: "recovery",
+    icon: "history",
+    title: "Account Recovery",
+    label: "Asset Retrieval",
+    description:
+      "Lost access to your account? We recover hacked or disabled profiles quickly and securely through trusted channels.",
+    statsValue: "72h",
+    statsLabel: "Avg. Recovery",
+    keywords: ["Hacked Restore", "Disabled Appeal", "Access Regained"]
   },
   {
-    ...originalServiceCards[3],
-    description: "Secure the exact username you need. We use official trademark and platform channels to claim inactive or squatted handles.",
+    slug: "username",
+    icon: "alternate_email",
+    title: "Username Claim",
+    label: "Digital Real Estate",
+    description:
+      "Secure the exact username you need. We use official trademark and platform channels to claim inactive or squatted handles.",
+    statsValue: "100%",
+    statsLabel: "Direct Claims",
+    keywords: ["Inactive Handles", "Trademark Rights", "Handle Transfer"]
   },
   {
-    ...originalServiceCards[4],
-    description: "Build a brand that commands respect. We design high-end visual identities that position you as an authority in your space.",
+    slug: "branding",
+    icon: "auto_awesome",
+    title: "Branding & Design",
+    label: "Identity Architecture",
+    description:
+      "Build a brand that commands respect. We design high-end visual identities that position you as an authority in your space.",
+    statsValue: "Top 1%",
+    statsLabel: "Visual Authority",
+    keywords: ["Identity Design", "Brand Systems", "Creative Strategy"]
   },
   {
-    ...originalServiceCards[5],
-    description: "High-performance digital presence. We engineer fast, secure, and beautiful websites tailored for elite conversion.",
+    slug: "webdev",
+    icon: "code",
+    title: "Website Development",
+    label: "Digital Engineering",
+    description:
+      "High-performance digital presence. We engineer fast, secure, and beautiful websites tailored for elite conversion.",
+    statsValue: "100/100",
+    statsLabel: "Performance",
+    keywords: ["Next.js", "Turbo Load", "Digital Vault"]
   },
   {
-    ...originalServiceCards[6],
-    description: "Get featured in prestigious publications. We secure editorial coverage to build credibility and establish your global presence.",
+    slug: "pr-media",
+    icon: "article",
+    title: "PR & Media",
+    label: "Media Operations",
+    description:
+      "Get featured in prestigious publications. We secure editorial coverage to build credibility and establish your global presence.",
+    statsValue: "200+",
+    statsLabel: "Media Outlets",
+    keywords: ["Forbes", "Bloomberg", "Editorial", "Visibility"]
   },
   {
-    ...originalServiceCards[7],
-    description: "Scale your audience sustainably. Data-driven strategies designed to grow your influence and build loyal communities.",
+    slug: "growth",
+    icon: "trending_up",
+    title: "Growth & Engagement",
+    label: "Amplification Engine",
+    description:
+      "Scale your audience sustainably. Data-driven strategies designed to grow your influence and build loyal communities.",
+    statsValue: "Real",
+    statsLabel: "Organic Reach",
+    keywords: ["Targeted Growth", "High Engagement", "Loyal Community"]
   },
 ];
 
@@ -52,43 +108,30 @@ export default function HomePage() {
   return (
     <>
       <Hero
+        eyebrow="Digital Authority Agency"
         title={
           <>
-            Take Full Control of Your <span className="text-neon">Digital Presence</span>
+            Take Full Control
+            <br />
+            of Your <span className="text-neon">Digital Presence</span>
           </>
         }
         description="We help elite individuals and brands get verified, protect their digital assets, and build a powerful online reputation with absolute discretion."
-        ctaText="Explore services"
+        ctaText="Explore Services"
         ctaHref="/services"
-        // Secondary button removed as per request
+        secondaryCta="Get in Touch"
+        secondaryCtaHref="/contact"
+        rightContent={<HomeHeroVisual />}
       />
 
-      {/* Services Section */}
-      <Section containerLow>
-        <ScrollReveal>
-          <div className="mb-16">
-            <h2 className="font-headline font-bold text-3xl md:text-4xl text-white mb-4">
-              Elite Digital <span className="text-neon">Services</span>
-            </h2>
-            <p className="text-on-surface-variant text-lg max-w-2xl leading-relaxed">
-              Curated solutions for those who demand the highest standards in digital asset management and authority.
-            </p>
-          </div>
-        </ScrollReveal>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {homeServiceCards.map((service, i) => (
-            <ScrollReveal key={service.slug} delay={i * 80}>
-              <ServiceCard {...service} />
-            </ScrollReveal>
-          ))}
-        </div>
-      </Section>
+      {/* Services Section — Premium Alternating Layout */}
+      <ServicesShowcase services={homeServices} />
 
       {/* Stats Section */}
       <Section>
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="font-headline font-bold text-3xl md:text-4xl text-white mb-4">
+            <h2 className="font-headline font-bold text-3xl md:text-[2.5rem] text-white mb-4 leading-tight">
               Trusted by brands across <span className="text-neon">platforms</span>
             </h2>
             <p className="text-on-surface-variant text-lg max-w-3xl mx-auto leading-relaxed">
@@ -107,10 +150,13 @@ export default function HomePage() {
       <Section containerLow>
         <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
           <ScrollReveal>
-            <h2 className="font-headline font-bold text-3xl md:text-4xl text-white mb-6">
+            <span className="text-primary text-xs font-bold uppercase tracking-[0.2em] mb-4 block">
+              Why Joinz
+            </span>
+            <h2 className="font-headline font-bold text-3xl md:text-[2.5rem] text-white mb-6 leading-tight">
               Built on Trust, Delivered with <span className="text-neon">Precision</span>
             </h2>
-            <p className="text-on-surface-variant text-lg leading-relaxed mb-8">
+            <p className="text-on-surface-variant text-lg leading-relaxed mb-10">
               Our methodology combines internal network access with advanced digital forensics to ensure your online identity remains impenetrable and authentic.
             </p>
             <div className="space-y-6">
@@ -121,12 +167,14 @@ export default function HomePage() {
                 { title: "Confidential Handling", desc: "Extreme discretion for high-profile clients with strictly enforced NDAs." },
               ].map((feature) => (
                 <div key={feature.title} className="flex items-start gap-4">
-                  <span className="material-symbols-outlined text-primary text-xl mt-0.5">
-                    check_circle
-                  </span>
+                  <div className="w-8 h-8 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="material-symbols-outlined text-primary text-lg">
+                      check_circle
+                    </span>
+                  </div>
                   <div>
                     <h4 className="text-white text-base font-bold mb-1">{feature.title}</h4>
-                    <p className="text-on-surface-variant text-sm">
+                    <p className="text-on-surface-variant text-sm leading-relaxed">
                       {feature.desc}
                     </p>
                   </div>
@@ -136,14 +184,14 @@ export default function HomePage() {
           </ScrollReveal>
           <ScrollReveal delay={200}>
             <div className="relative">
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden glass-card p-2">
-                <div className="w-full h-full rounded-xl bg-gradient-to-br from-primary/10 to-surface-container flex items-center justify-center">
-                  <span className="material-symbols-outlined text-primary text-[8rem] opacity-20">
+              <div className="aspect-[4/3] rounded-3xl overflow-hidden glass-card p-2">
+                <div className="w-full h-full rounded-2xl bg-gradient-to-br from-primary/8 to-surface-container flex items-center justify-center">
+                  <span className="material-symbols-outlined text-primary text-[8rem] opacity-15">
                     verified_user
                   </span>
                 </div>
               </div>
-              <div className="absolute -bottom-6 -right-6 glass-card p-6 rounded-xl shadow-2xl">
+              <div className="absolute -bottom-6 -right-6 glass-card p-6 rounded-2xl shadow-2xl">
                 <p className="text-primary font-headline font-bold text-2xl">
                   98%
                 </p>
@@ -160,7 +208,7 @@ export default function HomePage() {
       <Section className="py-20 relative">
         <ScrollReveal>
           <div className="text-center mb-10">
-            <h3 className="text-white/40 text-sm font-bold uppercase tracking-[0.3em]">Supported Platforms</h3>
+            <h3 className="text-white/30 text-xs font-bold uppercase tracking-[0.3em]">Supported Platforms</h3>
           </div>
           <PlatformShowcase />
         </ScrollReveal>
@@ -171,7 +219,7 @@ export default function HomePage() {
         title="Ready to Build Your"
         highlight="Digital Legacy?"
         description="Join 500+ elite brands who trust Joinz to architect their digital future."
-        ctaText="Explore services"
+        ctaText="Explore Services"
         ctaHref="/services"
       />
     </>

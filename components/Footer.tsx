@@ -2,14 +2,14 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full py-16 bg-[#080f12] overflow-hidden border-t border-white/[0.08]">
-      {/* Background Overlay Styles (Replicating Hero logic) */}
+    <footer className="relative w-full py-20 overflow-hidden border-t border-white/[0.06]">
+      {/* Background Overlay Styles */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(22,204,155,0.05)_0%,transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(22,204,155,0.03)_0%,transparent_70%)]" />
         
         {/* Wave Lines Pattern */}
         <svg 
-          className="absolute top-0 left-0 w-full h-full opacity-[0.15]" 
+          className="absolute top-0 left-0 w-full h-full opacity-[0.08]" 
           viewBox="0 0 1000 1000" 
           xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true"
@@ -19,17 +19,17 @@ export default function Footer() {
         </svg>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-16 pb-12">
+      <div className="relative z-10 max-w-[1300px] mx-auto px-6 md:px-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-16 pb-14">
           {/* Logo & Tagline */}
           <div className="md:col-span-2">
             <Link
               href="/"
-              className="text-2xl font-black text-white font-headline mb-4 tracking-tighter block"
+              className="text-2xl font-black text-white font-headline mb-4 tracking-[-0.04em] block"
             >
               Joinz
             </Link>
-            <p className="text-gray-400 text-sm max-w-sm leading-relaxed mb-8">
+            <p className="text-on-surface-variant text-sm max-w-sm leading-relaxed mb-8">
               Building Digital Trust & Authority. We provide expert solutions for social media verification and reputation.
             </p>
             
@@ -39,7 +39,7 @@ export default function Footer() {
                 href="https://www.facebook.com/Joinz.Agency"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-[#16cc9b] transition-all duration-300"
+                className="text-white/30 hover:text-primary transition-all duration-300 hover:-translate-y-1"
                 aria-label="Facebook"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -50,7 +50,7 @@ export default function Footer() {
                 href="https://www.instagram.com/joinz.agency"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-[#16cc9b] transition-all duration-300"
+                className="text-white/30 hover:text-primary transition-all duration-300 hover:-translate-y-1"
                 aria-label="Instagram"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -61,7 +61,7 @@ export default function Footer() {
                 href="https://wa.me/201020366187"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-[#16cc9b] transition-all duration-300"
+                className="text-white/30 hover:text-primary transition-all duration-300 hover:-translate-y-1"
                 aria-label="WhatsApp"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -70,7 +70,7 @@ export default function Footer() {
               </a>
               <a
                 href="mailto:info@joinz.agency"
-                className="text-gray-400 hover:text-[#16cc9b] transition-all duration-300"
+                className="text-white/30 hover:text-primary transition-all duration-300 hover:-translate-y-1"
                 aria-label="Email"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -85,10 +85,10 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold text-sm mb-6 uppercase tracking-wider">Quick Links</h4>
             <ul className="space-y-4">
-              <li><Link href="/" className="text-gray-400 hover:text-[#16cc9b] text-sm transition-colors">Home</Link></li>
-              <li><Link href="/#services" className="text-gray-400 hover:text-[#16cc9b] text-sm transition-colors">Services</Link></li>
-              <li><Link href="/#about" className="text-gray-400 hover:text-[#16cc9b] text-sm transition-colors">About Us</Link></li>
-              <li><Link href="/contact" className="text-gray-400 hover:text-[#16cc9b] text-sm transition-colors">Contact</Link></li>
+              <li><Link href="/" className="text-white/40 hover:text-primary text-sm transition-colors duration-300">Home</Link></li>
+              <li><Link href="/#services" className="text-white/40 hover:text-primary text-sm transition-colors duration-300">Services</Link></li>
+              <li><Link href="/#about" className="text-white/40 hover:text-primary text-sm transition-colors duration-300">About Us</Link></li>
+              <li><Link href="/contact" className="text-white/40 hover:text-primary text-sm transition-colors duration-300">Contact</Link></li>
             </ul>
           </div>
 
@@ -96,17 +96,17 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold text-sm mb-6 uppercase tracking-wider">Services</h4>
             <ul className="space-y-4">
-              <li><Link href="/services/verification" className="text-gray-400 hover:text-[#16cc9b] text-sm transition-colors">Verification</Link></li>
-              <li><Link href="/services/reputation" className="text-gray-400 hover:text-[#16cc9b] text-sm transition-colors">Reputation Management</Link></li>
-              <li><Link href="/services/recovery" className="text-gray-400 hover:text-[#16cc9b] text-sm transition-colors">Account Recovery</Link></li>
-              <li><Link href="/services/username" className="text-gray-400 hover:text-[#16cc9b] text-sm transition-colors">Username Claim</Link></li>
+              <li><Link href="/services/verification" className="text-white/40 hover:text-primary text-sm transition-colors duration-300">Verification</Link></li>
+              <li><Link href="/services/reputation" className="text-white/40 hover:text-primary text-sm transition-colors duration-300">Reputation Management</Link></li>
+              <li><Link href="/services/recovery" className="text-white/40 hover:text-primary text-sm transition-colors duration-300">Account Recovery</Link></li>
+              <li><Link href="/services/username" className="text-white/40 hover:text-primary text-sm transition-colors duration-300">Username Claim</Link></li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Line */}
-        <div className="pt-8 border-t border-white/[0.08]">
-          <p className="text-center text-gray-500 text-xs text-balance">
+        <div className="pt-8 border-t border-white/[0.06]">
+          <p className="text-center text-white/25 text-xs text-balance">
             © 2022 - 2026 Joinz. All rights reserved.
           </p>
         </div>

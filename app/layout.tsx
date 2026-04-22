@@ -60,7 +60,7 @@ export default function RootLayout({
 
         <Navbar />
 
-        <main className="relative z-10 overflow-hidden pt-32">
+        <main className="relative z-10 overflow-hidden">
           {children}
         </main>
 
