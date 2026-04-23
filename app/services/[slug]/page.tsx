@@ -7,7 +7,7 @@ import ClosingCta from "@/components/ClosingCta";
 import Section from "@/components/Section";
 import RecentlyVerified from "@/components/RecentlyVerified";
 import RealCaseResults from "@/components/RealCaseResults";
-import PlatformIcons from "@/components/PlatformIcons";
+import PlatformNetworkDashboard from "@/components/PlatformNetworkDashboard";
 import { services, getServiceBySlug } from "@/lib/services";
 
 // Generate static params for all services
@@ -156,36 +156,29 @@ export default async function ServiceDetailPage({
           ))}
         </div>
 
-        {/* Supported Platforms (Verification only) - Premium Luxury Centerpiece */}
+        {/* Supported Platforms (Verification only) - Minimal Luxury Section */}
         {service.slug === "verification" && (
-          <ScrollReveal delay={300}>
-            <div className="mt-24 md:mt-32 rounded-[2.5rem] md:rounded-[3rem] p-12 md:p-24 relative overflow-hidden glass-card group/centerpiece">
-              {/* Luxury Background Layers */}
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,210,190,0.08),transparent_60%)] pointer-events-none" />
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 via-transparent to-primary/5 pointer-events-none opacity-30" />
-
-              {/* Scan Line Detail */}
-              <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/40 to-transparent animate-scan" />
-
-              <div className="relative z-10 text-center mb-20">
-                <h3 className="font-headline font-bold text-4xl md:text-6xl mb-6 tracking-tight bg-gradient-to-r from-on-surface via-on-surface to-primary/40 bg-clip-text text-transparent">
+          <div className="mt-24 md:mt-32 relative">
+            <ScrollReveal>
+              <div className="text-center mb-12 md:mb-16 relative z-10">
+                <span className="text-primary text-xs font-black uppercase tracking-[0.4em] mb-3 block">
+                  PLATFORMS
+                </span>
+                <h2 className="font-headline font-bold text-3xl md:text-5xl text-on-surface mb-4 tracking-tight">
                   Supported Platforms
-                </h3>
-
-                {/* Visual Divider */}
-                <div className="flex justify-center mb-8">
-                  <div className="h-[1px] w-32 bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
-                </div>
-
-                <p className="text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-medium">
-                  Authoritative verification infrastructure engineered for the world&apos;s elite digital platforms.
+                </h2>
+                <p className="text-on-surface-variant text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+                  Verification support across major global platforms.
                 </p>
               </div>
+            </ScrollReveal>
 
-              {/* Platform Icons — isolated in a Client Component to avoid Turbopack CJS crash */}
-              <PlatformIcons />
-            </div>
-          </ScrollReveal>
+            <ScrollReveal delay={200}>
+              <div className="rounded-[2.5rem] md:rounded-[3.5rem] relative overflow-hidden glass-card border-white/5 bg-white/[0.01]">
+                <PlatformNetworkDashboard />
+              </div>
+            </ScrollReveal>
+          </div>
         )}
       </Section>
 

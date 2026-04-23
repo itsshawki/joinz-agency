@@ -6,6 +6,7 @@ import Section from "@/components/Section";
 import PlatformShowcase from "@/components/PlatformShowcase";
 import HomeHeroVisual from "@/components/HomeHeroVisual";
 import ServicesShowcase from "@/components/ServicesShowcase";
+import TrustDashboard from "@/components/TrustDashboard";
 
 /**
  * HOME PAGE COPY UPDATE
@@ -183,23 +184,7 @@ export default function HomePage() {
             </div>
           </ScrollReveal>
           <ScrollReveal delay={200}>
-            <div className="relative">
-              <div className="aspect-[4/3] rounded-3xl overflow-hidden glass-card p-2">
-                <div className="w-full h-full rounded-2xl bg-gradient-to-br from-primary/8 to-surface-container flex items-center justify-center">
-                  <span className="material-symbols-outlined text-primary text-[8rem] opacity-15">
-                    verified_user
-                  </span>
-                </div>
-              </div>
-              <div className="absolute -bottom-6 -right-6 glass-card p-6 rounded-2xl shadow-2xl">
-                <p className="text-primary font-headline font-bold text-2xl">
-                  98%
-                </p>
-                <p className="text-on-surface-variant text-xs font-bold">
-                  Success Rate
-                </p>
-              </div>
-            </div>
+            <TrustDashboard />
           </ScrollReveal>
         </div>
       </Section>

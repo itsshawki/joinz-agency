@@ -27,7 +27,7 @@ export default function ContactHeroVisual() {
 
         <div className="space-y-6">
           {[
-            { label: "Response Time", value: "< 1 Hour", icon: "timer" },
+            { label: "Response Time", value: "< 12 Hour", icon: "timer" },
             { label: "Communication", value: "Secure & Confidential", icon: "lock" },
             { label: "Network", value: "Global Clients", icon: "public" },
             { label: "Support Level", value: "Priority Support", icon: "stars" },
