@@ -4,6 +4,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import Counter from "@/components/Counter";
 import ClosingCta from "@/components/ClosingCta";
 import Section from "@/components/Section";
+import AboutHeroVisual from "@/components/AboutHeroVisual";
 
 export const metadata: Metadata = {
   title: "About",
@@ -22,6 +23,7 @@ export default function AboutPage() {
           </>
         }
         description="We are the silent partners behind the world's leading digital profiles. Joinz is a premier digital service agency specializing in secure, confidential, and guaranteed social media solutions."
+        rightContent={<AboutHeroVisual />}
       />
 
       {/* Story + Expertise */}

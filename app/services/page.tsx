@@ -5,6 +5,7 @@ import ScrollReveal from "@/components/ScrollReveal";
 import ClosingCta from "@/components/ClosingCta";
 import Section from "@/components/Section";
 import { serviceCards as originalServiceCards } from "@/lib/services";
+import ServicesPageHeroVisual from "@/components/ServicesPageHeroVisual";
 
 export const metadata: Metadata = {
   title: "Expert Digital Solutions | JOINZ Agency",
@@ -69,6 +70,7 @@ export default function ServicesPage() {
         description="Engineered solutions for high-stakes digital assets. We provide the infrastructure and influence required to dominate your space."
         ctaText="Get Started"
         ctaHref="/contact"
+        rightContent={<ServicesPageHeroVisual />}
       />
 
       <Section containerLow>

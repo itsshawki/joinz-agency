@@ -93,8 +93,8 @@ export default function Footer() {
             <h4 className="text-on-surface font-bold text-sm mb-6 uppercase tracking-wider">Quick Links</h4>
             <ul className="space-y-4">
               <li><Link href="/" className="text-on-surface-variant/60 hover:text-primary text-sm transition-colors duration-300">Home</Link></li>
-              <li><Link href="/#services" className="text-on-surface-variant/60 hover:text-primary text-sm transition-colors duration-300">Services</Link></li>
-              <li><Link href="/#about" className="text-on-surface-variant/60 hover:text-primary text-sm transition-colors duration-300">About Us</Link></li>
+              <li><Link href="/services" className="text-on-surface-variant/60 hover:text-primary text-sm transition-colors duration-300">Services</Link></li>
+              <li><Link href="/about" className="text-on-surface-variant/60 hover:text-primary text-sm transition-colors duration-300">About Us</Link></li>
               <li><Link href="/contact" className="text-on-surface-variant/60 hover:text-primary text-sm transition-colors duration-300">Contact</Link></li>
             </ul>
           </div>

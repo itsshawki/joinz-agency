@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import ContactForm from "@/components/ContactForm";
 import ScrollReveal from "@/components/ScrollReveal";
 import Section from "@/components/Section";
+import ContactHeroVisual from "@/components/ContactHeroVisual";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -22,6 +23,7 @@ export default function ContactPage() {
           </>
         }
         description="Ready to elevate your digital presence? Reach out through our secure contact form and a strategist will respond within 24 hours."
+        rightContent={<ContactHeroVisual />}
       />
 
       <Section>
