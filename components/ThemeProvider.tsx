@@ -26,22 +26,17 @@ export default function ThemeProvider({
   const [theme, setTheme] = useState<Theme>("dark");
   const [mounted, setMounted] = useState(false);
 
-  // Initialize from localStorage on mount
   useEffect(() => {
-    const stored = localStorage.getItem("joinz-theme") as Theme | null;
-    if (stored === "light" || stored === "dark") {
-      setTheme(stored);
-    }
     setMounted(true);
   }, []);
 
-  // Apply theme class to <html> and persist
+  // Apply theme class to <html> (No persistence)
   useEffect(() => {
     if (!mounted) return;
     const root = document.documentElement;
     root.classList.remove("dark", "light");
     root.classList.add(theme);
-    localStorage.setItem("joinz-theme", theme);
+    
     // Update meta theme-color for mobile browser chrome
     const metaTheme = document.querySelector('meta[name="theme-color"]');
     if (metaTheme) {
