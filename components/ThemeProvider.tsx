@@ -23,25 +23,22 @@ export default function ThemeProvider({
 }: {
   children: React.ReactNode;
 }) {
+  // Always default to dark on initial state
   const [theme, setTheme] = useState<Theme>("dark");
   const [mounted, setMounted] = useState(false);
 
-  // Initialize from localStorage on mount
   useEffect(() => {
-    const stored = localStorage.getItem("joinz-theme") as Theme | null;
-    if (stored === "light" || stored === "dark") {
-      setTheme(stored);
-    }
     setMounted(true);
   }, []);
 
-  // Apply theme class to <html> and persist
+  // Apply theme class to <html> for current session only
   useEffect(() => {
     if (!mounted) return;
+    
     const root = document.documentElement;
     root.classList.remove("dark", "light");
     root.classList.add(theme);
-    localStorage.setItem("joinz-theme", theme);
+    
     // Update meta theme-color for mobile browser chrome
     const metaTheme = document.querySelector('meta[name="theme-color"]');
     if (metaTheme) {
@@ -56,8 +53,6 @@ export default function ThemeProvider({
     setTheme((prev) => (prev === "dark" ? "light" : "dark"));
   }, []);
 
-  // Prevent flash — render children immediately but the theme 
-  // context will update on next tick after mount
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {children}

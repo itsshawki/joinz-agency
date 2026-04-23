@@ -4,33 +4,36 @@ import { motion } from "framer-motion";
 
 export default function TrustDashboard() {
   return (
-    <div className="relative w-full max-w-[560px] mx-auto perspective-1000">
+    <div className="relative w-full max-w-[500px] mx-auto perspective-1000 p-6 md:p-10">
       {/* Background Decorative Rings (Outer) */}
-      <div className="absolute -inset-10 opacity-20 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] border border-primary/20 rounded-full animate-[spin_20s_linear_infinite]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[110%] h-[110%] border border-primary/10 rounded-full animate-[spin_15s_linear_infinite_reverse]" />
+      <div className="absolute inset-0 opacity-20 pointer-events-none">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[115%] h-[115%] border border-primary/20 rounded-full animate-[spin_20s_linear_infinite]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[105%] h-[105%] border border-primary/10 rounded-full animate-[spin_15s_linear_infinite_reverse]" />
       </div>
 
       {/* Main Glass Card */}
       <motion.div 
-        initial={{ opacity: 0, scale: 0.95, rotateY: 5 }}
+        initial={{ opacity: 0, scale: 0.9, rotateY: 5 }}
         whileInView={{ opacity: 1, scale: 1, rotateY: 0 }}
         viewport={{ once: true }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="relative aspect-[4/3] md:aspect-square lg:aspect-[4/3] glass-card rounded-[2rem] md:rounded-[3rem] p-6 md:p-8 lg:p-10 overflow-hidden flex flex-col justify-between border-white/10 shadow-[0_20px_80px_rgba(0,0,0,0.4)]"
+        className="relative aspect-[4/3] glass-card rounded-[2rem] md:rounded-[3rem] p-6 md:p-8 lg:p-10 flex flex-col justify-between border-white/10 shadow-[0_20px_80px_rgba(0,0,0,0.4)]"
       >
-        {/* Inner Glows */}
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/10 via-transparent to-primary/5 pointer-events-none" />
-        <div className="absolute -top-32 -left-32 w-64 h-64 bg-primary/15 rounded-full blur-[100px] pointer-events-none" />
-        <div className="absolute -bottom-32 -right-32 w-64 h-64 bg-primary/10 rounded-full blur-[100px] pointer-events-none" />
-        
-        {/* Dynamic Grid Pattern */}
-        <div className="absolute inset-0 opacity-[0.05] pointer-events-none" 
-          style={{ 
-            backgroundImage: `linear-gradient(var(--color-primary) 1px, transparent 1px), linear-gradient(90deg, var(--color-primary) 1px, transparent 1px)`,
-            backgroundSize: '40px 40px' 
-          }} 
-        />
+        {/* Background Clipping Layer for Inner Glows */}
+        <div className="absolute inset-0 rounded-[2rem] md:rounded-[3rem] overflow-hidden pointer-events-none">
+          {/* Inner Glows */}
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/10 via-transparent to-primary/5" />
+          <div className="absolute -top-32 -left-32 w-64 h-64 bg-primary/15 rounded-full blur-[100px]" />
+          <div className="absolute -bottom-32 -right-32 w-64 h-64 bg-primary/10 rounded-full blur-[100px]" />
+          
+          {/* Dynamic Grid Pattern */}
+          <div className="absolute inset-0 opacity-[0.05]" 
+            style={{ 
+              backgroundImage: `linear-gradient(var(--color-primary) 1px, transparent 1px), linear-gradient(90deg, var(--color-primary) 1px, transparent 1px)`,
+              backgroundSize: '40px 40px' 
+            }} 
+          />
+        </div>
 
         {/* Top Header Section */}
         <div className="relative z-10 flex justify-between items-start">

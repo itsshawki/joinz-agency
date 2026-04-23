@@ -149,7 +149,7 @@ export default function HomePage() {
 
       {/* Trust Section & Features */}
       <Section containerLow>
-        <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center">
+        <div className="grid md:grid-cols-2 gap-16 md:gap-24 items-center overflow-visible">
           <ScrollReveal>
             <span className="text-primary text-xs font-bold uppercase tracking-[0.2em] mb-4 block">
               Why Joinz
