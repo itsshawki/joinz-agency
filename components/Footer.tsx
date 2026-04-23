@@ -1,11 +1,12 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full py-20 overflow-hidden border-t border-white/[0.06]">
+    <footer className="relative w-full py-20 overflow-hidden border-t border-outline/30">
       {/* Background Overlay Styles */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(22,204,155,0.03)_0%,transparent_70%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,210,190,0.03)_0%,transparent_70%)]" />
         
         {/* Wave Lines Pattern */}
         <svg 
@@ -14,8 +15,8 @@ export default function Footer() {
           xmlns="http://www.w3.org/2000/svg"
           aria-hidden="true"
         >
-          <path d="M0,500 C150,300 350,700 500,500 S850,300 1000,500" fill="none" stroke="#16cc9b" strokeWidth="0.5" />
-          <path d="M0,600 C200,400 400,800 600,600 S900,400 1000,600" fill="none" stroke="#16cc9b" strokeWidth="0.5" opacity="0.5" />
+          <path d="M0,500 C150,300 350,700 500,500 S850,300 1000,500" fill="none" stroke="#00D2BE" strokeWidth="0.5" />
+          <path d="M0,600 C200,400 400,800 600,600 S900,400 1000,600" fill="none" stroke="#00D2BE" strokeWidth="0.5" opacity="0.5" />
         </svg>
       </div>
 
@@ -25,9 +26,15 @@ export default function Footer() {
           <div className="md:col-span-2">
             <Link
               href="/"
-              className="text-2xl font-black text-white font-headline mb-4 tracking-[-0.04em] block"
+              className="block mb-6"
             >
-              Joinz
+              <Image
+                src="/logo.png"
+                alt="Joinz Agency Logo"
+                width={58}
+                height={38}
+                className="w-[57.8px] h-[38.4px] object-contain navbar-logo transition-all duration-300"
+              />
             </Link>
             <p className="text-on-surface-variant text-sm max-w-sm leading-relaxed mb-8">
               Building Digital Trust & Authority. We provide expert solutions for social media verification and reputation.
@@ -39,7 +46,7 @@ export default function Footer() {
                 href="https://www.facebook.com/Joinz.Agency"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/30 hover:text-primary transition-all duration-300 hover:-translate-y-1"
+                className="text-on-surface-variant/50 hover:text-primary transition-all duration-300 hover:-translate-y-1"
                 aria-label="Facebook"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -50,7 +57,7 @@ export default function Footer() {
                 href="https://www.instagram.com/joinz.agency"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/30 hover:text-primary transition-all duration-300 hover:-translate-y-1"
+                className="text-on-surface-variant/50 hover:text-primary transition-all duration-300 hover:-translate-y-1"
                 aria-label="Instagram"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -61,7 +68,7 @@ export default function Footer() {
                 href="https://wa.me/201020366187"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-white/30 hover:text-primary transition-all duration-300 hover:-translate-y-1"
+                className="text-on-surface-variant/50 hover:text-primary transition-all duration-300 hover:-translate-y-1"
                 aria-label="WhatsApp"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -70,7 +77,7 @@ export default function Footer() {
               </a>
               <a
                 href="mailto:info@joinz.agency"
-                className="text-white/30 hover:text-primary transition-all duration-300 hover:-translate-y-1"
+                className="text-on-surface-variant/50 hover:text-primary transition-all duration-300 hover:-translate-y-1"
                 aria-label="Email"
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -83,30 +90,30 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-bold text-sm mb-6 uppercase tracking-wider">Quick Links</h4>
+            <h4 className="text-on-surface font-bold text-sm mb-6 uppercase tracking-wider">Quick Links</h4>
             <ul className="space-y-4">
-              <li><Link href="/" className="text-white/40 hover:text-primary text-sm transition-colors duration-300">Home</Link></li>
-              <li><Link href="/#services" className="text-white/40 hover:text-primary text-sm transition-colors duration-300">Services</Link></li>
-              <li><Link href="/#about" className="text-white/40 hover:text-primary text-sm transition-colors duration-300">About Us</Link></li>
-              <li><Link href="/contact" className="text-white/40 hover:text-primary text-sm transition-colors duration-300">Contact</Link></li>
+              <li><Link href="/" className="text-on-surface-variant/60 hover:text-primary text-sm transition-colors duration-300">Home</Link></li>
+              <li><Link href="/#services" className="text-on-surface-variant/60 hover:text-primary text-sm transition-colors duration-300">Services</Link></li>
+              <li><Link href="/#about" className="text-on-surface-variant/60 hover:text-primary text-sm transition-colors duration-300">About Us</Link></li>
+              <li><Link href="/contact" className="text-on-surface-variant/60 hover:text-primary text-sm transition-colors duration-300">Contact</Link></li>
             </ul>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="text-white font-bold text-sm mb-6 uppercase tracking-wider">Services</h4>
+            <h4 className="text-on-surface font-bold text-sm mb-6 uppercase tracking-wider">Services</h4>
             <ul className="space-y-4">
-              <li><Link href="/services/verification" className="text-white/40 hover:text-primary text-sm transition-colors duration-300">Verification</Link></li>
-              <li><Link href="/services/reputation" className="text-white/40 hover:text-primary text-sm transition-colors duration-300">Reputation Management</Link></li>
-              <li><Link href="/services/recovery" className="text-white/40 hover:text-primary text-sm transition-colors duration-300">Account Recovery</Link></li>
-              <li><Link href="/services/username" className="text-white/40 hover:text-primary text-sm transition-colors duration-300">Username Claim</Link></li>
+              <li><Link href="/services/verification" className="text-on-surface-variant/60 hover:text-primary text-sm transition-colors duration-300">Verification</Link></li>
+              <li><Link href="/services/reputation" className="text-on-surface-variant/60 hover:text-primary text-sm transition-colors duration-300">Reputation Management</Link></li>
+              <li><Link href="/services/recovery" className="text-on-surface-variant/60 hover:text-primary text-sm transition-colors duration-300">Account Recovery</Link></li>
+              <li><Link href="/services/username" className="text-on-surface-variant/60 hover:text-primary text-sm transition-colors duration-300">Username Claim</Link></li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Line */}
-        <div className="pt-8 border-t border-white/[0.06]">
-          <p className="text-center text-white/25 text-xs text-balance">
+        <div className="pt-8 border-t border-outline/30">
+          <p className="text-center text-on-surface-variant/40 text-xs text-balance">
             © 2022 - 2026 Joinz. All rights reserved.
           </p>
         </div>

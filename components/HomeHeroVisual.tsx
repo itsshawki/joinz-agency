@@ -17,42 +17,42 @@ export default function HomeHeroVisual() {
               <span className="material-symbols-outlined text-primary text-xl">verified</span>
             </div>
             <div>
-              <p className="text-white text-sm font-bold">Verified Profiles</p>
-              <p className="text-primary text-xs font-bold">500+ Completed</p>
+              <p className="text-on-surface text-sm font-bold">Completed Cases</p>
+              <p className="text-primary text-xs font-bold">800+ Completed</p>
             </div>
           </div>
 
-          <div className="h-[1px] bg-white/[0.06]" />
+          <div className="h-[1px] bg-outline/10" />
 
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
               <span className="material-symbols-outlined text-primary text-xl">shield</span>
             </div>
             <div>
-              <p className="text-white text-sm font-bold">Reputation Protected</p>
+              <p className="text-on-surface text-sm font-bold">Reputation Protected</p>
               <p className="text-primary text-xs font-bold">24/7 Monitoring</p>
             </div>
           </div>
 
-          <div className="h-[1px] bg-white/[0.06]" />
+          <div className="h-[1px] bg-outline/10" />
 
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
               <span className="material-symbols-outlined text-primary text-xl">trending_up</span>
             </div>
             <div>
-              <p className="text-white text-sm font-bold">Growth Engine</p>
+              <p className="text-on-surface text-sm font-bold">Growth Engine</p>
               <p className="text-primary text-xs font-bold">Data-Driven Results</p>
             </div>
           </div>
 
           {/* Success rate bar */}
-          <div className="mt-4 p-4 rounded-2xl bg-white/[0.03] border border-white/[0.06]">
+          <div className="mt-4 p-4 rounded-2xl bg-surface-variant border border-outline/30">
             <div className="flex justify-between items-center mb-2">
-              <span className="text-white/60 text-xs font-bold">Success Rate</span>
+              <span className="text-on-surface-variant text-xs font-bold">Success Rate</span>
               <span className="text-primary text-sm font-bold">98%</span>
             </div>
-            <div className="w-full h-1.5 rounded-full bg-white/[0.06] overflow-hidden">
+            <div className="w-full h-1.5 rounded-full bg-outline/30 overflow-hidden">
               <div
                 className="h-full rounded-full bg-gradient-to-r from-primary to-primary-dim"
                 style={{ width: "98%" }}

@@ -16,7 +16,7 @@ const visualConfigs: Record<string, ServiceVisualConfig> = {
   verification: {
     icon: "verified",
     stats: [
-      { label: "Profiles Verified", value: "500+", icon: "verified" },
+      { label: "Profiles Verified", value: "100+", icon: "verified" },
       { label: "Platform Coverage", value: "6+", icon: "devices" },
       { label: "Approval Rate", value: "98%", icon: "check_circle" },
     ],
@@ -50,7 +50,7 @@ const visualConfigs: Record<string, ServiceVisualConfig> = {
   recovery: {
     icon: "history",
     stats: [
-      { label: "Accounts Recovered", value: "1.2K+", icon: "restore" },
+      { label: "Accounts Recovered", value: "80+", icon: "restore" },
       { label: "Avg. Recovery", value: "72h", icon: "timer" },
       { label: "Success Rate", value: "95%", icon: "check_circle" },
     ],
@@ -67,7 +67,7 @@ const visualConfigs: Record<string, ServiceVisualConfig> = {
   username: {
     icon: "alternate_email",
     stats: [
-      { label: "Handles Claimed", value: "800+", icon: "badge" },
+      { label: "Handles Claimed", value: "76+", icon: "badge" },
       { label: "Platforms", value: "All Major", icon: "language" },
       { label: "Claim Rate", value: "100%", icon: "verified" },
     ],
@@ -84,7 +84,7 @@ const visualConfigs: Record<string, ServiceVisualConfig> = {
   branding: {
     icon: "auto_awesome",
     stats: [
-      { label: "Brands Designed", value: "200+", icon: "palette" },
+      { label: "Brands Designed", value: "6+", icon: "palette" },
       { label: "Client Retention", value: "96%", icon: "favorite" },
       { label: "Visual Authority", value: "Top 1%", icon: "workspace_premium" },
     ],
@@ -119,7 +119,7 @@ const visualConfigs: Record<string, ServiceVisualConfig> = {
     icon: "article",
     stats: [
       { label: "Media Outlets", value: "200+", icon: "newspaper" },
-      { label: "Articles Placed", value: "3K+", icon: "edit_note" },
+      { label: "Articles Placed", value: "120+", icon: "edit_note" },
       { label: "Global Reach", value: "50M+", icon: "public" },
     ],
     accentLabel: "Media Network",
@@ -203,7 +203,7 @@ export default function ServiceHeroVisual({ slug }: { slug: string }) {
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, ease: "easeOut", delay: 0.5 + i * 0.12 }}
             >
-              {i > 0 && <div className="h-[1px] bg-white/[0.06] mb-5" />}
+              {i > 0 && <div className="h-[1px] bg-outline/10 mb-5" />}
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
                   <span className="material-symbols-outlined text-primary text-xl">
@@ -211,7 +211,7 @@ export default function ServiceHeroVisual({ slug }: { slug: string }) {
                   </span>
                 </div>
                 <div className="flex-1 min-w-0">
-                  <p className="text-white text-sm font-bold truncate">{stat.label}</p>
+                  <p className="text-on-surface text-sm font-bold truncate">{stat.label}</p>
                   <p className="text-primary text-xs font-bold">{stat.value}</p>
                 </div>
               </div>
@@ -220,16 +220,16 @@ export default function ServiceHeroVisual({ slug }: { slug: string }) {
 
           {/* Accent bar */}
           <motion.div
-            className="mt-4 p-4 rounded-2xl bg-white/[0.03] border border-white/[0.06]"
+            className="mt-4 p-4 rounded-2xl bg-surface-variant border border-outline/20"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.9 }}
           >
             <div className="flex justify-between items-center mb-2">
-              <span className="text-white/60 text-xs font-bold">{config.accentLabel}</span>
+              <span className="text-on-surface-variant text-xs font-bold">{config.accentLabel}</span>
               <span className="text-primary text-sm font-bold">{config.accentValue}</span>
             </div>
-            <div className="w-full h-1.5 rounded-full bg-white/[0.06] overflow-hidden">
+            <div className="w-full h-1.5 rounded-full bg-outline/20 overflow-hidden">
               <motion.div
                 className="h-full rounded-full bg-gradient-to-r from-primary to-primary-dim"
                 initial={{ width: 0 }}

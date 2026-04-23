@@ -6,7 +6,7 @@ const scrollItems = [...profiles, ...profiles];
 
 export default function RecentlyVerified() {
   return (
-    <section className="py-24 md:py-32 overflow-hidden border-t border-white/5 relative z-10 w-full">
+    <section className="py-24 md:py-32 overflow-hidden border-t border-outline/30 relative z-10 w-full">
       <style dangerouslySetInnerHTML={{
         __html: `
         @keyframes scrollLeft {
@@ -31,7 +31,7 @@ export default function RecentlyVerified() {
 
       <div className="max-w-[1440px] mx-auto px-6 md:px-12">
         <div className="mb-16 text-center">
-          <h2 className="font-headline font-bold text-[2rem] md:text-[2.5rem] text-white mb-3 tracking-tight">
+          <h2 className="font-headline font-bold text-[2rem] md:text-[2.5rem] text-on-surface mb-3 tracking-tight">
             Recently <span className="text-neon">Verified</span> Accounts
           </h2>
           <p className="text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
@@ -53,8 +53,8 @@ export default function RecentlyVerified() {
               >
                 {/* Profile Circle with Premium Glow */}
                 <div className="relative">
-                  <div className="w-28 h-28 md:w-40 md:h-40 rounded-full p-[2px] bg-white/5 group-hover/item:bg-primary transition-all duration-700">
-                    <div className="w-full h-full rounded-full overflow-hidden bg-surface-container-high border-[3px] border-background relative">
+                  <div className="w-28 h-28 md:w-40 md:h-40 rounded-full p-[2px] bg-outline/30 group-hover/item:bg-primary transition-all duration-700">
+                    <div className="w-full h-full rounded-full overflow-hidden bg-surface-container border-[3px] border-background relative">
                       <Image
                         src={account.image}
                         alt={account.username}
@@ -80,10 +80,10 @@ export default function RecentlyVerified() {
 
                 {/* Account Identity */}
                 <div className="text-center transform transition-all duration-500 group-hover/item:translate-y-[-4px]">
-                  <h5 className="text-white font-bold text-base md:text-lg mb-1 tracking-tight">
+                  <h5 className="text-on-surface font-bold text-base md:text-lg mb-1 tracking-tight">
                     {account.username}
                   </h5>
-                  <div className="inline-flex items-center px-3 py-1 rounded-full bg-white/5 border border-white/10">
+                  <div className="inline-flex items-center px-3 py-1 rounded-full glass-card">
                     <p className="text-on-surface-variant text-[10px] md:text-xs font-label font-semibold">
                       {account.platform}
                     </p>

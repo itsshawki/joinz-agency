@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope, Inter } from "next/font/google";
 import "./globals.css";
+import ThemeProvider from "@/components/ThemeProvider";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SovereignBackground from "@/components/SovereignBackground";
@@ -44,28 +45,36 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark" data-scroll-behavior="smooth">
+    <html lang="en" className="dark" data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
         {/* eslint-disable-next-line @next/next/no-page-custom-font */}
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap"
         />
+        {/* Inline script to prevent theme flash */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('joinz-theme');if(t==='light'){document.documentElement.classList.remove('dark');document.documentElement.classList.add('light')}}catch(e){}})()`,
+          }}
+        />
       </head>
       <body
         className={`${manrope.variable} ${inter.variable} bg-background text-on-surface font-body antialiased`}
       >
-        {/* Global sovereign background — fixed, z-0, covers all pages */}
-        <SovereignBackground />
+        <ThemeProvider>
+          {/* Global sovereign background — fixed, z-0, covers all pages */}
+          <SovereignBackground />
 
-        <Navbar />
+          <Navbar />
 
-        <main className="relative z-10 overflow-hidden">
-          {children}
-        </main>
+          <main className="relative z-10 overflow-hidden">
+            {children}
+          </main>
 
-        <Footer />
-        <WhatsAppButton />
+          <Footer />
+          <WhatsAppButton />
+        </ThemeProvider>
         <Analytics />
       </body>
     </html>

@@ -65,7 +65,7 @@ export default async function ServiceDetailPage({
             <span className="text-primary text-xs font-bold uppercase tracking-[0.2em] mb-3 block">
               {service.sectionSubtitle}
             </span>
-            <h2 className="font-headline font-bold text-[2rem] text-white">
+            <h2 className="font-headline font-bold text-[2rem] text-on-surface">
               {service.sectionTitle}
             </h2>
           </div>
@@ -76,19 +76,19 @@ export default async function ServiceDetailPage({
           <ScrollReveal className="md:col-span-8">
             <div className="glass-card rounded-3xl p-8 md:p-10 relative group overflow-hidden h-full flex flex-col justify-between">
               <div>
-                <span className="material-symbols-outlined text-[#16cc9b] text-4xl mb-6">
+                <span className="material-symbols-outlined text-primary text-4xl mb-6">
                   {service.mainFeature.icon}
                 </span>
-                <h3 className="font-headline font-bold text-2xl text-white mb-4">
+                <h3 className="font-headline font-bold text-2xl text-on-surface mb-4">
                   {service.mainFeature.title}
                 </h3>
-                <p className="text-white/60 leading-relaxed max-w-2xl whitespace-pre-line">
+                <p className="text-on-surface-variant leading-relaxed max-w-2xl whitespace-pre-line">
                   {service.mainFeature.description}
                 </p>
               </div>
               {service.mainFeature.footerNote && (
-                <div className="mt-8 pt-6 border-t border-white/5">
-                  <span className="text-xs uppercase tracking-widest text-white/40 font-bold">
+                <div className="mt-8 pt-6 border-t border-outline/30">
+                  <span className="text-xs uppercase tracking-widest text-on-surface-variant/50 font-bold">
                     {service.mainFeature.footerNote}
                   </span>
                 </div>
@@ -105,18 +105,18 @@ export default async function ServiceDetailPage({
           <ScrollReveal className="md:col-span-4" delay={120}>
             <div className="glass-card rounded-3xl p-8 md:p-10 flex flex-col justify-between h-full">
               <div>
-                <span className="material-symbols-outlined text-[#16cc9b] text-4xl mb-6">
+                <span className="material-symbols-outlined text-primary text-4xl mb-6">
                   {service.sideFeature.icon}
                 </span>
-                <h3 className="font-headline font-bold text-2xl text-white mb-4">
+                <h3 className="font-headline font-bold text-2xl text-on-surface mb-4">
                   {service.sideFeature.title}
                 </h3>
-                <p className="text-white/60 text-sm leading-relaxed whitespace-pre-line">
+                <p className="text-on-surface-variant text-sm leading-relaxed whitespace-pre-line">
                   {service.sideFeature.description}
                 </p>
               </div>
-              <div className="pt-8 border-t border-white/5 mt-8">
-                <div className="flex justify-between items-center text-[#16cc9b] font-bold">
+              <div className="pt-8 border-t border-outline/30 mt-8">
+                <div className="flex justify-between items-center text-primary font-bold">
                   <span>{service.sideFeature.statLabel}</span>
                   <span className="material-symbols-outlined">
                     {service.sideFeature.statIcon}
@@ -135,20 +135,20 @@ export default async function ServiceDetailPage({
             >
               <div className="glass-card rounded-3xl p-8 h-full flex items-center justify-between group">
                 <div>
-                  <span className="material-symbols-outlined text-[#16cc9b] mb-4">
+                  <span className="material-symbols-outlined text-primary mb-4">
                     {feat.icon}
                   </span>
-                  <h4 className="font-headline font-bold text-lg text-white mb-2">
+                  <h4 className="font-headline font-bold text-lg text-on-surface mb-2">
                     {feat.title}
                   </h4>
-                  <p className="text-white/60 text-sm whitespace-pre-line">
+                  <p className="text-on-surface-variant text-sm whitespace-pre-line">
                     {feat.description}
                   </p>
                 </div>
                 {feat.badge && (
-                  <div className="hidden sm:flex flex-col items-end text-right ml-4 px-4 py-2 rounded-xl bg-white/[0.03] border border-white/[0.06]">
-                    <span className="text-[#16cc9b] font-bold text-sm tracking-tight whitespace-nowrap">{feat.badge}</span>
-                    <span className="text-white/30 text-[10px] uppercase font-bold tracking-widest whitespace-nowrap">{feat.badgeSub}</span>
+                  <div className="hidden sm:flex flex-col items-end text-right ml-4 px-4 py-2 rounded-xl bg-surface-variant border border-outline/30">
+                    <span className="text-primary font-bold text-sm tracking-tight whitespace-nowrap">{feat.badge}</span>
+                    <span className="text-on-surface-variant/50 text-[10px] uppercase font-bold tracking-widest whitespace-nowrap">{feat.badgeSub}</span>
                   </div>
                 )}
               </div>
@@ -161,14 +161,14 @@ export default async function ServiceDetailPage({
           <ScrollReveal delay={300}>
             <div className="mt-24 md:mt-32 rounded-[2.5rem] md:rounded-[3rem] p-12 md:p-24 relative overflow-hidden glass-card group/centerpiece">
               {/* Luxury Background Layers */}
-              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(22,204,155,0.08),transparent_60%)] pointer-events-none" />
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,210,190,0.08),transparent_60%)] pointer-events-none" />
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/5 via-transparent to-primary/5 pointer-events-none opacity-30" />
 
               {/* Scan Line Detail */}
               <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-primary/40 to-transparent animate-scan" />
 
               <div className="relative z-10 text-center mb-20">
-                <h3 className="font-headline font-bold text-4xl md:text-6xl mb-6 tracking-tight bg-gradient-to-r from-white via-white to-primary/40 bg-clip-text text-transparent">
+                <h3 className="font-headline font-bold text-4xl md:text-6xl mb-6 tracking-tight bg-gradient-to-r from-on-surface via-on-surface to-primary/40 bg-clip-text text-transparent">
                   Supported Platforms
                 </h3>
 
@@ -177,7 +177,7 @@ export default async function ServiceDetailPage({
                   <div className="h-[1px] w-32 bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
                 </div>
 
-                <p className="text-white/60 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-medium">
+                <p className="text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-medium">
                   Authoritative verification infrastructure engineered for the world&apos;s elite digital platforms.
                 </p>
               </div>
@@ -194,7 +194,7 @@ export default async function ServiceDetailPage({
         <Section>
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="font-headline font-bold text-[2rem] text-white">
+              <h2 className="font-headline font-bold text-[2rem] text-on-surface">
                 Featured In
               </h2>
             </div>
@@ -203,7 +203,7 @@ export default async function ServiceDetailPage({
             {service.mediaLogos.map((logo, i) => (
               <ScrollReveal key={logo} delay={i * 60}>
                 <div className="glass-card rounded-2xl p-8 flex items-center justify-center media-logo-card">
-                  <span className="font-headline font-bold text-xl text-white">
+                  <span className="font-headline font-bold text-xl text-on-surface">
                     {logo}
                   </span>
                 </div>
@@ -223,7 +223,7 @@ export default async function ServiceDetailPage({
             <span className="text-primary font-bold tracking-[0.3em] uppercase text-xs mb-4 block text-center">
               {service.processSubtitle}
             </span>
-            <h2 className="font-headline font-bold text-4xl md:text-5xl lg:text-6xl text-white leading-tight mb-8">
+            <h2 className="font-headline font-bold text-4xl md:text-5xl lg:text-6xl text-on-surface leading-tight mb-8">
               {service.processTitle}
             </h2>
           </div>
@@ -236,24 +236,24 @@ export default async function ServiceDetailPage({
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
             {service.processSteps.map((step, i) => (
               <ScrollReveal key={step.number} delay={i * 150}>
-                <div className="group relative flex flex-col p-8 md:p-10 rounded-3xl glass-card transition-all duration-500 hover:bg-white/[0.06] hover:border-primary/30 hover:-translate-y-3 hover:scale-[1.03] hover:shadow-[0_20px_50px_rgba(22,204,155,0.12)] text-left h-full">
+                <div className="group relative flex flex-col p-8 md:p-10 rounded-3xl glass-card transition-all duration-500 hover:bg-surface-variant hover:border-primary/30 hover:-translate-y-3 hover:scale-[1.03] hover:shadow-[0_20px_50px_rgba(0,210,190,0.12)] text-left h-full">
                   {/* Step Number Badge */}
-                  <div className="w-16 h-16 rounded-full border-2 border-primary/30 flex items-center justify-center text-primary font-bold text-2xl mb-8 relative group-hover:border-primary group-hover:shadow-[0_0_25px_rgba(22,204,155,0.4)] transition-all duration-500 bg-background/80 backdrop-blur-sm">
+                  <div className="w-16 h-16 rounded-full border-2 border-primary/30 flex items-center justify-center text-primary font-bold text-2xl mb-8 relative group-hover:border-primary group-hover:shadow-[0_0_25px_rgba(0,210,190,0.18)] transition-all duration-500 bg-background/80 backdrop-blur-sm">
                     <div className="absolute inset-0 rounded-full bg-primary/20 scale-0 group-hover:scale-110 transition-transform duration-500 blur-md" />
                     <span className="relative z-10">{step.number}</span>
                   </div>
 
                   <div className="relative z-10">
-                    <h5 className="text-white font-bold text-2xl mb-4 tracking-tight group-hover:text-primary transition-colors duration-300">
+                    <h5 className="text-on-surface font-bold text-2xl mb-4 tracking-tight group-hover:text-primary transition-colors duration-300">
                       {step.title}
                     </h5>
-                    <p className="text-white/50 text-base leading-relaxed group-hover:text-white/80 transition-colors duration-300 whitespace-pre-line">
+                    <p className="text-on-surface-variant text-base leading-relaxed group-hover:text-on-surface/80 transition-colors duration-300 whitespace-pre-line">
                       {step.description}
                     </p>
                   </div>
 
                   {/* Glass Shimmer Effect */}
-                  <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none rounded-3xl" />
+                  <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-surface-variant to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none rounded-3xl" />
                 </div>
               </ScrollReveal>
             ))}

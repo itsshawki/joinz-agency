@@ -9,23 +9,23 @@ export default function WhatsAppButton() {
     <div className="fixed bottom-6 right-6 z-[999] group pointer-events-none sm:bottom-8 sm:right-8">
       {/* Tooltip */}
       <div 
-        className={`absolute bottom-full right-0 mb-4 px-4 py-2 bg-[#0a0f12] border border-white/10 rounded-xl text-white text-[10px] sm:text-xs font-bold tracking-[0.2em] whitespace-nowrap shadow-2xl transition-all duration-300 transform ${
+        className={`absolute bottom-full right-0 mb-4 px-4 py-2 bg-surface-container/80 backdrop-blur-[18px] border border-outline/30 shadow-lg rounded-xl text-on-surface text-[10px] sm:text-xs font-bold tracking-[0.2em] whitespace-nowrap transition-all duration-300 transform ${
           showTooltip ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
         }`}
       >
         CHAT WITH US
-        <div className="absolute top-full right-5 w-2 h-2 bg-[#0a0f12] border-r border-b border-white/10 rotate-45 -translate-y-1"></div>
+        <div className="absolute top-full right-5 w-2 h-2 bg-surface-container border-r border-b border-outline/30 rotate-45 -translate-y-1"></div>
       </div>
 
       {/* Pulse Effect */}
-      <div className="absolute inset-0 rounded-full bg-[#25D366]/20 animate-pulse pointer-events-none"></div>
+      <div className="absolute inset-0 rounded-full bg-primary/20 animate-pulse pointer-events-none"></div>
 
       {/* Button */}
       <a
         href="https://wa.me/201020366187"
         target="_blank"
         rel="noopener noreferrer"
-        className="relative flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-[#25D366] rounded-full shadow-[0_10px_30px_rgba(37,211,102,0.4)] transition-all duration-300 transform pointer-events-auto hover:scale-110 hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(37,211,102,0.6)] group"
+        className="relative flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-[#00E6CF] to-[#00D2BE] rounded-full shadow-[0_20px_40px_rgba(0,0,0,0.4),0_0_20px_rgba(0,210,190,0.18)] transition-all duration-300 transform pointer-events-auto hover:scale-110 hover:-translate-y-1 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6),0_0_30px_rgba(0,210,190,0.3)] group"
         onMouseEnter={() => setShowTooltip(true)}
         onMouseLeave={() => setShowTooltip(false)}
         aria-label="Chat with us on WhatsApp"

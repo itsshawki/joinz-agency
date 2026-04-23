@@ -40,7 +40,7 @@ export default function ContactPage() {
                     href="https://www.facebook.com/Joinz.Agency"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-on-surface-variant/40 hover:text-primary hover:scale-110 hover:-translate-y-1 hover:drop-shadow-[0_0_15px_rgba(22,204,155,0.4)] transition-all duration-300 transform"
+                    className="text-on-surface-variant/40 hover:text-primary hover:scale-110 hover:-translate-y-1 hover:drop-shadow-[0_0_15px_rgba(0,210,190,0.4)] transition-all duration-300 transform"
                     aria-label="Facebook"
                   >
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
@@ -51,7 +51,7 @@ export default function ContactPage() {
                     href="https://www.instagram.com/joinz.agency"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-on-surface-variant/40 hover:text-primary hover:scale-110 hover:-translate-y-1 hover:drop-shadow-[0_0_15px_rgba(22,204,155,0.4)] transition-all duration-300 transform"
+                    className="text-on-surface-variant/40 hover:text-primary hover:scale-110 hover:-translate-y-1 hover:drop-shadow-[0_0_15px_rgba(0,210,190,0.4)] transition-all duration-300 transform"
                     aria-label="Instagram"
                   >
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
@@ -62,7 +62,7 @@ export default function ContactPage() {
                     href="https://wa.me/201020366187"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-on-surface-variant/40 hover:text-primary hover:scale-110 hover:-translate-y-1 hover:drop-shadow-[0_0_15px_rgba(22,204,155,0.4)] transition-all duration-300 transform"
+                    className="text-on-surface-variant/40 hover:text-primary hover:scale-110 hover:-translate-y-1 hover:drop-shadow-[0_0_15px_rgba(0,210,190,0.4)] transition-all duration-300 transform"
                     aria-label="WhatsApp"
                   >
                     <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
@@ -105,7 +105,7 @@ export default function ContactPage() {
                     </span>
                   </div>
                   <div>
-                    <h3 className="font-headline font-bold text-white mb-1">
+                    <h3 className="font-headline font-bold text-on-surface mb-1">
                       {item.title}
                     </h3>
                     <p className="text-primary font-bold text-lg mb-1">
@@ -123,7 +123,7 @@ export default function ContactPage() {
                 <span className="material-symbols-outlined text-primary text-5xl mb-3">
                   lock
                 </span>
-                <p className="font-headline font-bold text-white mb-1">
+                <p className="font-headline font-bold text-on-surface mb-1">
                   Sovereign Security
                 </p>
                 <p className="text-on-surface-variant text-sm">

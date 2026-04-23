@@ -39,7 +39,7 @@ export default function PlatformShowcase() {
       {platforms.map((platform) => (
         <div
           key={platform.name}
-          className="w-12 h-12 flex items-center justify-center text-white/50 hover:text-primary transition-all duration-300 transform hover:scale-110 hover:drop-shadow-[0_0_10px_rgba(22,204,155,0.4)] cursor-pointer"
+          className="w-12 h-12 flex items-center justify-center text-on-surface-variant hover:text-primary transition-all duration-300 transform hover:scale-110 hover:drop-shadow-[0_0_10px_rgba(0,210,190,0.4)] cursor-pointer"
           title={platform.name}
         >
           <platform.Icon size={28} />

@@ -23,7 +23,7 @@ export default function ClosingCta({
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[400px] h-[200px] bg-primary/5 rounded-full blur-[80px] pointer-events-none" />
 
         <div className="relative z-10 max-w-3xl mx-auto">
-          <h2 className="font-headline font-extrabold text-3xl md:text-[2.75rem] leading-tight text-white mb-6">
+          <h2 className="font-headline font-extrabold text-3xl md:text-[2.75rem] leading-tight text-on-surface mb-6">
             {title} <span className="text-neon">{highlight}</span>
           </h2>
           <p className="text-on-surface-variant mb-10 text-lg leading-relaxed max-w-xl mx-auto">{description}</p>

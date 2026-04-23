@@ -131,7 +131,7 @@ export default function HomePage() {
       <Section>
         <ScrollReveal>
           <div className="text-center mb-16">
-            <h2 className="font-headline font-bold text-3xl md:text-[2.5rem] text-white mb-4 leading-tight">
+            <h2 className="font-headline font-bold text-3xl md:text-[2.5rem] text-on-surface mb-4 leading-tight">
               Trusted by brands across <span className="text-neon">platforms</span>
             </h2>
             <p className="text-on-surface-variant text-lg max-w-3xl mx-auto leading-relaxed">
@@ -153,7 +153,7 @@ export default function HomePage() {
             <span className="text-primary text-xs font-bold uppercase tracking-[0.2em] mb-4 block">
               Why Joinz
             </span>
-            <h2 className="font-headline font-bold text-3xl md:text-[2.5rem] text-white mb-6 leading-tight">
+            <h2 className="font-headline font-bold text-3xl md:text-[2.5rem] text-on-surface mb-6 leading-tight">
               Built on Trust, Delivered with <span className="text-neon">Precision</span>
             </h2>
             <p className="text-on-surface-variant text-lg leading-relaxed mb-10">
@@ -173,7 +173,7 @@ export default function HomePage() {
                     </span>
                   </div>
                   <div>
-                    <h4 className="text-white text-base font-bold mb-1">{feature.title}</h4>
+                    <h4 className="text-on-surface text-base font-bold mb-1">{feature.title}</h4>
                     <p className="text-on-surface-variant text-sm leading-relaxed">
                       {feature.desc}
                     </p>
@@ -208,7 +208,7 @@ export default function HomePage() {
       <Section className="py-20 relative">
         <ScrollReveal>
           <div className="text-center mb-10">
-            <h3 className="text-white/30 text-xs font-bold uppercase tracking-[0.3em]">Supported Platforms</h3>
+            <h3 className="text-on-surface-variant/40 text-xs font-bold uppercase tracking-[0.3em]">Supported Platforms</h3>
           </div>
           <PlatformShowcase />
         </ScrollReveal>

@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState, useEffect } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -60,9 +62,16 @@ export default function Navbar() {
             {/* Logo — Left */}
             <Link
               href="/"
-              className="text-[1.4rem] font-black tracking-[-0.04em] text-white font-headline flex-shrink-0"
+              className="flex-shrink-0 flex items-center"
             >
-              Joinz
+              <Image
+                src="/logo.png"
+                alt="Joinz Agency Logo"
+                width={54}
+                height={36}
+                className="w-[53.9px] h-[35.8px] object-contain navbar-logo transition-all duration-300"
+                priority
+              />
             </Link>
 
             {/* Nav Links — Center */}
@@ -78,8 +87,10 @@ export default function Navbar() {
               ))}
             </div>
 
-            {/* CTA + Hamburger — Right */}
-            <div className="flex items-center gap-4 lg:gap-5">
+            {/* CTA + Theme Toggle + Hamburger — Right */}
+            <div className="flex items-center gap-3 lg:gap-4">
+              <ThemeToggle />
+
               <Link
                 href="/contact"
                 className="nav-cta-button !hidden lg:!flex"
@@ -111,7 +122,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               className={`mobile-nav-link text-4xl font-headline font-bold transition-all duration-300 delay-${index + 1} ${
-                isActive(link.href) ? "text-primary" : "text-white hover:text-primary"
+                isActive(link.href) ? "text-primary" : "text-on-surface hover:text-primary"
               }`}
             >
               {link.label}

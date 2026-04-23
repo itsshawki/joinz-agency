@@ -29,7 +29,7 @@ export default function AboutPage() {
         <div className="grid md:grid-cols-5 gap-8">
           <ScrollReveal className="md:col-span-3">
             <div className="glass-card rounded-3xl p-8 md:p-12 h-full">
-              <h2 className="font-headline font-bold text-2xl text-white mb-6">
+              <h2 className="font-headline font-bold text-2xl text-on-surface mb-6">
                 Our Story
               </h2>
               <div className="space-y-5 text-on-surface-variant leading-relaxed">
@@ -53,7 +53,7 @@ export default function AboutPage() {
           </ScrollReveal>
           <ScrollReveal className="md:col-span-2" delay={150}>
             <div className="glass-card rounded-3xl p-8 md:p-12 h-full">
-              <h2 className="font-headline font-bold text-2xl text-white mb-2">
+              <h2 className="font-headline font-bold text-2xl text-on-surface mb-2">
                 Our Expertise
               </h2>
               <span className="text-primary text-sm font-bold mb-6 block">
@@ -103,7 +103,7 @@ export default function AboutPage() {
             <span className="text-primary text-xs font-bold uppercase tracking-[0.2em] mb-3 block">
               Our Edge
             </span>
-            <h2 className="font-headline font-bold text-[2rem] text-white">
+            <h2 className="font-headline font-bold text-[2rem] text-on-surface">
               What Makes Us Different
             </h2>
             <p className="text-on-surface-variant text-lg mt-4 max-w-2xl">
@@ -131,12 +131,12 @@ export default function AboutPage() {
           ].map((card, i) => (
             <ScrollReveal key={card.title} delay={i * 120}>
               <div className="glass-card rounded-3xl p-8 h-full group transition-all duration-400 hover:-translate-y-2 hover:border-primary/20">
-                <div className="w-12 h-12 rounded-2xl bg-white/[0.04] border border-white/[0.06] flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
+                <div className="w-12 h-12 rounded-2xl bg-surface-variant border border-outline/30 flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors">
                   <span className="material-symbols-outlined text-primary text-2xl">
                     {card.icon}
                   </span>
                 </div>
-                <h3 className="font-headline font-bold text-xl text-white mb-3">
+                <h3 className="font-headline font-bold text-xl text-on-surface mb-3">
                   {card.title}
                 </h3>
                 <p className="text-on-surface-variant text-sm leading-relaxed">

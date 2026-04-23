@@ -122,7 +122,7 @@ export default function ContactForm() {
         <span className="material-symbols-outlined text-primary text-6xl mb-4">
           check_circle
         </span>
-        <h3 className="font-headline font-bold text-2xl text-white mb-3">
+        <h3 className="font-headline font-bold text-2xl text-on-surface mb-3">
           Message Received
         </h3>
         <p className="text-on-surface-variant">
@@ -167,8 +167,8 @@ export default function ContactForm() {
                   type="button"
                   onClick={() => setIsDropdownOpen(!isDropdownOpen)}
                   className={`form-input flex items-center justify-between cursor-pointer text-left select-none
-                    ${formData.service ? "font-semibold text-white/90" : "font-medium text-on-surface-variant/50"}
-                    tracking-wider transition-all duration-300 border-white/5 hover:border-primary/30 focus:border-primary focus:ring-4 focus:ring-primary/5
+                    ${formData.service ? "font-semibold text-on-surface" : "font-medium text-on-surface-variant/50"}
+                    tracking-wider transition-all duration-300 border-outline/30 hover:border-primary/30 focus:border-primary focus:ring-4 focus:ring-primary/5
                   `}
                   style={{
                     letterSpacing: '0.04em',
@@ -190,7 +190,7 @@ export default function ContactForm() {
                       className="fixed inset-0 z-40 cursor-default"
                       onClick={() => setIsDropdownOpen(false)}
                     />
-                    <div className="absolute top-full left-0 right-0 mt-3 z-[100] bg-[#0a0f12] border border-primary/20 rounded-2xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.8)] py-2 animate-fade-in slide-in-from-top-2">
+                    <div className="absolute top-full left-0 right-0 mt-3 z-[100] bg-surface-container/90 backdrop-blur-[18px] border border-outline/30 rounded-2xl overflow-hidden shadow-lg py-2 animate-fade-in slide-in-from-top-2">
                       <div className="max-h-60 overflow-y-auto custom-scrollbar">
                         {field.options?.map((opt) => (
                           <div
@@ -198,7 +198,7 @@ export default function ContactForm() {
                             className={`px-6 py-4 cursor-pointer font-medium text-sm tracking-wide transition-all duration-200
                               ${formData.service === opt
                                 ? "bg-primary/10 text-primary"
-                                : "text-on-surface-variant/80 hover:bg-white/[0.03] hover:text-white"
+                                : "text-on-surface-variant/80 hover:bg-surface-variant hover:text-on-surface"
                               }
                             `}
                             onClick={() => {
@@ -224,7 +224,7 @@ export default function ContactForm() {
                 <input
                   name="custom_service_input"
                   type="text"
-                  className="form-input font-medium tracking-wide text-white/90 border-white/5 focus:border-primary focus:ring-4 focus:ring-primary/5"
+                  className="form-input font-medium tracking-wide text-on-surface border-outline/30 focus:border-primary focus:ring-4 focus:ring-primary/5"
                   placeholder="Please specify your request"
                   value={formData.custom_service || ""}
                   onChange={(e) => handleChange("custom_service", e.target.value)}

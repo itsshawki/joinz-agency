@@ -62,12 +62,12 @@ function ServiceRow({
             service-showcase-card relative overflow-hidden
             min-h-[380px] flex flex-col md:flex-row
             rounded-[32px]
-            bg-white/[0.02] backdrop-blur-2xl
-            border border-white/[0.06]
-            shadow-[0_0_40px_rgba(0,0,0,0.3)]
+            bg-surface-container backdrop-blur-[22px] saturate-[160%]
+            border border-outline/10
+            shadow-[inset_0_1px_0_rgba(255,255,255,0.04),0_10px_40px_rgba(0,0,0,0.18)]
             transition-all duration-700 ease-[cubic-bezier(0.23,1,0.32,1)]
-            hover:translate-y-[-8px] hover:border-white/[0.12]
-            hover:shadow-[0_20px_80px_rgba(0,255,180,0.12)]
+            hover:translate-y-[-8px] hover:border-primary/30
+            hover:shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_20px_80px_rgba(0,255,180,0.12)]
             ${!isLeft ? "md:flex-row-reverse" : ""}
           `}
         >
@@ -93,7 +93,7 @@ function ServiceRow({
 
             {/* Title */}
             <motion.div variants={itemVariants} className="flex items-center gap-5 mb-6">
-              <h3 className="font-headline font-extrabold text-3xl md:text-[2.5rem] text-white leading-[1.1] tracking-[-0.03em]">
+              <h3 className="font-headline font-extrabold text-3xl md:text-[2.5rem] text-on-surface leading-[1.1] tracking-[-0.03em]">
                 {service.title}
               </h3>
             </motion.div>
@@ -121,7 +121,7 @@ function ServiceRow({
                   {["Trusted Process", "Elite Support", "Confidential"].map((text) => (
                     <div key={text} className="flex items-center gap-1.5">
                       <span className="w-1 h-1 rounded-full bg-primary" />
-                      <span className="text-[10px] font-bold uppercase tracking-widest text-white">{text}</span>
+                      <span className="text-[10px] font-bold uppercase tracking-widest text-on-surface/60">{text}</span>
                     </div>
                   ))}
                 </div>
@@ -135,13 +135,13 @@ function ServiceRow({
               service-visual-side
               relative flex-[0.45] min-h-[300px] md:min-h-full overflow-hidden
               flex items-center justify-center
-              border-t md:border-t-0 ${isLeft ? "md:border-l" : "md:border-r"} border-white/[0.04]
-              bg-white/[0.01]
+              border-t md:border-t-0 ${isLeft ? "md:border-l" : "md:border-r"} border-outline/10
+              bg-surface-container/30
             `}
           >
             {/* Grid Pattern */}
             <div className="absolute inset-0 opacity-[0.15] [mask-image:radial-gradient(ellipse_at_center,black,transparent)]">
-              <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(rgba(22,204,155,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(22,204,155,0.2) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
+              <div className="absolute inset-0" style={{ backgroundImage: 'linear-gradient(rgba(0,210,190,0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(0,210,190,0.2) 1px, transparent 1px)', backgroundSize: '40px 40px' }} />
             </div>
 
             {/* Animated Gradient Orb */}
@@ -164,10 +164,10 @@ function ServiceRow({
                 initial={{ opacity: 0, scale: 0.8, y: 20 }}
                 animate={isInView ? { opacity: 1, scale: 1, y: 0 } : {}}
                 transition={{ delay: 0.5, duration: 0.8 }}
-                className="absolute top-10 right-10 z-20 glass-card px-5 py-3 rounded-2xl border border-white/10 shadow-2xl"
+                className="absolute top-10 right-10 z-20 glass-card px-5 py-3 rounded-2xl border border-outline/30 shadow-2xl"
               >
                 <div className="text-primary font-bold text-xl">{service.statsValue}</div>
-                <div className="text-[10px] text-white/50 uppercase tracking-tighter font-bold">{service.statsLabel}</div>
+                <div className="text-[10px] text-on-surface-variant uppercase tracking-tighter font-bold">{service.statsLabel}</div>
               </motion.div>
             )}
 
@@ -180,7 +180,7 @@ function ServiceRow({
                     initial={{ opacity: 0, x: -10 }}
                     animate={isInView ? { opacity: 0.4 + (i * 0.1), x: 0 } : {}}
                     transition={{ delay: 0.6 + (i * 0.1) }}
-                    className="text-[11px] font-bold uppercase tracking-[0.2em] text-white bg-white/5 px-3 py-1 rounded-full border border-white/5"
+                    className="text-[11px] font-bold uppercase tracking-[0.2em] text-on-surface bg-surface-variant px-3 py-1 rounded-full border border-outline/20"
                   >
                     {word}
                   </motion.span>
@@ -189,7 +189,7 @@ function ServiceRow({
             )}
 
             {/* Soft Radial Glow */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(22,204,155,0.05)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,210,190,0.05)_0%,transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-1000" />
 
             {/* Large Watermark Icon */}
             <motion.span 
@@ -249,7 +249,7 @@ export default function ServicesShowcase({
       className="px-6 md:px-12 py-24 md:py-32 relative overflow-hidden"
     >
       {/* Background Decorative Element */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-outline/40 to-transparent" />
       
       <div className="max-w-[1300px] mx-auto">
         {/* Section Header */}
@@ -263,7 +263,7 @@ export default function ServicesShowcase({
           <span className="text-primary text-xs font-bold uppercase tracking-[0.3em] mb-4 block">
             Core Expertise
           </span>
-          <h2 className="font-headline font-bold text-4xl md:text-[3.5rem] text-white mb-6 leading-tight">
+          <h2 className="font-headline font-bold text-4xl md:text-[3.5rem] text-on-surface mb-6 leading-tight">
             Elite Digital <span className="text-neon">Services</span>
           </h2>
           <p className="text-on-surface-variant text-xl max-w-2xl leading-relaxed opacity-70">

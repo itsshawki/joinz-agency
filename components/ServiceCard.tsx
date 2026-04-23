@@ -20,12 +20,12 @@ export default function ServiceCard({
         <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
         <div className="relative z-10">
-          <div className="w-14 h-14 rounded-2xl bg-white/[0.04] border border-white/[0.06] flex items-center justify-center mb-6 group-hover:bg-primary/10 group-hover:border-primary/20 transition-all duration-300">
+          <div className="w-14 h-14 rounded-2xl bg-surface-container border border-outline/20 flex items-center justify-center mb-6 group-hover:bg-primary/10 group-hover:border-primary/20 transition-all duration-300">
             <span className="material-symbols-outlined text-primary text-2xl">
               {icon}
             </span>
           </div>
-          <h3 className="font-headline font-bold text-xl text-white mb-3">
+          <h3 className="font-headline font-bold text-xl text-on-surface mb-3">
             {title}
           </h3>
           <p className="text-on-surface-variant text-sm leading-relaxed mb-6">
